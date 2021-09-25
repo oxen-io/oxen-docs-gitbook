@@ -1,86 +1,102 @@
-# 🍺 Full service node setup guide
+# 🍺 Full Service Node set-up guide
 
-This guide will walk you through the complete process of setting up, staking, and running an Oxen Service Node. This guide is targeted at non-developers, so even if you're new to Linux or the command line, you should be able to follow along without any trouble.
+This guide will walk you through the complete process of setting up, staking, and running an Oxen Service Node. The guide targets non-experts, so even if you're new to Linux or the command line, you should be able to follow the text without any difficulty.
 
-You can run the Oxen Service Node software on any device running a supported operating system, but for the purposes of this guide, we're assuming you're setting up a service node on a remote Ubuntu or Debian server. If you're new to Linux and running servers in general, this is the best way to go. If you're more experienced and would prefer to run your service node on a different operating system, you'll need to modify the syntax of some commands to suit your selected OS.
+You can run the Oxen Service Node software on any device running a supported operating system, but for the purposes of this guide, we'll assume you will be setting up a Service Node on a remote Ubuntu or Debian server. If you're new to Linux or running servers in general, this is the most straightforward approach. If you're more experienced and would prefer to run your Service Node on a different operating system, you'll need to modify the syntax of some commands to suit your system of choice.
 
 #### Running an Oxen Service Node: Requirements
 
-These are the basic requirements for running a service node. These requirements may change in future, so keep an eye on [the Oxen blog](https://oxen.io/blog) or join our [Telegram community](https://t.me/Oxen_Community) and [Discord server](https://discord.com/invite/67GXfD6) for all the latest updates.
+These are the current basic requirements for running a Service Node as of October 2021. They will almost certainly increase in the future as the technologies powered by the Oxen network grow in popularity, so keep an eye on the [Oxen blog](https://oxen.io/blog) and join either our [Telegram community](https://t.me/Oxen_Community) or [Discord server](https://discord.com/invite/67GXfD6) for all the latest updates.
 
 | Spec | Requirement |
 | :--- | :--- |
-| Latest Oxen Service Node software | Latest service node debs \(installed through the steps below\) or latest [binaries](https://github.com/oxen-io/loki-core/releases) |
+| Latest Oxen Service Node software | Latest Service Node `.deb` packages \(installed via the steps below\) or latest [binaries](https://github.com/oxen-io/loki-core/releases) |
 | Server operating system | Ubuntu 18.04+ or Debian 10+ |
-| Storage | 30GB |
-| RAM | 2-4GB \(2GB at absolute minimum\) |
+| Storage | 40Gb or more |
+| RAM | 2-4Gb \(2Gb is the absolute minimum\) |
+| Connectivity | 100Mbps or faster |
+| Traffic | 2Gb per month or more |
+| Power | Redundant with remote cycling ability, as found in most data centres |
 
-> Note: It is possible for an experienced system administrator to run a service node on a server running an operating system other than Ubuntu or Debian. However, this requires additional work to start up and manage the required service node services, and is beyond the scope of this guide.
+> Note: It is possible for an experienced system administrator to run a Service Node on a server running an operating system other than Ubuntu or Debian. However, this requires additional work to start up and manage the required services, and is beyond the scope of this guide.
 
 ### Table of Contents
 
 * Oxen Service Nodes in a nutshell
-* Setup for new users
-  * [Step 1: Getting a server](full-service-node-setup-guide.md#step-1-getting-a-server)
+* Set-up for new users
+  * [Step 1: Obtaining a server](full-service-node-setup-guide.md#step-1-obtaining-a-server)
   * [Step 2: Preparing your server](full-service-node-setup-guide.md#step-2-preparing-your-server)
-  * [Step 3: Initial repository setup](full-service-node-setup-guide.md#step-3-initial-repository-setup)
-  * [Step 4: Oxen Service Node installation and operation](full-service-node-setup-guide.md#step-4-oxen-service-node-installation-and-operation)
-  * [Step 5: Service node registration](full-service-node-setup-guide.md#step-5-service-node-registration)
-  * [Step 6: Service node status check ](full-service-node-setup-guide.md#step-6-service-node-status-check)
+  * [Step 3: Initial repository set-up](full-service-node-setup-guide.md#step-3-initial-repository-setup)
+  * [Step 4: Service Node installation and operation](full-service-node-setup-guide.md#step-4-oxen-service-node-installation-and-operation)
+  * [Step 5: Service Node registration](full-service-node-setup-guide.md#step-5-service-node-registration)
+  * [Step 6: Service Node status check ](full-service-node-setup-guide.md#step-6-service-node-status-check)
   * [Step 7: Unlocking your stake](full-service-node-setup-guide.md#step-7-unlocking-your-stake)
 
 ### Oxen Service Nodes in a nutshell
 
-* Service nodes start as full nodes on the Oxen network
-* Full nodes become service nodes when the owner locks the required amount of $OXEN and submits a registration transaction
-* Once accepted by the network, a service node begins completing service node operations and becomes eligible to receive periodic block rewards in the form of $OXEN tokens
-* [Multiple participants can stake into one service node](staking-to-shared-service-node.md) and can have the reward automatically distributed
+* A Service Node starts as a full node on the Oxen network.
+* The full node becomes a Service Node when the owner locks the required amount of $OXEN (see below) and submits a registration transaction.
+* Once accepted by the network, the Service Node starts performing node operations and becomes eligible to receive periodic block [rewards](https://imaginary.stream/sn/) in the form of $OXEN.
+* [Multiple participants can stake into one Service Node](staking-to-shared-service-node.md) and can have the reward automatically distributed among them.
 
-#### Service node functionality
+#### Service Node functionality
 
-Service nodes:
+Service Nodes:
 
 * Receive, store, and forward encrypted [Session](../../products-built-on-oxen/session/) messages
-* Route [Lokinet](../../products-built-on-oxen/lokinet/) internet traffic
-* Monitor other service nodes and vote on their performance
-* Are called into quorums which give them authority over [Blink](../../about-the-oxen-blockchain/blink-instant-transactions.md) transactions
+* Route [Lokinet](../../products-built-on-oxen/lokinet/) traffic
+* Monitor other Service Nodes and vote on their performance
+* Are called into quorums that give them authority over [Blink](../../about-the-oxen-blockchain/blink-instant-transactions.md) transactions
 * Produce new blocks for the network via [Pulse PoS](../../about-the-oxen-blockchain/pulse-pos-on-oxen/)
 
-### Service node setup for new users
+### Service Node set-up for new users
 
-This guide is geared towards users unfamiliar with servers and the command line.
+#### Step 1: Obtaining a server
 
-#### Step 1: Getting a server
+Choosing where to set up your Service Node is the first and most critical decision you will face in setting up and running your node. There are a number of factors to consider. Because you will be locking up funds as part of operating your Service Node, you will want to ensure, at a minimum, that your server meets the technical requirements given above.
 
-Choosing where to set up your service node is the biggest choice you will make when running a node. There are a number of factors to consider. Because you will be locking up funds as part of operating your service node, you will want to ensure that your server has:
+Your aim is to provide a stable, reliable server with good network connectivity, so that data can be efficiently routed to and from your node. An underpowered or poorly connected node will have a poor response time and add latency to the network for all users whose traffic passes through it, resulting in a less than optimal experience.
 
-* A stable, relatively fast connection \(100Mbps or better\) to route messages and data quickly
-* A minimum of 2GB of RAM, to run the service node software reliably
-* At least 30GB of storage space, used to store a local copy of the blockchain
-* Redundant power, as found in most data centres. If your server goes down while staked, your service node could be [kicked off the network](service-node-deregistration.md) and you could have your funds locked for 30 days \(without receiving rewards\)
+Additionally, you should consider the following factors. The more weight you attach to these factors when deciding where to run your node, the more value you will provide to the network.
 
-We strongly recommend against running a service node from home. Most home internet connections are relatively slow \(especially for uploads — service nodes need high speeds for both uploading and downloading data\) and typically don't offer static IP addresses, which are required by service nodes. Connection speed and support aside, issues like power outages can easily disrupt home servers, which could result in your service node being kicked from the network.
+Firstly, please consult the [node distribution](https://oxendashboard.com/#5) panel of the [Oxen Dashboard](https://oxendashboard.com/), where you will find a breakdown of the current Service Node network by country and network owner.
 
-Typically, the easiest and cheapest way to host a server such as an Oxen Service Node is to rent a Virtual Private Server \(VPS\). There are thousands of options when it comes to VPS providers, but any of the providers and configurations listed below will do.
+Here, you will see that some countries and network operators are currently overrepresented on the Service Node network. In other words, a relatively small number of countries and network operators account for the majority of the network. This is bad for decentralisation.
 
-| Hosting Provider | Product Name | Cost Per Month \($USD\) | Bandwidth Provided | Accepts $OXEN? |
-| :--- | :--- | :--- | :--- | :--- |
-| Netcup | VPS 1000 G8 | 10.50 | 30 - 35 MiB’s |  |
-| Evolution Host | STARTER | 5.50 | 9 - 1 MiB’s | [YES](https://evolution-host.com/vps-hosting.php?package=Loki) |
-| Online.net | Start-2-S-SSD | 13.99 | 15 - 17 MiB’s |  |
-| Scaleway | START1-M | 9.33 | 20 - 25 MiB’s |  |
-| OVH | VPS SSD 2 | 7.61 | 9 - 1 MiB’s |  |
-| Leaseweb | Virtual Server XL | 34.45 | 30 - 35 MiB’s |  |
-| Digital Ocean | 2 GB, 2 vCPUs | 15 | 9 - 11 MiB’s |  |
-| Feral Hosting | Neon Capability | 19.68 | 9 - 11 MiB’s |  |
-| Trabia | VDS-8G | 38.54 | 9 - 11 MiB’s |  |
-| Hetzner | EX41-SSD \(30 TB\) | 39.71 | 40 - 80 MiB’s |  |
+To be robust against disparate forms of attack, a distributed network must pursue diversity at multiple levels:
 
-> Note: We do not officially endorse any of these providers. The above list is simply an example of some of the options currently available as of time of writing.
+* Geographical diversity: distribution across multiple, disparate regions to minimise the effect of natural disasters
+* Sociopolitical diversity: distribution across multiple countries and legal jurisdictions to minimise the effects of unrest, legislation, coercion and espionage
+* Network diversity: distribution across multiple [tier 1](https://en.wikipedia.org/wiki/Tier_1_network) and [tier 2](https://en.wikipedia.org/wiki/Tier_2_network) network providers to minimise the effects of fire, flooding, network splits, equipment failure, cable rupture, bankruptcy, industrial espionage and rogue employees
+* Software diversity: multiple operating systems, distributions and release variants to minimise the effects of events that target or otherwise afflict a particular system, such as a [zero-day vulnerability](https://www.kaspersky.com/resource-center/definitions/zero-day-exploit) or the push of a buggy package.
 
-Don't just pick the first VPS from the list, either. Do some digging and see which one looks the best to you, fits best into your budget, and what the latency \(lag between sending a command and the server responding to it\) would be like for you based on the location of the server.
+> **You can make a significant contribution to decentralisation and provide greater value to the network by taking the above factors into account when choosing where to run your node. Take care, however, not to compromise on the core requirements of a node when trying to satisfy these goals.**
 
-When selecting your VPS’ operating system, choose Ubuntu 20.04 or Debian 10 if you want to follow the steps below verbatim. If you feel more confident and/or wish to run your server on another Linux distribution, the commands in this guide will still apply, but may need to be modified to suit your chosen operating system.
+If your server goes down while staked, your Service Node could be [evicted from the network](service-node-deregistration.md) and your funds locked for 30 days \(without receiving rewards\).
+
+For this reason, we strongly recommend against running a Service Node from home. Most consumer internet connections have poor upstream bandwidth \(Service Nodes require a high speed connection for both uploading and downloading data\) and typically don't provide a static IP address, which is essential for a Service Node. Connection speed and support aside, transient power and network outages are a relatively common occurrence with consumer-grade connections and can easily disrupt home servers.
+
+Typically, the simplest and cheapest way to host a server such as an Oxen Service Node is to lease a Virtual Private Server \(VPS\). There are literally hundreds of options when it comes to VPS providers, but some of the more commonly chosen companies and products are listed below.
+
+| Hosting Provider | Product Name | Cost Per Month \($USD\) |
+| :--- | :--- | :--- |
+| Netcup | VPS 1000 G8 | 10.50 |
+| Evolution Host | STARTER | 5.50 |
+| Online.net | Start-2-S-SSD | 13.99 |
+| Scaleway | START1-M | 9.33 |
+| OVH | VPS SSD 2 | 7.61 |
+| Leaseweb | Virtual Server XL | 34.45 |
+| Digital Ocean | 2 GB, 2 vCPUs | 15 |
+| Linode | 4 GB, 2 vCPUs | 20 |
+| Feral Hosting | Neon Capability | 19.68 |
+| Trabia | VDS-8G | 38.54 |
+| Hetzner | EX41-SSD \(30 TB\) | 39.71 |
+
+> Note: We do not endorse **any** of these providers. The above list is merely a selection of some of the popular options at the time of writing. Of course, this popularity comes at the expense of decentralisation. To provide even greater value to the network, please consider running a node in a country and/or on a network that currently has poor or even no representation according to the [OXEN Dashboard](https://oxendashboard.com/#5). A useful resource in choosing a less common VPS provider is [ExoticVM](https://www.exoticvm.com).
+
+In any case, do not just settle on the first provider you encounter. No two are alike. Do your own research and decide on a provider that looks good to you and fits your budget. The better ones will allow you to monitor your VPS' resource consumption, perform a seamless upgrade to a more powerful server at a later date, remotely reboot the host if it becomes unresponsive, and even recover the system using out-of-band access if, for example, a bad configuration change results in lost network access.
+
+When selecting your VPS’ operating system, please choose Ubuntu 20.04 or Debian 10 if you want to be able to follow the steps below verbatim. If you feel more confident and/or wish to run your server on another Linux distribution, the commands in this guide will still apply, but may need to be modified to suit your chosen operating system. In most cases, beginners and experts alike will be best served by sticking closely to this guide.
 
 #### Step 2: Preparing your server
 
@@ -98,8 +114,8 @@ A terminal window will now appear, prompting you for your log-in details, userna
 
 Consoles don't quite work like the rest of your computer. Here are some basic tips for navigating your way around the command line!
 
-* Don't try copying something by using the usual Ctrl + C hotkey! If you want to copy something, do so by highlighting text and then right clicking it and selecting Copy. Pasting works by right clicking a blank area in the console and selecting Paste.
-* If you want to kill a process or stop something from running, press Ctrl + C. \(This is why you shouldn't try copying something with this hotkey!\)
+* Don't try copying something by using the usual `Ctrl + C` hotkey! If you want to copy something, do so by highlighting text and then right clicking it and selecting Copy. Pasting works by right clicking a blank area in the console and selecting Paste.
+* If you want to kill a process or stop something from running, press `Ctrl + C`. \(This is why you shouldn't try copying something with this hotkey!\)
 * You can always check the directory you are in by typing `pwd,` and you can list its contents by typing `ls`.
 * You can always return to your home directory by typing `cd`and pressing Enter.
 * You can move into a given directory by typing `cd <name>` or move back up one level by typing `cd ..`.
@@ -132,14 +148,14 @@ If you are using a firewall then ensure that the following ports are open/reacha
 * Port 22020 \(storage server to storage server\)
 * Port 22021 \(client to storage server\)
 * Port 22022 \(blockchain syncing\)
-* Port 22025 \(service node to service node\)
+* Port 22025 \(Service Node to Service Node\)
 * Port 1090 \(UDP, not TCP, unlike all of the above; Lokinet router data\)
 
 #### Step 3: Initial repository setup
 
 You only need to do this step the first time you want to set up the Oxen repository; when you've done it once, the repository will automatically update whenever you fetch new system updates.
 
-To add the apt repository, run the following commands.
+To add the `apt` repository, run the following commands.
 
 This first command installs the public key used to sign the Oxen Service Node packages:
 
@@ -171,13 +187,13 @@ sudo apt update
 
 #### Step 4: Oxen Service Node installation and operation
 
-To install the software needed to run a service node, simply install the `oxen-service-node` package:
+To install the software needed to run a Service Node, simply install the `oxen-service-node` package:
 
 ```text
 sudo apt install oxen-service-node
 ```
 
-This will detect your public IP \(or allow you to enter it yourself\) and automatically update the /etc/oxen/oxen.conf configuration file with the necessary additional settings to run a service node.
+This will detect your public IP \(or allow you to enter it yourself\) and automatically update the `/etc/oxen/oxen.conf` configuration file with the necessary additional settings to run a Service Node.
 
 > Note: This process can take up to 6 hours for the blockchain to fully sync.
 
@@ -185,6 +201,12 @@ If you encounter an error during the syncing process due to a 15000 millisecond 
 
 ```text
 sudo systemctl restart oxen-node.service
+```
+
+Alternatively, the blockchain can be typically be downloaded in a fraction of the time that it takes to sync it via the network, using the following command:
+
+```
+sudo oxend-download-lmdb https://public.loki.foundation/loki/data.mdb
 ```
 
 #### 4.1: Interacting with the running oxend
@@ -203,7 +225,7 @@ To see the output log of your node you can run the following command:
 journalctl -u oxen-node -af
 ```
 
-This is useful to see if your node is syncing with the blockchain and to see other diagnostic messages that may come up from time to time. \(Press Ctrl-C to stop watching the log\).
+This is useful to see if your node is syncing with the blockchain and to see other diagnostic messages that may come up from time to time. \(Press `Ctrl-C` to stop watching the log\).
 
 For a full list of supported commands run:
 
@@ -219,35 +241,35 @@ systemctl status oxen-storage-server
 systemctl status lokinet-router
 ```
 
-#### Step 5: Service node registration
+#### Step 5: Service Node registration
 
 This section of the guide is split into two parts:
 
-* If you are an individual staker and do not require any other contributors to run your service node, jump into the [Individual staking ](full-service-node-setup-guide.md#6-1-individual-staking)section.
-* If you want to run a pooled Service Node, jump into [Setting up a pooled service node](full-service-node-setup-guide.md#6-2-setting-up-a-pooled-service-node).
+* If you are an individual staker and do not require any other contributors to run your Service Node, jump into the [Individual staking ](full-service-node-setup-guide.md#6-1-individual-staking)section.
+* If you want to run a pooled Service Node, jump into [Setting up a pooled Service Node](full-service-node-setup-guide.md#6-2-setting-up-a-pooled-service-node).
 
 #### **5.0.1: Retrieving your wallet address**
 
-You'll need your wallet address to register your service node. Copy your primary address from the Oxen GUI wallet, or run the `address` command from within the Oxen CLI wallet, and copy the output.
+You'll need your wallet address to register your Service Node. Copy your primary address from the Oxen GUI wallet, or run the `address` command from within the Oxen CLI wallet, and copy the output.
 
 > Note: Do not use subaddresses for staking. Subaddresses are currently unsupported for staking in the Oxen wallet.
 
 #### **5.1: Individual staking**
 
-To run a service node as the sole contributor, you'll need:
+To run a Service Node as the sole contributor, you'll need:
 
-* A fully synchronized, up-to-date Oxen daemon running on your service node
-* An Oxen wallet with at least 15,000 $OXEN in it \(to meet the 15,000 $OXEN staking requirement to register your service node\)
+* A fully synchronized, up-to-date Oxen daemon running on your Service Node
+* An Oxen wallet with at least 15,000 $OXEN in it \(to meet the staking requirement to register your Service Node\)
 
 #### 5.1.1: Preparing your node for registration
 
-Log in \(if not already logged in\) to the VPS running the service node, then run the following command:
+Log in \(if not already logged in\) to the VPS running the Service Node, then run the following command:
 
 ```text
 oxend prepare_registration
 ```
 
-The daemon will output the current staking requirement \(15,000 $OXEN\) and prompt you with an input to clarify whether you are an individual staker or you will be running a pool. Type `y` and click enter, as you will be the sole staker.
+The daemon will output the current staking requirement and prompt you with an input to clarify whether you are an individual staker or you will be running a pool. Type `y` and click enter, as you will be the sole staker.
 
 The daemon will now prompt you for the operator's \(your\) Oxen address — this is the address saved in Step 5. Retrieve this address, copy it, then paste it into the terminal and press Enter.
 
@@ -261,50 +283,50 @@ register_service_node 4294967292 T6TCCyDgjjbddtzwNGryRJ5HntgGYvqZTagBb2mtHhn7WWz
 
 > _NOTE: You must run the command which **your** daemon outputs, and **not** the command shown above._
 
-#### 5.1.2: Registering your service node
+#### 5.1.2: Registering your Service Node
 
-To stake and register your service node, open your Oxen GUI wallet \(with a balance of at least 15,000 $OXEN\). Navigate to the Service Nodes tab, then the Registration subsection. Paste the `register_service_node` command from Step 5.1.1 above, and click **Register Service Node**.
+To stake and register your Service Node, open your Oxen GUI wallet \(with a balance of at least 15,000 $OXEN\). Navigate to the Service Nodes tab, then the Registration subsection. Paste the `register_service_node` command from Step 5.1.1 above, and click **Register Service Node**.
 
 If you're using the Oxen CLI wallet, simply paste the registration command directly into the CLI wallet prompt and hit Enter.
 
-Well done! Continue to [Step 6: Service node check](full-service-node-setup-guide.md#step-6-service-node-status-check) to make sure your service node is running properly.
+Well done! Continue to [Step 6: Service Node check](full-service-node-setup-guide.md#step-6-service-node-status-check) to make sure your Service Node is running properly.
 
-#### **5.2: Setting up a pooled service node**
+#### **5.2: Setting up a pooled Service Node**
 
 #### _**Minimum contribution rules**_
 
-The service node staking requirement is fixed at a flat 15,000 $OXEN total. Service nodes accept at most 4 contributions, meaning the minimum contribution to a service node is `<Remaining Staking Requirement> ➗ <Number of Remaining Contributors>`.
+The Service Node staking requirement is fixed at 15,000 $OXEN. Service Nodes accept at most 4 contributions, meaning the minimum contribution to a Service Node is `<Remaining Staking Requirement> ➗ <Number of Remaining Contributors>`.
 
-When setting up reserved spots in a pooled service node, the node administrator \(you\) must ensure the reserved stake amounts each meet the minimum staking requirement; contributors then simply stake their reserved amounts.
+When setting up reserved spots in a pooled Service Node, the node administrator \(you\) must ensure the reserved stake amounts each meet the minimum staking requirement; contributors then simply stake their reserved amounts.
 
 #### **5.2.1: Pool operator**
 
-The operator \(you\) is the individual who will be hosting the pool and running the server hosting the service node, thus incurring the operating expenses involved in running a node.
+The operator \(you\) is the individual who will be hosting the pool and running the server hosting the Service Node, thus incurring the operating expenses involved in running a node.
 
 To be an operator, you'll need to have:
 
 * A server running a fully synchronized, up-to-date `oxend`
-* An Oxen wallet with at least 3750 $OXEN \(to meet the minimum service node operator staking requirement\)
+* An Oxen wallet with at least 3750 $OXEN \(to meet the minimum Service Node operator staking requirement\)
 * 1-3 other contributors who also have an Oxen wallet \(either the CLI or GUI wallet\) with enough $OXEN to meet their portion of the total stake
 * If the operator wants to reserve contribution spots for specific contributors, the operator will need the addresses of the contributors and the amounts the 1-3 contributors will stake.
 
-If you have the above ready, we can now prepare the service node.
+If you have the above ready, we can now prepare the Service Node.
 
-Log in \(if not already logged in\) to the VPS running the service node, then run the following command:
+Log in \(if not already logged in\) to the VPS running the Service Node, then run the following command:
 
 ```text
 oxend prepare_registration
 ```
 
-`oxend` will prompt you to specify if you will contribute the entire stake. Because you're running a pooled service node, type `n` and press Enter.
+`oxend` will prompt you to specify if you will contribute the entire stake. Because you're running a pooled Service Node, type `n` and press Enter.
 
 Next, `oxend` will request input for your desired operator fee. This value, which can be between 0-100, represents the percentage of the reward the operator will receive **before** the reward is distributed to all shareholders \(including you!\). For example, if you want to set up a 10% operator cut, you would type `10` and press Enter. 
 
-> For example, imagine a service node with 4 contributors, including the operator, all staking equal amounts \(25%\). If the operator specified a 10% fee at this step, they would automatically receive 10% of the service node rewards, and the remaining 90% would then be split equally between the operator and the other 3 contributors.
+> For example, imagine a Service Node with 4 contributors, including the operator, all staking equal amounts \(25%\). If the operator specified a 10% fee at this step, they would automatically receive 10% of the Service Node rewards, and the remaining 90% would then be split equally between the operator and the other 3 contributors.
 
 The terminal will now display the minimum reserve the operator can contribute, and request input for the amount \(in Oxen\) you, as the operator, wish to contribute. Type your desired `<operator contribution>` and click return.
 
-Once you've set your desired stake amount, you'll be prompted to either reserve spots for individuals that have already agreed to stake into the service node, or leave the pool open for anyone to contribute.
+Once you've set your desired stake amount, you'll be prompted to either reserve spots for individuals that have already agreed to stake into the Service Node, or leave the pool open for anyone to contribute.
 
 #### **Option one: Reserved pool**
 
@@ -326,7 +348,7 @@ If the operator wishes to leave their pool complete open to contributions they s
 
 The daemon will display a summary of the information you've entered. This is your chance for a final check over to make sure the correct information has been entered. To confirm the information is correct, type `y` and press Enter.
 
-#### Step 5.2.2: Registering your shared service node
+#### Step 5.2.2: Registering your shared Service Node
 
 Regardless of which option \(closed or open\) you've gone with, the daemon will output a command which looks similar to:
 
@@ -346,9 +368,9 @@ Before you disconnect from your VPS, run the following command:
 oxend print_sn_key
 ```
 
-This will output a bunch of information about your service node, but there's one part we're interested in at this stage: the long string of random letters and numbers after the characters `SN:` . This string is your service node's public key, used to identify your service node on the list of registered and operational service nodes. Select and copy the public key \(do not copy any of the surrounding information\).
+This will output a bunch of information about your Service Node, but there's one part we're interested in at this stage: the long string of random letters and numbers after the characters `SN:` . This string is your Service Node's public key, used to identify your Service Node on the list of registered and operational Service Nodes. Select and copy the public key \(do not copy any of the surrounding information\).
 
-On your local machine, open your Oxen GUI or CLI wallet and make sure your wallet contains at least 15,000 $OXEN to meet the service node staking requirement. Once you're in your wallet and have checked the balance, run the command which was provided above when you ran the `prepare_registration` command. The wallet will prompt you to confirm your password, then the amount of $OXEN to stake. Confirm this by typing `y` and clicking enter.
+On your local machine, open your Oxen GUI or CLI wallet and make sure your wallet contains at least 15,000 $OXEN to meet the Service Node staking requirement. Once you're in your wallet and have checked the balance, run the command which was provided above when you ran the `prepare_registration` command. The wallet will prompt you to confirm your password, then the amount of $OXEN to stake. Confirm this by typing `y` and clicking enter.
 
 Once this command completes, your staking transaction will be sent to be included on the blockchain. It may take a few minutes for the transaction to be mined into a block; you can check the status using the following command:
 
@@ -358,31 +380,31 @@ oxend print_sn_status
 
 You can also check your node's status by looking for your `<Service Node Public Key>` in the "Service Nodes Awaiting Contributions" section on [the Oxen block explorer](https://oxen.observer/).
 
-Once the service node registration is received, you can send the `<Service Node Public Key>` to your contributors, along with the amount of $OXEN they are required to stake.
+Once the Service Node registration is received, you can send the `<Service Node Public Key>` to your contributors, along with the amount of $OXEN they are required to stake.
 
-At this point, you'll need to wait until all contributors have staked before the service node activates and becomes eligible to begin receiving rewards.
+At this point, you'll need to wait until all contributors have staked before the Service Node activates and becomes eligible to begin receiving rewards.
 
 #### **Staking to a shared node as a contributor**
 
 For a guide on staking to a shared Oxen Service Node as a contributor, [see here.](staking-to-shared-service-node.md)
 
-#### Step 6: Service node status check
+#### Step 6: Service Node status check
 
-After you've staked to your service node \(or after all contributors have staked, if you're running a shared node\), you'll need to check if your service node's public key is on the list of service nodes which are operational on the network. This will prove that your service node is running, recognised, and eligible to receive rewards.
+After you've staked to your Service Node \(or after all contributors have staked, if you're running a shared node\), you'll need to check if your Service Node's public key is on the list of Service Nodes which are operational on the network. This will prove that your Service Node is running, recognised, and eligible to receive rewards.
 
-Connect to the VPS where the service node is running and run the following command to retrieve your service node's public key:
+Connect to the VPS where the Service Node is running and run the following command to retrieve your Service Node's public key:
 
 ```text
 oxend print_sn_key
 ```
 
-This will output a long string of letters and numbers: your service node's public key. This public key is used to identify your service node on the list of registered and operational service nodes. Select and copy the public key.
+This will output a long string of letters and numbers: your Service Node's public key. This public key is used to identify your Service Node on the list of registered and operational Service Nodes. Select and copy the public key.
 
-You can now jump onto [oxen.observer](https://oxen.observer/), open the full list of active service nodes, and use Cmd+F/Ctrl+F to check if your service node's public key appears in the list.
+You can now jump onto [oxen.observer](https://oxen.observer/), open the full list of active Service Nodes, and use `Cmd+F`/`Ctrl+F` to check if your Service Node's public key appears in the list.
 
 #### Step 7: Unlocking your stake
 
-Service Nodes will continually receive block rewards indefinitely until a stake is unlocked or the service node becomes deregistered. To unlock your stake, simply open the Oxen GUI Wallet and navigate to the Service Nodes &gt; My Stakes tab. You can then click Unlock for any stake you wish to unlock:
+Service Nodes will continually receive block rewards indefinitely until a stake is unlocked or the Service Node becomes deregistered. To unlock your stake, simply open the Oxen GUI Wallet and navigate to the Service Nodes &gt; My Stakes tab. You can then click Unlock for any stake you wish to unlock:
 
 ![](../../.gitbook/assets/screen_shot_2021-01-24_at_18.46.34.png)
 
@@ -392,11 +414,11 @@ You can also unlock your stake by running the following command from the [Oxen C
 request_stake_unlock <service node key>
 ```
 
-The service node will expire 15 days \(10800 blocks\) after the unlock is requested, and your staked $OXEN will then become unlocked after expiry.
+The Service Node will expire 15 days \(10800 blocks\) after the unlock is requested, and your staked $OXEN will then become unlocked after expiry.
 
-For pooled nodes, any contributor can submit an unlock request. This will schedule the service node for expiration. All locked stakes in that Service Node will be unlocked 15 days \(10800 blocks\) after the unlock is requested. Once an unlock is requested, this process can not be undone or prolonged. Service node participants will continue receiving rewards until the node expires.
+For pooled nodes, any contributor can submit an unlock request. This will schedule the Service Node for expiration. All locked stakes in that Service Node will be unlocked 15 days \(10800 blocks\) after the unlock is requested. Once an unlock is requested, this process can not be undone or prolonged. Service Node participants will continue receiving rewards until the node expires.
 
-[Deregistrations](service-node-deregistration.md) can be issued at any point during the active lifecycle of a service node, including during the period after requesting an unlock. Deregistration removes your service node from the network, and your stake\(s\) become locked and unspendable for 30 days \(21600 blocks\) from the block in which the service node was deregistered.
+[Deregistrations](service-node-deregistration.md) can be issued at any point during the active lifecycle of a Service Node, including during the period after requesting an unlock. Deregistration removes your Service Node from the network, and your stake\(s\) become locked and unspendable for 30 days \(21600 blocks\) from the block in which the Service Node was deregistered.
 
 Receiving a deregistration **after** participant\(s\) have already requested an unlock overrides the 15-day \(10800-block\) stake unlock time, and sets the unlock time to 30 days \(21600 blocks\).
 
@@ -430,9 +452,9 @@ sudo apt install oxen-storage-server oxend lokinet-router
 
 ### Conclusion
 
-Well done! Your service node is configured, operational, and will now begin receiving rewards.
+Well done! Your Service Node is configured, operational, and will now begin receiving rewards.
 
-For tips and tricks to maintain your service node, check out [Service node tools and upkeep](service-node-tools-upkeep.md).
+For tips and tricks to maintain your Service Node, check out [Service Node tools and upkeep](service-node-tools-upkeep.md).
 
 Having trouble? Just [head to our Support section](../../support.md).
 
