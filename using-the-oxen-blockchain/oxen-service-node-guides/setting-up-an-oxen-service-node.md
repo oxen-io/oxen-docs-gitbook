@@ -1,34 +1,34 @@
-# 🏎 Express service node setup guide
+# 🏎 Express Service Node set-up guide
 
-Thinking of running an Oxen Service Node? Great! The guide below will help you configure a device with the necessary service node software packages, and stake $OXEN to register the node on the Oxen network.
+Thinking of running an Oxen Service Node? Great! The guide below will help you configure a device with the necessary Service Node software packages, and stake $OXEN to register the node on the Oxen network.
 
-> Note: This guide assumes some familiarity with the  command line and running a server. For a more detailed walkthrough, check out our [full service node setup guide](full-service-node-setup-guide.md).
+> Note: This guide assumes some familiarity with the command line and running a Linux server. For a more detailed walkthrough, check out our [full Service Node set-up guide](full-service-node-setup-guide.md).
 
 ### Operating system requirements
 
 One of:
 
-* Debian 10 \("buster"\)
+* Debian 10	  \("buster"\)
 * Debian unstable \("sid"\)
-* Ubuntu 18.04 \("bionic"\)
-* Ubuntu 20.04 \("focal"\)
-* Ubuntu 20.10 \("groovy"\)
+* Ubuntu 18.04	  \("bionic"\)
+* Ubuntu 20.04	  \("focal"\)
+* Ubuntu 20.10	  \("groovy"\)
 
-> Note: There are strict uptime requirements for service nodes \(see [Service Node deregistration](service-node-deregistration.md)\). It is **not recommended** to run a service node on a personal device or any device which will not be constantly online. We recommend running your service node on a VPS with a reliable provider.
+> Note: There are strict uptime requirements for Service Nodes \(see [Service Node deregistration](service-node-deregistration.md)\). It is **strongly discouraged** to run a Service Node on a device that will not be continuously on-line. We recommend running your Service Node on a VPS with a reputable provider.
 
 ### Firewall Configuration
 
-If you are using a firewall then ensure that the following ports are open/reachable
+If you are using a firewall then you should ensure that the following ports are open and reachable:
 
 * Port 22020 \(storage server to storage server\)
 * Port 22021 \(client to storage server\)
 * Port 22022 \(blockchain syncing\)
-* Port 22025 \(service node to service node\)
-* Port 1090 \(UDP, not TCP, unlike all of the above; lokinet router data\)
+* Port 22025 \(Service Node to Service Node\)
+* Port 1090  \(UDP, not TCP, unlike all of the above; Lokinet router data\)
 
 ### Ultra-express guide
 
-You can configure a new Oxen Service Node by running the following 4 commands on the Linux server you want to become a service node \(these commands will work on Ubuntu; modifications may be necessary on other Linux distributions\):
+Configuring a new Oxen Service Node is as simple as running the following 4 commands on the Linux server you want to become a node \(these commands will work on Debian and Ubuntu; modifications may be necessary for other Linux distributions\):
 
 ```text
 sudo curl -so /etc/apt/trusted.gpg.d/oxen.gpg https://deb.oxen.io/pub.gpg
@@ -42,15 +42,21 @@ sudo apt install oxen-service-node
 
 The services will run via systemd as `oxen-node.service`, `oxen-storage-server.service`, and `lokinet-router.service`.
 
-Once the blockchain has synced to the server \(which usually takes a few hours\), your service node will be [ready to be staked](setting-up-an-oxen-service-node.md#staking-your-service-node). You can use the `oxend status` command to check blockchain sync progress.
+Once the blockchain has synced to the server \(which can take several hours\), your Service Node will be [ready to be staked](setting-up-an-oxen-service-node.md#staking-your-service-node). You can use the `oxend status` command to check the sync progress.
+
+Alternatively, the blockchain can typically be downloaded in a fraction of the time required to sync it via the Service Node network, using the following command:
+
+```
+sudo oxend-download-lmdb https://public.loki.foundation/loki/data.mdb
+```
 
 ### Express guide
 
-#### Step 1: Initial repository setup
+#### Step 1: Initial repository set-up
 
 To add the Oxen repository, run the following commands.
 
-> Note: You only need to follow this step the first time you want to set up the repository; after you've done it once, the repository will automatically update whenever you fetch new system updates.
+> Note: You only need to follow this step once, to set up the repository. The repository will subsequently be automatically updated whenever you fetch new system updates.
 
 This first command installs the public key used to sign the Oxen Service Node packages:
 
@@ -62,13 +68,13 @@ The second command tells `apt` where to find the packages. **Note:** Replace `<D
 
 To find your `<DISTRO>` run the following command: `lsb_release -sc`
 
-Alternatively, your `<DISTRO>` can be found by using the following list:
+Alternatively, `<DISTRO>` can be found in the following list:
 
 * sid      \(Debian testing/unstable\)
 * buster   \(Debian 10\)
 * bionic   \(Ubuntu 18.04\)
-* focal     \(Ubuntu 20.04\)
-* groovy    \(Ubuntu 20.10\)
+* focal    \(Ubuntu 20.04\)
+* groovy   \(Ubuntu 20.10\)
 
 ```text
 echo "deb https://deb.oxen.io <DISTRO> main" | sudo tee /etc/apt/sources.list.d/oxen.list
@@ -82,21 +88,21 @@ sudo apt update
 
 #### Step 2: Oxen Service Node configuration
 
-To configure your service node, simply install the `oxen-service-node` package:
+To configure your Service Node, simply install the `oxen-service-node` package:
 
 ```text
 sudo apt install oxen-service-node
 ```
 
-This will detect your public IP \(or allow you to enter it yourself\) and automatically update the /etc/oxen/oxen.conf configuration file with the necessary additional settings to run a service node.
+This will detect your public IP \(or allow you to enter it yourself\) and automatically update the `/etc/oxen/oxen.conf` configuration file with the necessary additional settings to run a Service Node.
 
-Congratulations! Your service node is now ready to be registered and staked.
+Congratulations! Your Service Node is now ready to be registered and staked.
 
-### Staking your service node
+### Staking your Service Node
 
-#### Preparing your service node for registration
+#### Preparing your Service Node for registration
 
-To prepare your service node for registration, run the following command:
+To prepare your Service Node for registration, run the following command:
 
 ```text
 oxend prepare_registration
@@ -106,23 +112,29 @@ This will prompt you for some registration details, then output a registration c
 
 > Note: You can safely run this command multiple times if you change your mind about some of the registration questions before you submit the registration.
 
-#### Staking and registering your service node
+#### Staking and registering your Service Node
 
-To stake and register your service node, open the Oxen GUI wallet. Make sure your wallet has a balance of at least 15,000 $OXEN to meet the service node staking requirement \(less if you're configuring a [shared service node](full-service-node-setup-guide.md#5-2-setting-up-a-pooled-service-node)\). Navigate to the `Service Nodes`tab &gt; `Registration` section, and paste the output from the above command, then click **Register Service Node**. 
+To stake and register your Service Node, open the Oxen GUI wallet. Make sure your wallet has a balance of at least 15,000 $OXEN to meet the Service Node staking requirement \(less if you're configuring a [shared Service Node](full-service-node-setup-guide.md#5-2-setting-up-a-pooled-service-node)\). Navigate to the `Service Nodes`tab &gt; `Registration` section, and paste the output from the above command, then click **Register Service Node**. 
 
-Done! Your staking transaction will now be submitted to the network, and after a short delay, your service node will be registered and begin contributing to the network \(and receiving rewards!\).
+Done! Your staking transaction will now be submitted to the network. After a short delay, your Service Node will be registered and start contributing to the network \(and receiving rewards!\).
 
 #### Checking registration status
 
-You can easily check if your service node is registered on the network. First, connect to the VPS where the service node is running and run the following command to retrieve your service node's public key:
+You can easily check if your Service Node is registered on the network. First, connect to the VPS where the Service Node is running and run the following command to retrieve your Service Node's public key:
 
 ```text
 oxend status
 ```
 
-This will output a bunch of information about your service node, but there's one part we're interested in at this stage: The long string of random letters and numbers after the characters `SN:` . This string is your service node's public key, used to identify your service node on the list of registered and operational service nodes. Select and copy the public key \(do not copy any of the surrounding information\).
+This will output a bunch of information about your Service Node, but there's one part we're interested in at this stage: The long string of random letters and numbers after the characters `SN:` . This string is your Service Node's public key, used to identify your Service Node on the list of registered and operational Service Nodes. Select and copy the public key \(do not copy any of the surrounding information\).
 
-You can now jump onto [oxen.observer](https://oxen.observer/), open the full list of active service nodes, and use Cmd+F/Ctrl+F to check if your service node's public key appears in the list.
+You can now jump onto [oxen.observer](https://oxen.observer/), open the full list of active Service Nodes, and use `Cmd+F`/`Ctrl+F` to check if your Service Node's public key appears in the list.
+
+#### Monitoring
+
+We highly recommend setting up monitoring for your Service Node. This is as simple as calling on the services of our Telegram bot. Contact `@LokiSNBot` and type `/start` to get started.
+
+Another helpful tool is Konstantin Ullrich's [Oxen Service Node Operator app](https://play.google.com/store/apps/details?id=dev.konsti.oxen_service_node) for Android.
 
 #### Upgrading
 
@@ -140,13 +152,12 @@ sudo apt upgrade
 
 > Note that this will install both updated Oxen packages _and_ any available system updates \(this is generally a good thing!\)
 
-During the upgrade, all running instances of `oxend` will be restarted to switch them over to the updated `oxend`.
+During the upgrade, the running instance of `oxend` will be restarted to ensure that the updated `oxend` is now active.
 
-If for some reason you want to install _only_ updated Oxen package upgrades but not other system packages, then instead of `sudo apt upgrade` you can use:
+If, for some reason, you want to install _only_ updated Oxen package upgrades, but not other system packages, then instead of `sudo apt upgrade` you can use:
 
 ```text
 sudo apt install oxen-storage-server oxend lokinet-router
 ```
 
 Having trouble? Just [head to our Support section](../../support.md).
-
