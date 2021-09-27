@@ -31,6 +31,9 @@ These are the current basic requirements for running a Service Node as of Octobe
   * [Step 5: Service Node registration](full-service-node-setup-guide.md#step-5-service-node-registration)
   * [Step 6: Service Node status check ](full-service-node-setup-guide.md#step-6-service-node-status-check)
   * [Step 7: Unlocking your stake](full-service-node-setup-guide.md#step-7-unlocking-your-stake)
+* Keeping your binaries up to date
+* Monitoring
+* Conclusion
 
 ### Oxen Service Nodes in a nutshell
 
@@ -110,7 +113,7 @@ A terminal window will now appear, prompting you for your log-in details, userna
 
 > Note: After logging in for the first time, the VPS may prompt you for a new password for the root account. The terminal will require you to enter the new password twice before you can start running commands. If you aren't prompted for a new `root` password but want to change it anyway, type `sudo passwd`. Choose something very secure!
 
-#### **2.1: Hot tips for using the console on Windows**
+#### 2.1: Hot tips for using the console on Windows
 
 Consoles don't quite work like the rest of your computer. Here are some basic tips for navigating your way around the command line!
 
@@ -121,7 +124,7 @@ Consoles don't quite work like the rest of your computer. Here are some basic ti
 * You can move into a given directory by typing `cd <name>` or move back up one level by typing `cd ..`.
 * PuTTY allows you to easily duplicate or restart a session by right clicking the top of the window. Handy if you’re trying to do a few things at once.
 
-#### **2.2: Server preparation continued**
+#### 2.2: Server preparation continued
 
 Next, update your package lists _\(the lists that tell your server which software is available for install or upgrade\)_. The following command downloads package lists from their respective package repositories and "updates" them to get information on the newest versions of packages and their dependencies. It will do this for all repositories and PPAs.
 
@@ -149,7 +152,7 @@ If you are using a firewall then ensure that the following ports are open/reacha
 * Port 22021 \(client to storage server\)
 * Port 22022 \(blockchain syncing\)
 * Port 22025 \(Service Node to Service Node\)
-* Port 1090 \(UDP, not TCP, unlike all of the above; Lokinet router data\)
+* Port 1090  \(UDP, not TCP, unlike all of the above; Lokinet router data\)
 
 #### Step 3: Initial repository setup
 
@@ -172,8 +175,8 @@ Alternatively, your `<DISTRO>` can be found by using the following list:
 * sid      \(Debian testing/unstable\)
 * buster   \(Debian 10\)
 * bionic   \(Ubuntu 18.04\)
-* focal     \(Ubuntu 20.04\)
-* groovy    \(Ubuntu 20.10\)
+* focal    \(Ubuntu 20.04\)
+* groovy   \(Ubuntu 20.10\)
 
 ```text
 echo "deb https://deb.oxen.io <DISTRO> main" | sudo tee /etc/apt/sources.list.d/oxen.list
@@ -203,13 +206,13 @@ If you encounter an error during the syncing process due to a 15000 millisecond 
 sudo systemctl restart oxen-node.service
 ```
 
-Alternatively, the blockchain can be typically be downloaded in a fraction of the time that it takes to sync it via the network, using the following command:
+Alternatively, the blockchain can be typically be downloaded in a fraction of the time required to sync it via the network, using the following command:
 
 ```
 sudo oxend-download-lmdb https://public.loki.foundation/loki/data.mdb
 ```
 
-#### 4.1: Interacting with the running oxend
+#### 4.1: Interacting with the running `oxend`
 
 If you run the `oxend` command with an appended oxend command \(note that `sudo` is not required!\), the `oxend` command forwards this instruction to the running `oxend`. So, for example, to get the current `oxend` status you can run you would run:
 
@@ -248,13 +251,13 @@ This section of the guide is split into two parts:
 * If you are an individual staker and do not require any other contributors to run your Service Node, jump into the [Individual staking ](full-service-node-setup-guide.md#6-1-individual-staking)section.
 * If you want to run a pooled Service Node, jump into [Setting up a pooled Service Node](full-service-node-setup-guide.md#6-2-setting-up-a-pooled-service-node).
 
-#### **5.0.1: Retrieving your wallet address**
+#### 5.0.1: Retrieving your wallet address
 
 You'll need your wallet address to register your Service Node. Copy your primary address from the Oxen GUI wallet, or run the `address` command from within the Oxen CLI wallet, and copy the output.
 
 > Note: Do not use subaddresses for staking. Subaddresses are currently unsupported for staking in the Oxen wallet.
 
-#### **5.1: Individual staking**
+#### 5.1: Individual staking
 
 To run a Service Node as the sole contributor, you'll need:
 
@@ -291,15 +294,15 @@ If you're using the Oxen CLI wallet, simply paste the registration command direc
 
 Well done! Continue to [Step 6: Service Node check](full-service-node-setup-guide.md#step-6-service-node-status-check) to make sure your Service Node is running properly.
 
-#### **5.2: Setting up a pooled Service Node**
+#### 5.2: Setting up a pooled Service Node
 
-#### _**Minimum contribution rules**_
+#### _Minimum contribution rules_
 
 The Service Node staking requirement is fixed at 15,000 $OXEN. Service Nodes accept at most 4 contributions, meaning the minimum contribution to a Service Node is `<Remaining Staking Requirement> ➗ <Number of Remaining Contributors>`.
 
 When setting up reserved spots in a pooled Service Node, the node administrator \(you\) must ensure the reserved stake amounts each meet the minimum staking requirement; contributors then simply stake their reserved amounts.
 
-#### **5.2.1: Pool operator**
+#### 5.2.1: Pool operator
 
 The operator \(you\) is the individual who will be hosting the pool and running the server hosting the Service Node, thus incurring the operating expenses involved in running a node.
 
@@ -328,7 +331,7 @@ The terminal will now display the minimum reserve the operator can contribute, a
 
 Once you've set your desired stake amount, you'll be prompted to either reserve spots for individuals that have already agreed to stake into the Service Node, or leave the pool open for anyone to contribute.
 
-#### **Option one: Reserved pool**
+#### Option one: Reserved pool
 
 If you want to reserve spots for specific contributors, type `y` at this prompt and click return.
 
@@ -342,7 +345,7 @@ Next, you need to input the amount of Oxen each contributor will stake, and the 
 
 The daemon will display a summary of the information you've entered. This is your chance for a final check over to make sure the correct information has been entered. To confirm the information is correct, type `y` and press Enter.
 
-#### **Option two: Open pool**
+#### Option two: Open pool
 
 If the operator wishes to leave their pool complete open to contributions they should type `n` at the reservation prompt and type Enter. The terminal will prompt you to input your address. Once your address has been entered, the terminal will display the remaining portion that needs to be contributed by others. If you agree, click `y` and hit return.
 
@@ -384,7 +387,7 @@ Once the Service Node registration is received, you can send the `<Service Node 
 
 At this point, you'll need to wait until all contributors have staked before the Service Node activates and becomes eligible to begin receiving rewards.
 
-#### **Staking to a shared node as a contributor**
+#### Staking to a shared node as a contributor
 
 For a guide on staking to a shared Oxen Service Node as a contributor, [see here.](staking-to-shared-service-node.md)
 
@@ -426,7 +429,7 @@ Receiving a deregistration **after** participant\(s\) have already requested an 
 print_locked_stakes
 ```
 
-### **Updating your binaries**
+### Keeping your binaries up to date
 
 When a new release is available, upgrading is as simple as syncing with the repository:
 
@@ -440,7 +443,7 @@ Then installing updates using:
 sudo apt upgrade
 ```
 
-> Note that this will install both updated oxend packages _and_ any available system updates \(this is generally a good thing!\).
+> Note that this will install both updated `oxend` packages _and_ any available system updates \(this is generally a good thing!\).
 
 During the upgrade, all instances of `oxend` will be restarted if they are currently running in order to switch to the updated `oxend`.
 
@@ -450,6 +453,12 @@ If for some reason you want to install _only_ Oxen package upgrades but not othe
 sudo apt install oxen-storage-server oxend lokinet-router
 ```
 
+### Monitoring
+
+We highly recommend setting up monitoring for your Service Node. This is as simple as calling on the services of our Telegram bot. Contact `@LokiSNBot` and type `/start` to get started.
+
+Another helpful tool is Konstantin Ullrich's [Oxen Service Node Operator app](https://play.google.com/store/apps/details?id=dev.konsti.oxen_service_node) for Android.
+
 ### Conclusion
 
 Well done! Your Service Node is configured, operational, and will now begin receiving rewards.
@@ -457,4 +466,3 @@ Well done! Your Service Node is configured, operational, and will now begin rece
 For tips and tricks to maintain your Service Node, check out [Service Node tools and upkeep](service-node-tools-upkeep.md).
 
 Having trouble? Just [head to our Support section](../../support.md).
-
