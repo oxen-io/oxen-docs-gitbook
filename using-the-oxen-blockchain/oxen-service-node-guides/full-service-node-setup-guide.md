@@ -6,7 +6,7 @@ You can run the Oxen Service Node software on any device running a supported ope
 
 #### Running an Oxen Service Node: Requirements
 
-These are the current basic requirements for running a Service Node as of October 2021. They will almost certainly increase in the future as the technologies powered by the Oxen network grow in popularity, so keep an eye on the [Oxen blog](https://oxen.io/blog) and join either our [Telegram community](https://t.me/Oxen_Community) or [Discord server](https://discord.com/invite/67GXfD6) for all the latest updates.
+These are the current basic requirements for running a Service Node as of October 2021. They will almost certainly increase in the future as the technologies powered by the Oxen network grow in popularity, so keep an eye on the [Oxen blog](https://oxen.io/blog) and join either our [Telegram community](https://t.me/Oxen_Community) or [Session open group](http://116.203.70.33/oxen?public_key=a03c383cf63c3c4efe67acc52112a6dd734b3a946b9545f488aaa93da7991238) for all the latest updates.
 
 | Spec | Requirement |
 | :--- | :--- |
@@ -75,7 +75,7 @@ To be robust against disparate forms of attack, a distributed network must pursu
 
 > **You can make a significant contribution to decentralisation and provide greater value to the network by taking the above factors into account when choosing where to run your node. Take care, however, not to compromise on the core requirements of a node when trying to satisfy these goals.**
 
-If your server goes down while staked, your Service Node could be [evicted from the network](service-node-deregistration.md) and your funds locked for 30 days \(without receiving rewards\).
+If your server goes down while staked, your Service Node could be [deregistered from the network](service-node-deregistration.md) and your funds locked for 30 days \(without receiving rewards\).
 
 For this reason, we strongly recommend against running a Service Node from home. Most consumer internet connections have poor upstream bandwidth \(Service Nodes require a high speed connection for both uploading and downloading data\) and typically don't provide a static IP address, which is essential for a Service Node. Connection speed and support aside, transient power and network outages are a relatively common occurrence with consumer-grade connections and can easily disrupt home servers.
 
@@ -455,7 +455,7 @@ sudo apt install oxen-storage-server oxend lokinet-router
 
 ### Monitoring
 
-We highly recommend setting up monitoring for your Service Node. This is as simple as calling on the services of our Telegram bot. Contact `@LokiSNBot` and type `/start` to get started.
+We highly recommend setting up monitoring for your Service Node. This is as simple as calling on the services of our Telegram or Discord bot. Contact `@LokiSNBot` on Telegram or `OxenSNBot#5812` on Discord and type `/start` or `$help` respectively to get started.
 
 Another helpful tool is Konstantin Ullrich's [Oxen Service Node Operator app](https://play.google.com/store/apps/details?id=dev.konsti.oxen_service_node) for Android.
 
