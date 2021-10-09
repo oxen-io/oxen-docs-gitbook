@@ -148,5 +148,23 @@ If for some reason you want to install _only_ updated Oxen package upgrades but 
 sudo apt install oxen-storage-server oxend lokinet-router
 ```
 
+### Back-ups
+
+You should immediately make a back-up of your Service Node's secret key. This will allow you to recover from a disaster or to migrate your node to a different network, should that prove necessary in the future.
+
+The command to reveal the secret key is:
+
+```text
+oxen-sn-keys show /var/lib/oxen/key_ed25519
+```
+
+And the command to restore it is:
+
+```text
+oxen-sn-keys restore /var/lib/oxen/key_ed25519
+```
+
+Alternatively, you can use a tool like `scp` to copy the file off-host for safekeeping.
+
 Having trouble? Just [head to our Support section](../../support.md).
 
