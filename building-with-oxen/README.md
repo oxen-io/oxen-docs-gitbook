@@ -12,9 +12,9 @@ It can be a bit difficult to see how the pieces of the Oxen stack fit together t
 
 | Project | Description |
 | :--- | :--- |
-| \*\*\*\*[**Lokinet**](lokinet.md)\*\*\*\* | Cutting-edge onion router that can power anonymous voice and video calling. Can be leveraged to provide anonymous, censorship-resistant access to your web-based application or service. |
-| \*\*\*\*[**Session**](session.md)\*\*\*\* | Fully anonymous encrypted messenger with a focus on minimising metadata leakage to provide users with total privacy. Can be used as the basis for anonymous, encrypted notification and communication services for individuals or communities. |
-| \*\*\*\*[**Oxen**](oxen.md)\*\*\*\* | Decentralised blockchain network and instant anonymous payments platform. Can be used to accept payments and power decentralised web-based platforms and services. |
+| [**Lokinet**](lokinet.md) | Cutting-edge onion router that can power anonymous voice and video calling. Can be leveraged to provide anonymous, censorship-resistant access to your web-based application or service. |
+| [**Session**](session.md)| Fully anonymous encrypted messenger with a focus on minimising metadata leakage to provide users with total privacy. Can be used as the basis for anonymous, encrypted notification and communication services for individuals or communities. |
+| [**Oxen**](oxen.md)| Decentralised blockchain network and instant anonymous payments platform. Can be used to accept payments and power decentralised web-based platforms and services. |
 
 
 
