@@ -462,7 +462,7 @@ Another helpful tool is Konstantin Ullrich's [Oxen Service Node Operator app](ht
 
 ### Back-ups
 
-You should immediately make a back-up of your Service Node's secret key. This will allow you to recover from a disaster or to migrate your node to a different network, should that prove necessary in the future.
+You should immediately make a back-up of your Service Node's secret key. This will allow you to recover from a disaster or to migrate your node to a different network service provider, should that prove necessary in the future.
 
 The command to reveal the secret key is:
 
