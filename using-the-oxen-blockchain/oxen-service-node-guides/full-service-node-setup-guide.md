@@ -33,6 +33,7 @@ These are the current basic requirements for running a Service Node as of Octobe
   * [Step 7: Unlocking your stake](full-service-node-setup-guide.md#step-7-unlocking-your-stake)
 * Keeping your binaries up to date
 * Monitoring
+* Back-ups
 * Conclusion
 
 ### Oxen Service Nodes in a nutshell
@@ -458,6 +459,24 @@ sudo apt install oxen-storage-server oxend lokinet-router
 We highly recommend setting up monitoring for your Service Node. This is as simple as calling on the services of our Telegram or Discord bot. Contact `@LokiSNBot` on Telegram or `OxenSNBot#5812` on Discord and type `/start` or `$help` respectively to get started.
 
 Another helpful tool is Konstantin Ullrich's [Oxen Service Node Operator app](https://play.google.com/store/apps/details?id=dev.konsti.oxen_service_node) for Android.
+
+### Back-ups
+
+You should immediately make a back-up of your Service Node's secret key. This will allow you to recover from a disaster or to migrate your node to a different network service provider, should that prove necessary in the future.
+
+The command to reveal the secret key is:
+
+```text
+oxen-sn-keys show /var/lib/oxen/key_ed25519
+```
+
+And the command to restore it is:
+
+```text
+oxen-sn-keys restore /var/lib/oxen/key_ed25519
+```
+
+Alternatively, you can use a tool like `scp` to copy the file off-host for safekeeping.
 
 ### Conclusion
 

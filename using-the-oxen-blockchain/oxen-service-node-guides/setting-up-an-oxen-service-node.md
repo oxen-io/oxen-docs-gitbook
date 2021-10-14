@@ -160,4 +160,20 @@ If, for some reason, you want to install _only_ updated Oxen package upgrades, b
 sudo apt install oxen-storage-server oxend lokinet-router
 ```
 
+### Back-ups
+
+Backing up your Service Node's secret key. Will allow you to easily recover or migrate your Service Node
+
+Reveal SN secret key:
+
+```text
+oxen-sn-keys show /var/lib/oxen/key_ed25519
+```
+
+Restore from SN secret key:
+
+```text
+oxen-sn-keys restore /var/lib/oxen/key_ed25519
+```
+
 Having trouble? Just [head to our Support section](../../support.md).
