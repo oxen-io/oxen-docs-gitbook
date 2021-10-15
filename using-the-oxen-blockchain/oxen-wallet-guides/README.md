@@ -30,7 +30,7 @@ To download the latest release of the Oxen CLI Wallet, head to [our downloads pa
 | :--- | :--- |
 | [Restore CLI Wallet from keys](restore-cli-from-keys.md) | How to restore your wallet from spend and view keys. |
 | [Restore CLI Wallet from seed](restore-cli-from-seed.md) | How to restore your wallet using its 25-word mnemonic seed phrase. |
-| [CLI Wallet commands](../Wallets/CliWallet/WalletCommands.md) | A list and explanation of the different commands available within `oxen-wallet-cli`. |
+| [CLI Wallet commands](cli-wallet-commands.md) | A list and explanation of the different commands available within `oxen-wallet-cli`. |
 | [CLI Setup for macOS](cli-wallet-setup-macos.md) | How to configure `oxen-wallet-cli` for the first time on macOS. |
 | [Oxen Ledger Wallet setup: CLI Wallet](oxen-ledger-wallet-usage-cli-wallet.md) | How to setup the Oxen CLI Wallet on the Ledger Hardware Wallet. |
 | [Exporting a CSV of your wallet transaction history](exporting-a-csv-of-your-wallet-transaction-history.md) | How to export your Oxen wallet's transaction history as a CSV file.                                                   |
