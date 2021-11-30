@@ -167,20 +167,10 @@ This first command installs the public key used to sign the Oxen Service Node pa
 sudo curl -so /etc/apt/trusted.gpg.d/oxen.gpg https://deb.oxen.io/pub.gpg
 ```
 
-The second command tells `apt` where to find the packages. **Note:** Replace `<DISTRO>`with the appropriate value to match your operating system. If your VPS is running Ubuntu 20.04 as recommended for this guide, replace `<DISTRO>` with `focal`. 
-
-Otherwise, to check your `<DISTRO>` , run the following command: `lsb_release -sc`
-
-Alternatively, your `<DISTRO>` can be found by using the following list:
-
-* sid      \(Debian testing/unstable\)
-* buster   \(Debian 10\)
-* bionic   \(Ubuntu 18.04\)
-* focal    \(Ubuntu 20.04\)
-* groovy   \(Ubuntu 20.10\)
+The second command tells `apt` where to find the packages:
 
 ```text
-echo "deb https://deb.oxen.io <DISTRO> main" | sudo tee /etc/apt/sources.list.d/oxen.list
+echo "deb https://deb.oxen.io $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/oxen.list
 ```
 
 Then resync your package repositories with:
