@@ -1,6 +1,6 @@
 # GUI Wallet Quickstart
 
-This guide will walk you through using the GUI wallet for the first time. It assumes you already have the GUI wallet installed and running. If this is not the case you can download the wallet from HERE, also you may need to work with your antivirus software if it blocks the wallet and we walk you through that process HERE.
+This guide will walk you through using the GUI wallet for the first time. It assumes you already have the GUI wallet installed and running. If this is not the case you can download the wallet from [HERE](https://docs.oxen.io/downloads). You may need to work with your antivirus software if it blocks the wallet and we walk you through that process [HERE](https://docs.oxen.io/using-the-oxen-blockchain/oxen-wallet-guides/preparing-for-gui-wallet-setup-windows).
 
 ### **General Workflow of the GUI Wallet**
 
