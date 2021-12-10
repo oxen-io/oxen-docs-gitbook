@@ -20,11 +20,12 @@
 
 ## Using the Oxen Blockchain
 
-* [📍   Overview](using-the-oxen-blockchain/overview.md)
+* [📍 Overview](using-the-oxen-blockchain/overview.md)
 * [💰 Oxen Wallet & Guides](using-the-oxen-blockchain/oxen-wallet-guides/README.md)
-  * [Preparing for GUI Wallet setup \(Windows\)](using-the-oxen-blockchain/oxen-wallet-guides/preparing-for-gui-wallet-setup-windows.md)
+  * [GUI Wallet Quickstart](using-the-oxen-blockchain/oxen-wallet-guides/gui-wallet-quickstart.md)
+  * [Preparing for GUI Wallet setup (Windows)](using-the-oxen-blockchain/oxen-wallet-guides/preparing-for-gui-wallet-setup-windows.md)
   * [GUI Wallet setup](using-the-oxen-blockchain/oxen-wallet-guides/gui-wallet-setup.md)
-  * [CLI Wallet setup \(macOS\)](using-the-oxen-blockchain/oxen-wallet-guides/cli-wallet-setup-macos.md)
+  * [CLI Wallet setup (macOS)](using-the-oxen-blockchain/oxen-wallet-guides/cli-wallet-setup-macos.md)
   * [Oxen Ledger Wallet setup: CLI Wallet](using-the-oxen-blockchain/oxen-wallet-guides/oxen-ledger-wallet-usage-cli-wallet.md)
   * [CLI Wallet commands](using-the-oxen-blockchain/oxen-wallet-guides/cli-wallet-commands.md)
   * [Restoring an Oxen CLI Wallet from seed](using-the-oxen-blockchain/oxen-wallet-guides/restore-cli-from-seed.md)
@@ -37,7 +38,7 @@
   * [🛑 Service Node deregistration](using-the-oxen-blockchain/oxen-service-node-guides/service-node-deregistration.md)
   * [🛠 Service node tools and upkeep](using-the-oxen-blockchain/oxen-service-node-guides/service-node-tools-upkeep.md)
   * [📱 Mobile Wallet Staking Guide](using-the-oxen-blockchain/oxen-service-node-guides/mobile-wallet-staking-guide.md)
-* [🔡 Using Oxen Name System \(ONS\)](using-the-oxen-blockchain/using-oxen-name-system.md)
+* [🔡 Using Oxen Name System (ONS)](using-the-oxen-blockchain/using-oxen-name-system.md)
 * [🤓 Advanced](using-the-oxen-blockchain/advanced/README.md)
   * [Service node 📞 RPC calls](using-the-oxen-blockchain/advanced/service-node-rpc-calls.md)
   * [Daemon 📞 RPC calls](using-the-oxen-blockchain/advanced/daemon-rpc-calls.md)
@@ -53,8 +54,8 @@
   * [🗣 Open group setup](products-built-on-oxen/session/open-group-setup.md)
 * [🌐 Lokinet](products-built-on-oxen/lokinet/README.md)
   * [📚 Guides](products-built-on-oxen/lokinet/guides/README.md)
-    * [🐧 Installing on Linux \(GUI\)](products-built-on-oxen/lokinet/guides/linux-gui-install-guide.md)
-    * [🐧 Installing on Linux \(CLI\)](products-built-on-oxen/lokinet/guides/installing-on-linux-cli.md)
+    * [🐧 Installing on Linux (GUI)](products-built-on-oxen/lokinet/guides/linux-gui-install-guide.md)
+    * [🐧 Installing on Linux (CLI)](products-built-on-oxen/lokinet/guides/installing-on-linux-cli.md)
     * [🐧❗️Linux troubleshooting](products-built-on-oxen/lokinet/guides/linux-troubleshooting.md)
     * [🍎 Installing on macOS](products-built-on-oxen/lokinet/guides/macos-gui-install-guide.md)
     * [🖥Installing on Windows](products-built-on-oxen/lokinet/guides/windows-gui-install-guide.md)
@@ -63,4 +64,3 @@
   * [🧑‍💻 SNApps](products-built-on-oxen/lokinet/snapps/README.md)
     * [🚀 Accessing SNApps](products-built-on-oxen/lokinet/snapps/accessing-snapps.md)
     * [🖥 Hosting SNApps](products-built-on-oxen/lokinet/snapps/hosting-snapps.md)
-

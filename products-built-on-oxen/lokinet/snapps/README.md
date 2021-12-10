@@ -6,8 +6,8 @@ SNApp operators use the traditional server-client model, with the key difference
 
 ### SNApp 📚 Guides
 
-| **Guide** | **Description** |
-| :--- | :--- |
-| [Accessing SNApps](accessing-snapps.md) | How to access SNApps. |
-| [Hosting SNApps](hosting-snapps.md) | Hosting your own SNApp \(making a web service available over Lokinet\). |
-
+|                                         |                                                                       |
+| --------------------------------------- | --------------------------------------------------------------------- |
+| **Guide**                               | **Description**                                                       |
+| [Accessing SNApps](accessing-snapps.md) | How to access SNApps.                                                 |
+| [Hosting SNApps](hosting-snapps.md)     | Hosting your own SNApp (making a web service available over Lokinet). |
