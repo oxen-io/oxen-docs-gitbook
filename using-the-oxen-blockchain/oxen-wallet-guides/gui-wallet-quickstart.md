@@ -1,6 +1,6 @@
 # GUI Wallet Quickstart
 
-This guide will walk you through using the GUI wallet for the first time. It assumes you already have the GUI wallet installed and running. If this is not the case you can download the wallet from [HERE](https://docs.oxen.io/downloads). You may need to work with your antivirus software if it blocks the wallet and we walk you through that process [HERE](https://docs.oxen.io/using-the-oxen-blockchain/oxen-wallet-guides/preparing-for-gui-wallet-setup-windows).
+This guide will walk you through using the GUI wallet for the first time. It assumes you already have the GUI wallet installed and running. If this is not the case you can download the wallet from our [downloads page](../../downloads.md). Some overzealous antivirus software may take issue with the Oxen wallet, if this happens we walk you what to do about that [HERE](preparing-for-gui-wallet-setup-windows.md).
 
 ### **General Workflow of the GUI Wallet**
 
@@ -8,19 +8,19 @@ We will discuss in detail the process of creating & using the wallet later in th
 
 ![Wallet Selection Page](https://lh3.googleusercontent.com/vgJxx9t3c0R0z-gjRhY8k1BmvxAhdmtG1ebjcvCAYDXJcvueCtjlOkejzyzoiLJwF9GfAGq9tYAiGSIgCqRh7o3n\_BDpW4lpSzmtcMWDc3qQn3-IbzmpLjQsyytKFi-84TjZH880)
 
-In this above image you can see 5 different wallets. Each wallet has a different address and holds a different amount of Oxen. Clicking into a wallet will ask you for a password which is used to decrypt the wallet file and brings you to the following page:
+In this above image you can see 5 different wallets. Each wallet has a different address and holds a different amount of Oxen. Clicking on a wallet will ask you for a password which is used to decrypt the wallet file and brings you to the following page:
 
 ![Wallet Main Page](../../.gitbook/assets/2nd.png)
 
-This is the main wallet page and it has quite a lot of information to process.
+This is the main wallet page which contains all of the basic information about the wallet.
 
-**1.** The “Total Balance” of the wallet is in big numbers at the top center of the screen (16,475.448 Oxen).&#x20;
+**1.** The “Total Balance” of the wallet is shown just above the centre of the screen (16,475.448 Oxen). It also lists the 'unlocked' balance directly below. If you have staked to an Oxen service node, the amount of Oxen you have staked will be unavailable to send.&#x20;
 
 **2.** A list of sent and received transactions can be seen at the bottom. (Showing where you have previously received funds, and also previously spent funds)
 
 **3.** The long alphanumeric text in the center is the wallet address (T6SYH3Lh…). In this image the wallet operates on the Oxen testnet (A network built to practice without risking real funds), this can be identified by the address beginning with the letter “T” and the address being 98 characters long. When interacting with the Oxen mainnet (The real network) the wallet address will begin with the letter “L” and will be 95 characters long.
 
-**4.** The wallet name at the top left. This name is decided by you and matches with the names on the first page. You choose this name to assist with your own filing system. For example you may name the wallets after fruit and in alphabetical order (1st wallet created = Apple, 2nd wallet created = Banana etc)
+**4.** The wallet name at the top left. This name is decided by you and matches with the names on the first page. This name is simply to help you identify which wallet you are using, if you have multiple wallets.
 
 **5.** Action Buttons for wallet usage. These include sending funds, receiving funds, interacting with service nodes and purchasing and managing Oxen Name Service records (ONS Records). We will go into sending and receiving in detail later.
 
@@ -45,19 +45,21 @@ To get started quickly and easily the following settings are recommended:
 * **Remote Node Port:** 22023
 
 **Additional Network Configuration Details**\
-The three radio buttons at the top of this page determine how the wallet connects to your daemon (Which manages the blockchain). Remote means there is an external daemon that the wallet communicates with. Local Daemon means the wallet will spin up a subprocess for the daemon and interact with it directly.
+The three radio buttons at the top of this page determine how the wallet connects to your daemon (which manages the blockchain). Remote means there is an external daemon that the wallet communicates with. Local Daemon means the wallet will spin up a subprocess for the daemon and interact with it directly.
 
 Running a local daemon will require syncing the Oxen blockchain before you are able to interact with the wallet, which will take time. So for an immediate start, connecting to a remote daemon that the Oxen Foundation is running is the easiest option.
 
-The downside to using a third party for your remote daemon is that it is privacy reducing (That third party will see your requests to the network). So for ultimate security one should run their own daemon, but it is a more advanced topic. If you wish to follow this route it is recommended you run the oxend daemon software separately, wait for the blockchain to sync, and from the wallet select “Remote Daemon Only” and point it at your own local daemon (Remote Node Host: Localhost). This means you do not need to keep the wallet open while syncing and have greater control over the daemon rather than letting the wallet manage the daemon. If this does not make sense do not stress, choose the basic network settings above and continue.
+The downside to using a third party for your remote daemon is that it is privacy reducing (That third party will see your requests to the network). So for ultimate security one should run their own daemon, but as that is a more advanced topic we won't get into it here. If you wish to follow this route it is recommended you run the oxend daemon software separately, wait for the blockchain to sync, and from the wallet select “Remote Daemon Only” and point it at your own local daemon (Remote Node Host: Localhost). This means you do not need to keep the wallet open while syncing and have greater control over the daemon rather than letting the wallet manage the daemon. If this sounds like mumbo jumbo to you, don't stress, just choose the basic network settings above and continue.
 
 The next page will present 3 options to decide how to create/load/import/open a wallet into the application. If you have not used the GUI wallet before will want to choose “Create new wallet”
+
+### Creating a new wallet
 
 ![New Wallet Page](https://lh5.googleusercontent.com/mQ-8TpCzUGsiTtU9fwe5AE199XbbtRmWdIa3teJS8747UPqvTl5CpB7IT4ETP\_XHy1Ycnr9Q3gRYtOb3NE2hF26lyDwIO9A9l2xzsYfU4MBQPUJx\_XboWZHud4lBPgZn89K8uxCe)
 
 When creating a new wallet you will need to choose the following:
 
-1. **Wallet Name:** represents the name of the datafile and is used throughout the application to identify the wallet. Choose something that is memorable because your wallet list becomes unwieldy rather quickly (Naming Wallet1, Wallet2, Wallet3 is not recommended).
+1. **Wallet Name:** represents the name of the datafile and is used throughout the application to identify the wallet. Choose something that is memorable because your wallet list can become unwieldy rather quickly when creating multiple wallets. For this reason using names such as: Wallet1, Wallet2, Wallet3 etc are not recommended.
 2. **Seed language:** The most important part of the wallet creation process is the creation of your “Seed Phrase”. This is shown in the next step. Select your native language here to make the recording of your seed phrase easier.
 3. **Password:** Your wallet file will be encrypted by this password to prevent malicious persons from accessing your wallet if they get control of the wallet file. Please note that you can still access your wallet if you forget the password but still have the seed phrase. A password is not necessary (resulting in an unencrypted wallet save file) but it is highly recommended.
 
@@ -73,7 +75,7 @@ On this page you are shown the details of your newly created wallet. At the top 
 
 **Please note that these 25 seed words are by far the most important part of the wallet creation process. Write these somewhere safe! Don't lose them. If a malicious person gets access to these words they will be able to spend your funds. The Oxen team will NEVER ask you for your seed phrase and a person requesting them from you is likely a scammer trying to steal your funds.**
 
-You won’t need to regularly use these seed words. But if/when you need to recover your wallet or move the wallet to a different computer then everything can be rebuilt using these 25 words and your funds are safe.
+You won’t need to regularly use these seed words. But if/when you need to recover your wallet or move the wallet to a different computer then everything can be rebuilt using these 25 words.
 
 Click “OPEN WALLET” and you will be brought to the main wallet page discussed earlier.
 
@@ -93,7 +95,7 @@ Down the bottom of the application there is a status bar. This should be green a
 
 ![Wallet is ready](https://lh4.googleusercontent.com/jSK1S9WCi1ywfgLrW3B80iXJO2qCuGCskT5k5ktHtLmdNBkUb6kbL2nlGiuLazjicY1c4cRTDnaPQlh9ZRulww1hYhX7Zx61Ami7S1qrL61Ns9yVtGdN41qT\_8Z5TOkYe9znmp82)
 
-_Remote: 946353_ refers to the height of the blockchain on the remote daemon. _Wallet: 946353 / 946353 (100.0%)_ refers to how much of the blockchain the wallet has processed when looking for your transactions. The wallet has to go through all transactions on the blockchain when searching for your transactions, so this process does take some time. If the wallet is still syncing the status bar will look like this:
+_Remote: 946353_ refers to the height of the blockchain on the remote daemon. _Wallet: 946353 / 946353 (100.0%)_ refers to how much of the blockchain the wallet has processed when looking for your transactions. The wallet has to scan all transactions on the blockchain when searching for your transactions, so this process does take some time. If the wallet is still syncing the status bar will look like this:
 
 ![Wallet is still syncing](https://lh5.googleusercontent.com/qDhxF2tneqM8t8SQRV85l2S\_cRkFmIytxjvMqrtdixuRJYc0lAygeG6VZJdktVKPRLTRHHoApAYTrp3v3FUqjE-e6yF1fEwbDLAJdmKaEwUOb5u7ZVRTO9JhuTojdW546ZW2Rug9)
 
@@ -112,6 +114,7 @@ From here you will be greeted with the page to enter in your recipients address 
 1. **Amount:** This is the amount of Oxen you wish to transfer, 1 means 1 full oxen transferred
 2. **Priority:** Blink is our instant transfer technology which is selected by default. Selecting slow will mean the recipient has to wait until the transfer has been confirmed in a block before seeing the payment. Choosing Blink is recommended wherever possible.
 3. **Address:** The address of the recipient.
+4. **Notes:** This is an optional field for noting details about the transaction such as: why are you sending it, who are you sending it to etc. This is completely optional.
 
 ![Send Funds Page](https://lh6.googleusercontent.com/ua4bE0pMAdfFyLfFEroFdrU6f6ZqxCohZ1FdahhbLdJuLZrZQiO82DVOempIboIDGa\_S4os19LCF1JYRhwL86aWYV8\_sOAAoXCz7k4Vst7nUejBZmoF9x6GJEG2vuxkZcMtlIR7K)
 
