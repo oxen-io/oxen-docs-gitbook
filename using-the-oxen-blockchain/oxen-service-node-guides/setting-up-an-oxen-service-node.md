@@ -162,12 +162,17 @@ sudo apt install oxen-storage-server oxend lokinet-router
 
 ### Back-ups
 
-Backing up your Service Node's secret key. Will allow you to easily recover or migrate your Service Node
-
-Reveal SN secret key:
+To show backup information for your Service Node's secret key (for future recovery/migration):
 
 ```
 oxen-sn-keys show /var/lib/oxen/key_ed25519
+```
+
+For service nodes originally installed before 8.x there will be a /var/lib/oxen/key file that must
+also be backed up (if this file does not exist then you do not need it):
+
+```
+oxen-sn-keys show /var/lib/oxen/key
 ```
 
 Restore from SN secret key:
@@ -175,5 +180,13 @@ Restore from SN secret key:
 ```
 oxen-sn-keys restore /var/lib/oxen/key_ed25519
 ```
+
+and, *only* when restoring from an older installation with an additional `.../key` file:
+
+```
+oxen-sn-keys restore-legacy /var/lib/oxen/key
+```
+
+### Support
 
 Having trouble? Just [head to our Support section](../../support.md).
