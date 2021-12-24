@@ -11,7 +11,7 @@ These are the current basic requirements for running a Service Node as of Octobe
 | Spec                              | Requirement                                                                                                                             |
 | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | Latest Oxen Service Node software | Latest Service Node `.deb` packages (installed via the steps below) or latest [binaries](https://github.com/oxen-io/loki-core/releases) |
-| Server operating system           | Ubuntu 18.04+ or Debian 10+                                                                                                             |
+| Server operating system           | Ubuntu 18.04+ (latest LTS recommended) or Debian 10+ (latest stable recommended)                                                        |
 | Storage                           | 40GB or more                                                                                                                            |
 | RAM                               | 2-4GB (2GB absolute minimum)                                                                                                            |
 | Connectivity                      | 100Mb or faster                                                                                                                         |
@@ -109,7 +109,7 @@ Typically, the simplest and cheapest way to host a server such as an Oxen Servic
 
 In any case, do not just settle on the first provider you encounter. No two are alike. Do your own research and decide on a provider that seems professional, reputable and fits your budget. The better ones will utilise [KVM](https://www.linux-kvm.org/page/Main\_Page) as the [virtualisation technology](https://www.tradingfxvps.com/kvm-vs-vmware-vs-openvz-vs-xen/) (as opposed to OpenVZ, for example, which is an incomplete virtualisation that allows VPS capacity to be oversold), allow you to monitor your VPS' resource consumption, perform a seamless upgrade to a more powerful server at a later date, remotely reboot the host if it becomes unresponsive, and even recover the system using out-of-band access if, for example, a bad configuration change results in lost network access.
 
-When selecting your VPS’ operating system, please choose Ubuntu 20.04 or Debian 10 if you want to be able to follow the steps below verbatim. If you feel more confident and/or wish to run your server on another Linux distribution, the commands in this guide will still apply, but may need to be modified to suit your chosen operating system. In most cases, beginners and experts alike will be best served by sticking closely to this guide.
+When selecting your VPS’ operating system, please choose the latest Ubuntu LTS release or latest Debian stable release (currently 20.04 and 11, respectively) if you want to be able to follow the steps below verbatim. If you feel more confident and/or wish to run your server on another Linux distribution, the commands in this guide will still apply, but may need to be modified to suit your chosen operating system. In most cases, beginners and experts alike will be best served by sticking closely to this guide.
 
 #### Step 2: Preparing your server
 
@@ -182,11 +182,12 @@ Otherwise, to check your `<DISTRO>` , run the following command: `lsb_release -s
 
 Alternatively, your `<DISTRO>` can be found by using the following list:
 
-* sid (Debian testing/unstable)
+* bullseye (Debian 11)
 * buster (Debian 10)
-* bionic (Ubuntu 18.04)
 * focal (Ubuntu 20.04)
-* groovy (Ubuntu 20.10)
+* bionic (Ubuntu 18.04)
+* sid (Debian testing/unstable) (not recommended for a production server)
+* impish (Ubuntu 21.10) (not recommended for a production server)
 
 ```
 echo "deb https://deb.oxen.io <DISTRO> main" | sudo tee /etc/apt/sources.list.d/oxen.list
