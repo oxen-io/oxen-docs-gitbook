@@ -487,6 +487,20 @@ oxen-sn-keys restore /var/lib/oxen/key_ed25519
 
 Alternatively, you can use a tool like `scp` to copy the file off-host for safekeeping.
 
+> Note that for older service nodes (installed before Oxen 8.x) the server will have *two* keys: the above, plus a legacy `/var/lib/oxen/key`.  You must additionally back up and restore this legacy key to restore such a service node, using:
+>
+> ```
+> oxen-sn-keys show /var/lib/oxen/key
+> ```
+>
+> to show the key, and if you need to restore it (note the "legacy" added to the command):
+>
+> ```
+> oxen-sn-keys restore-legacy /var/lib/oxen/key
+> ```
+>
+> If you are planning on unlocking and re-registering an older node with two keys, it is recommended to remove the legacy `/var/lib/oxen/key` *after* the registration expires, restart the oxen/lokinet/storage server services, and then register using the new, single key: this will leave you with just one key to back up and restore.  IMPORTANT: Never remove any keys on an active, registered service node!
+
 ### Conclusion
 
 Well done! Your Service Node is configured, operational, and will now begin receiving rewards.
