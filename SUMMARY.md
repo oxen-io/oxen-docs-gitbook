@@ -25,6 +25,7 @@
   * [Preparing for GUI Wallet setup (Windows)](using-the-oxen-blockchain/oxen-wallet-guides/preparing-for-gui-wallet-setup-windows.md)
   * [GUI Wallet setup](using-the-oxen-blockchain/oxen-wallet-guides/gui-wallet-setup.md)
   * [GUI Wallet Quickstart](using-the-oxen-blockchain/oxen-wallet-guides/gui-wallet-quickstart.md)
+  * [Oxen Mobile Wallet Quickstart](using-the-oxen-blockchain/oxen-wallet-guides/oxen-mobile-wallet-quickstart.md)
   * [Exporting a CSV of your wallet transaction history](using-the-oxen-blockchain/oxen-wallet-guides/exporting-a-csv-of-your-wallet-transaction-history.md)
   * [CLI Wallet setup (macOS)](using-the-oxen-blockchain/oxen-wallet-guides/cli-wallet-setup-macos.md)
   * [Oxen Ledger Wallet setup: CLI Wallet](using-the-oxen-blockchain/oxen-wallet-guides/oxen-ledger-wallet-usage-cli-wallet.md)
