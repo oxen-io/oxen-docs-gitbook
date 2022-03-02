@@ -1,110 +1,111 @@
-# 🗣 Open group setup
+# 🗣 Session Open Group Server Setup
 
-Open groups are Session group chat servers that can host many thousands of chat participants. This guide explains how to set up a Session open group.
+Session open groups servers (SOGS) are group chat servers that can host thousands of chat participants. This guide explains how to set up a Session open group server.
 
-> Note: Open groups provide transit encryption, but open group messages are not encrypted while stored on the open group server, making **closed groups** \(which can be created within Session itself\) a better solution for high-security communications with groups of 100 or less people.
+> Note: Session open group servers provide transit encryption, but open group messages are not encrypted while stored on the server; **closed groups** (which can be created within Session itself) are a better solution for high-security communications with groups of 100 or less people.
 
-Open groups are based on an express REST API for serving persistent-history public chat rooms. Open groups are unlimited in size, as they are hosted by your own server. Please be aware these are **public** groups, and highly sensitive private information **should not be shared in this group format.**
-
-Open group servers are run by 2 daemons: the platform server, providing an ADN standard REST API, and another daemon with Session-specific behaviors \(crypto-key registration and enhanced moderation functions\).
+Open groups are hosted using [PySOGS](https://github.com/oxen-io/session-pysogs). Written in Python, PySOGS is the reference implementation of a Session open group server. PySOGS is used to run the official Session open groups, and is the officially supported open group server.&#x20;
 
 ## Installation
 
-**Note:** .debs for the Session Open Group server are currently only available for Ubuntu 20.04.  
-For other operating systems, you can either [build from source](https://github.com/nielsandriesse/session-open-group-server/blob/main/BUILDING.md) or use [Docker](https://github.com/nielsandriesse/session-open-group-server/blob/main/DOCKER.md).
+**Note:** .debs for the Session Open Group server are currently available for Ubuntu 20.04 and newer, and for Debian 10 and newer. For other operating systems, you can [build from source](https://github.com/oxen-io/session-pysogs/blob/dev/install-uwsgi.md)&#x20;
 
-\*\*\*\*[**Video Guide**](https://www.youtube.com/watch?v=D83gKXn6iTI)\*\*\*\*
+### 1. Find a suitable server to run SOGS&#x20;
 
-### 1. Pull in the Session open group server executable
+Typically, the simplest and cheapest way to host a server is by leasing a Virtual Private Server (VPS). There are hundreds of VPS providers to choose from, some popular options are: Vultr, Hetzner, DigitalOcean, Linode, Amazon Lightsail, etc.
 
-Pull in the Session Open Group Server executable by running the following commands
+You can run a SOGS from home, but consider most consumer internet connections have poor upstream bandwidth, typically don't provide a static IP address, and transient power and network outages are a relatively common. These factors can affect the stability of your SOGS and the ability for users to chat in your group.
 
-```text
+Resource requirements are highly dependent on how many users you plan to support in your open groups and how frequent usage is, however, a good starting point would be:&#x20;
+
+**1 Virtual core, 512 MB of RAM, 20GB HDD space**
+
+Once you have signed up for a provider you should receive a static IP address, you will need to SSH into your server, you can find instructions on how to do this online.&#x20;
+
+### 2. Add Oxen apt repository&#x20;
+
+Add the Oxen apt repository by running the following commands
+
+```
 sudo curl -so /etc/apt/trusted.gpg.d/oxen.gpg https://deb.oxen.io/pub.gpg
 echo "deb https://deb.oxen.io $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/oxen.list
 sudo apt update
-sudo apt install session-open-group-server
-sudo chown _loki /var/lib/session-open-group-server -R
 ```
 
-### 2. Add a room
+### 3. Install &#x20;
 
-Add a room of your choice with the following command:
+You have a choice to install either the sogs-standalone package or the sogs-proxied package.&#x20;
 
-```text
-session-open-group-server --add-room {room_id} {room_name}
+#### sogs-standalone
+
+This is the simple SOGS package for most setups. It installs a SOGS that listens on a public IP/port for HTTP connections. It does not support HTTPS connections (but since all messages to/from SOGS are separately encrypted, HTTPS is not necessary nor recommended).
+
+#### sogs-proxied
+
+This package provides a more advanced SOGS configuration where SOGS itself will listen on an internal port and expects to have requests proxied to it from an ngnix or apache2 front-end server that listens on the public IP/port. The package will install basic site configuration files for either nginx or apache2, but extra configuration may be necessary.
+
+This package is required if you want your SOGS to be reached over HTTPS: the HTTPS handling is configured on the front-end server (i.e. in nginx or apache) using a tool such as `certbot`. (This package does not auto-configure such HTTPS certificates, but there are many online help pages on setting up such HTTPS support for a front-end web server).
+
+If you don't know what any of this means then stick with the `sogs-standalone` package.
+
+```
+sudo apt install sogs-standalone
 ```
 
- `room_id` must be lowercase and consist of only letters, numbers and underscores.
+OR
 
-For **example:** 
-
-```text
-session-open-group-server --add-room fish FishingAustralia
+```
+sudo apt install sogs-proxied
 ```
 
-### 3. Print your server's URL
+If installing the standalone version you will see this prompt, asking you to enter a URL or IP address, if you have not setup DNS to point towards the IP address of your VPS then you should enter your VPS Public IP address, which can usually be found on your VPS provider's website. &#x20;
 
-Print the URL users can use to join rooms on your open group server by running:
+![](<../../.gitbook/assets/image (2).png>)
 
-```text
-session-open-group-server --print-url
+### 4. Add a room
+
+Once finished with installation, you will want to add a room, to add a room run:
+
+```
+sogs --add-room TOKEN --name "NAME" --description "DESCRIPTION"
 ```
 
-This will output a result similar to:
+Replace `TOKEN` with the address to use in the room URL (which must consist of letters, numbers, underscores, or dashes), replace `NAME` with the room name to display in Session and optionally replace `DESCRIPTION` with a short description of the topic of the room.
 
-```text
-http://[host_name_or_ip]/[room_id]?public_key=2054fa3271f27ec9e55492c85d022f9582cb4aa2f457e4b885147fb913b9c131
+```
+sogs --add-room fish --name "Fishing" --description "Australian fisheries chat"
 ```
 
-You will need to replace `[host_name_or_ip]` with the IP address of your VPS or the domain mapping to your IP address, and `[room_id]` with the ID of one of the rooms you created earlier.
+As an example, setting up a room for discussion of Australian fisheries&#x20;
+
+### 5. Make yourself an administrator
+
+Make yourself a global administrator for all rooms hosted on your SOGS by running the following:
+
+```
+sogs --rooms + --add-moderators SESSIONID --admin --visible
+```
+
+Replace `SESSIONID` with the Session ID you want to be an administrator
 
 For **example**:
 
-```text
-http://116.203.217.101/fish?public_key=2054fa3271f27ec9e55492c85d022f9582cb4aa2f457e4b885147fb913b9c131
+```
+sogs --rooms + --add-moderators 05d871fc80ca007eed9b2f4df72853e2a2d5465a92fcb1889fb5c84aa2833b3b40 --admin --visible
 ```
 
-This URL can then be used to join the group inside the Session app.
+### 6. Join your SOGS
 
-### 4. Make yourself a moderator
+Once setup, you should be able to navigate to your VPS's IP address in a web browser, for example [http://116.203.70.33/](http://116.203.70.33)&#x20;
 
-Make yourself a moderator using the following command:
+Here you should see a list of your rooms, clicking on a room will display a QR code and the link required to join the room, this link can be copied and pasted into a Session client to join a group.
 
-```text
-session-open-group-server --add-moderator {your_session_id} {room_id}
-```
-
-For **example**:
-
-```text
-session-open-group-server --add-moderator 05d871fc80ca007eed9b2f4df72853e2a2d5465a92fcb1889fb5c84aa2833b3b40 fish
-```
-
-### 5. Add an image for your new room \(Optional\)
-
-* Add your room on Session desktop using the URL printed earlier
-* Use Session desktop to upload a picture for your room
-
-Or
-
-* Upload a JPG to your VPS
-* Put it in `/var/lib/session-open-group-server/files`
-* Rename it to `{room_id}` \(no file extension\)
-
-### Customization
-
-The default options the Session open group server runs with should be fine in most cases, but if you like you can run on a custom port or host, specify the path to the X25519 key pair you want to use, etc. To do this, simply add [the right arguments](https://github.com/nielsandriesse/session-open-group-server/blob/main/BUILDING.md#step-3-run-it) to the `ExecStart` line in your systemd service file \(normally located under `/etc/systemd/system`\) and restart your service using:
-
-```text
-systemctl restart session-open-group-server.service
-```
+![](<../../.gitbook/assets/image (3).png>)
 
 ### Getting help
 
-If something in this guide doesn't make sense, or if you’re running into issues that you can’t identify on your own, the first place to go would be the Oxen [Telegram Group](https://t.me/Oxen_Community). Alternatively, you can find help on our other communication channels: [Twitter](https://twitter.com/Oxen_io), or [Reddit](https://reddit.com/oxen_io).
+If something in this guide doesn't make sense, or if you’re running into issues that you can’t identify on your own, the first place to go would be the [Session open group](http://116.203.70.33/session?public\_key=a03c383cf63c3c4efe67acc52112a6dd734b3a946b9545f488aaa93da7991238) inside Session. Alternatively, you can find help on our other communication channels: [Twitter](https://twitter.com/Oxen\_io), or [Reddit](https://reddit.com/oxen\_io).
 
 ### Reporting bugs
 
-If you've sought help through our communication channels but have not arrived at a solution for your issue, we recommend opening an issue ticket on the [Session public server](https://github.com/oxen-io/session-open-group-server-legacy/issues) GitHub repository.
-
+If you've sought help through our communication channels but have not arrived at a solution for your issue, we recommend opening an issue ticket on the [Session open group server](https://github.com/oxen-io/session-pysogs) GitHub repository.

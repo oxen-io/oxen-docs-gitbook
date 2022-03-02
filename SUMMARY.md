@@ -52,7 +52,7 @@
   * [🏗 Network infrastructure](products-built-on-oxen/session/network-infrastructure.md)
   * [📨 Message routing](products-built-on-oxen/session/message-routing.md)
   * [📎 Attachments](products-built-on-oxen/session/attachments.md)
-  * [🗣 Open group setup](products-built-on-oxen/session/open-group-setup.md)
+  * [🗣 Session Open Group Server Setup](products-built-on-oxen/session/open-group-setup.md)
 * [🌐 Lokinet](products-built-on-oxen/lokinet/README.md)
   * [📚 Guides](products-built-on-oxen/lokinet/guides/README.md)
     * [🐧 Installing on Linux (GUI)](products-built-on-oxen/lokinet/guides/linux-gui-install-guide.md)
