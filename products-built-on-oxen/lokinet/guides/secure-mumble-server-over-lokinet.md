@@ -48,11 +48,11 @@ Success? Congrats, you’re ready to move on to the next step:
 
 To install Lokinet, we need to add the Lokinet repository. Run the following command to install the public key used by the Lokinet dev team to sign Lokinet binaries:
 
-`curl -s https://deb.imaginary.stream/public.gpg | sudo apt-key add -`
+`sudo curl -so /etc/apt/trusted.gpg.d/oxen.gpg https://deb.oxen.io/pub.gpg`
 
 Then run the following command to tell `apt` where to find the Lokinet packages:
 
-`echo "deb https://deb.imaginary.stream $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/imaginary.stream.list`  
+`echo "deb https://deb.oxen.io $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/oxen.list`
 
 
 Next, update your repository package lists again with:

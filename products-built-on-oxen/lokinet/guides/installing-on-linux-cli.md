@@ -33,13 +33,13 @@ You only need to do this step the first time you want to set up the Lokinet repo
 This first command installs the public key used to sign official Lokinet binaries.
 
 ```text
-curl -s https://deb.imaginary.stream/public.gpg | sudo apt-key add -
+sudo curl -so /etc/apt/trusted.gpg.d/oxen.gpg https://deb.oxen.io/pub.gpg
 ```
 
 The next command tells `apt` where to find the packages:
 
 ```text
-echo "deb https://deb.imaginary.stream $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/imaginary.stream.list
+echo "deb https://deb.oxen.io $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/oxen.list
 ```
 
 > Note: if you're running Linux Mint and get an error with this command, check out [Troubleshooting](installing-on-linux-cli.md#linux-mint-does-not-work-with-lsb-release).
@@ -105,6 +105,6 @@ sudo systemctl restart lokinet
 It has been reported that Linux Mint users may need to use the following command instead of the second command in [2. Installation](installing-on-linux-cli.md#2-installation):
 
 ```text
-echo "deb https://deb.imaginary.stream bionic main" | sudo tee /etc/apt/sources.list.d/imaginary.stream.list
+echo "deb https://deb.oxen.io focal main" | sudo tee /etc/apt/sources.list.d/oxen.list
 ```
 
