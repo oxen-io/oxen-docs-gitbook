@@ -1,6 +1,6 @@
 # Oxen Mobile Wallet Quickstart
 
-This guide will walk you through using the Oxen Mobile wallet for the first time. This is done on an Android phone but the usage of the Mobile wallet on iOS is identical.
+This guide will walk you through using the Oxen Mobile wallet for the first time. This guide was created on an Android phone but the user experience of the Mobile wallet on iOS is identical.
 
 ### **General Workflow of the Mobile Wallet**
 
@@ -10,19 +10,19 @@ We will discuss in detail the process of creating & using the wallet later in th
 
 This page displays:
 
-1\) Your wallet's available balance big in the front and center,&#x20;
+1\) Your wallet's available balance is shown front and centre in large text
 
-2\) Buttons in the middle for sending and receiving transactions,
+2\) Buttons in the middle for sending and receiving transactions
 
-3\) A list of historical transactions at the bottom.
+3\) A list of historical transactions at the bottom
 
-4\) At the top we have the name of the wallet "TepidFlavor" which is decided by you when creating the wallet,
+4\) At the top we have the name of the wallet "TepidFlavor" which you will create when making the wallet
 
-5\) Your wallets Synchronization status slightly below, in this photo the wallet is "Synchronized" which tells you how much of the blockchain your wallet has analysed.&#x20;
+5\) Your wallets synchronization status, in this photo the wallet is "Synchronized" which tells you how much of the blockchain your wallet has analysed
 
-6\) On the top right is a profile icon which allows you to configure the wallet, access settings, generate new wallets and stake to Oxen Service Nodes.
+6\) On the top right is a profile icon which allows you to configure the wallet, access settings, generate new wallets and stake to Oxen Service Nodes
 
-7\) The refresh icon on the right allows you to force refresh the blockchain and reconnect to the remote node if the wallet has synced incorrectly.
+7\) The refresh icon on the right allows you to force refresh the blockchain and reconnect to the remote node if the wallet has synced incorrectly
 
 ### Installing from the Play Store
 
@@ -43,7 +43,7 @@ The iOS app can be found via this link:\
 
 Congratulations on downloading the mobile wallet. The first time you open the app you will need to create your wallet, do this by clicking "Create new" to continue.
 
-### ![](<../../.gitbook/assets/2 (1).jpeg>) 
+### ![](<../../.gitbook/assets/2 (1).jpeg>)
 
 Your wallet is protected by a 4 or 6 digit PIN number. You will be required to enter this pin whenever you open the app and also when sending transactions. Enter a PIN you will remember.
 
@@ -72,8 +72,6 @@ When the wallet is synchronising it is normal and expected that your transaction
 
 ![](<../../.gitbook/assets/6 (1).jpeg>)![](../../.gitbook/assets/7.jpeg)
 
-
-
 ### Receiving Oxen
 
 When purchasing Oxen from an exchange or requesting funds from another person you will need to provide your wallet address. Your wallet address is a 95 character text starting with “L”. This is shown by clicking on the "Receive" button:
@@ -86,13 +84,13 @@ Clicking on the address string ("L8jFZ...VhS9o) will copy the address to your ph
 
 When receiving funds from an exchange there will generally be some processing time from the exchange (This time varies depending on the exchange) then a transfer will occur on the blockchain which your wallet will recognise.
 
-The wallet scans the blockchain to find transfers that belong to you, when it finds one it will be added to the transaction list at the bottom. If the wallet is not detecting your transfers the most common reason is due to the wallet not being fully synced yet.
+The wallet scans the blockchain to find transfers that belong to you, when it finds one it will be added to the transaction list at the bottom. If the wallet is not detecting your transfers the most common reason that the wallet is not yet fully synced.
 
 You can also click into the transaction to show more details.
 
 ![](../../.gitbook/assets/9.jpeg)![](<../../.gitbook/assets/10 (4).jpeg>)
 
-Please note that your "Available Balance" will not update immediately. This is normal and your funds still belong to you, the wallet enforces a 10 block (20 minute) waiting time before allowing you to spend recently received funds. The reasons for this are interesting and complicated but the TLDR is that as a privacy coin the wallet needs to be mindful of statistical attacks, and spend transactions that occur immediately after receiving funds are easily traceable, which reduces the privacy of all the transactions the blockchain (not just your own transactions).
+Please note that your "Available Balance" will not update immediately. This is normal so don't worry, this is because the wallet enforces a 10 block (20 minute) waiting time before allowing you to spend recently received funds. The reasons for this are interesting and complicated but the TLDR is that as a privacy coin the wallet needs to be mindful of statistical attacks, and spend transactions that occur immediately after receiving funds are easily traceable, which reduces the privacy of all the transactions the blockchain (not just your own transactions).
 
 After 10 blocks your available balance will update and you can then spend/stake your coins:
 
@@ -110,7 +108,7 @@ You will also need to enter in the amount that is to be transferred. This can be
 
 Alternatively you can enter the amount value in USD, which will automatically calculate the correct amount of oxen to transfer using current market rates. You only need to enter the amount into one field.
 
-When sending transactions on the blockchain there is always a small fee charged to the sender. The wallet shows an estimate on this page (But will confirm the exact amount at a later point).
+When sending transactions on the blockchain there is always a small fee charged to the sender. The wallet shows an estimate on this page (but will confirm the exact amount at a later point).
 
 To proceed with the transaction slide the "Send Oxen" slider to the right. You will be asked to enter your PIN and the final details of the transaction will be displayed.\
 
@@ -125,5 +123,5 @@ After this point your transaction will have been sent to the network. After the 
 
 ![](<../../.gitbook/assets/17 (1).jpeg>)
 
-And thats it! you have now successfully used the wallet to send and receive a transaction!
+And that's it! You have successfully used the wallet to send and receive a transaction!
 
