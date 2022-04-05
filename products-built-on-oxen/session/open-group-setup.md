@@ -104,12 +104,22 @@ Once setup, you should be able to navigate to your VPS's IP address in a web bro
 
 Here you should see a list of your rooms, clicking on a room will display a QR code and the link required to join the room, this link can be copied and pasted into a Session client to join a group.
 
-![](<../../.gitbook/assets/image (3).png>)
-
-### Getting help
+![U](<../../.gitbook/assets/image (3).png>)
 
 If something in this guide doesn't make sense, or if you’re running into issues that you can’t identify on your own, the first place to go would be the [Session open group](http://116.203.70.33/session?public\_key=a03c383cf63c3c4efe67acc52112a6dd734b3a946b9545f488aaa93da7991238) inside Session. Alternatively, you can find help on our other communication channels: [Twitter](https://twitter.com/Oxen\_io), or [Reddit](https://reddit.com/oxen\_io).
 
-### Reporting bugs
+### Upgrading SOGS
+
+SOGS is configured as a Debian package, it will be updated when you update and upgrade other packages on your system, you can trigger this process by running the following commands
+
+```
+sudo apt update
+```
+
+```
+sudo apt upgrade
+```
+
+### Having Issues?&#x20;
 
 If you've sought help through our communication channels but have not arrived at a solution for your issue, we recommend opening an issue ticket on the [Session open group server](https://github.com/oxen-io/session-pysogs) GitHub repository.
