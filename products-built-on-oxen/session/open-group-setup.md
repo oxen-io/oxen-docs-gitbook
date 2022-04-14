@@ -8,8 +8,6 @@ Open groups are hosted using [PySOGS](https://github.com/oxen-io/session-pysogs)
 
 Below you can find a video guide walking you through the process of setting up a Session open group server, as well as a written guide.
 
-{% embed url="https://youtu.be/1br1D5mg-PI" %}
-
 ## Installation
 
 **Note:** .debs for the Session Open Group server are currently available for Ubuntu 20.04 and newer, and for Debian 10 and newer. For other operating systems, you can [build from source](https://github.com/oxen-io/session-pysogs/blob/dev/install-uwsgi.md)&#x20;

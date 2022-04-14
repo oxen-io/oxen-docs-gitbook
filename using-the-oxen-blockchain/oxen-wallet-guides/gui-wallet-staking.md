@@ -1,10 +1,10 @@
 # GUI Wallet Staking
 
-Oxen allows users to stake their oxen by running service nodes which support the oxen network. To run a service node an operator is required to stake 15,000 oxen which can be shared between multiple contributors to reduce the amount required individually.\
+Oxen allows users to stake their oxen by running service nodes which support the Oxen Network. To run a service node an operator is required to stake 15,000 oxen which they can either contribute the full amount or share the burden between multiple contributors to reduce the amount required individually.\
 \
-This guide does not explain how to set up a service node, instead it explains how non-technical users can contribute to another operators service node which allows them to share in the rewards that that operator earns.
+This guide does not explain how to set up a service node, instead it explains for non-technical users how they can contribute to a service node which is run by a separate operator, allowing them to share in the rewards earned by that service node.
 
-We begin by searching for service node that is "Awaiting Contribution", this occurs when a service node requires additional contributors to make up the 15,000 oxen requirement.
+The first step is to find out if there are any service nodes which are "Awaiting Contribution", this occurs when a service node requires additional contributors to make up the 15,000 oxen requirement.
 
 If you navigate to [oxen.observer ](https://oxen.observer)you can see on the front page a section titled "Service Nodes Awaiting Contributions" (Highlighted in Orange Below).
 
@@ -12,7 +12,7 @@ If you navigate to [oxen.observer ](https://oxen.observer)you can see on the fro
 
 We are going to stake to the service node highlighted in green (a321e...)
 
-The above image (and this guide in general) is using our testnet. This differs slightly to our mainnet in that you only need to contribute 100 oxen to set up a service node. However all other calculations are identical.
+Throughout this guide we will be using the Oxen "testnet" for demonstration purposes. This differs slightly to our mainnet in that you only need to contribute 100 oxen to set up a service node. Aside from this, the process is identical.
 
 #### About Service Node Staking
 
