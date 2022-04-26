@@ -12,6 +12,12 @@ Below you can find a video guide walking you through the process of setting up a
 
 **Note:** .debs for the Session Open Group server are currently available for Ubuntu 20.04 and newer, and for Debian 10 and newer. For other operating systems, you can [build from source](https://github.com/oxen-io/session-pysogs/blob/dev/install-uwsgi.md)&#x20;
 
+#### Video Guide&#x20;
+
+{% embed url="https://www.youtube.com/watch?v=5KddQxxwEDg" %}
+Session Open Group server video guide
+{% endembed %}
+
 ### 1. Find a suitable server to run SOGS&#x20;
 
 Typically, the simplest and cheapest way to host a server is by leasing a Virtual Private Server (VPS). There are hundreds of VPS providers to choose from, some popular options are: Vultr, Hetzner, DigitalOcean, Linode, Amazon Lightsail, etc.
