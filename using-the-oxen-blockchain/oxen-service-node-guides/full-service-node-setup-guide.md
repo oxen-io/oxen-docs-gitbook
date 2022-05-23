@@ -384,7 +384,7 @@ oxend print_sn_key
 
 This will output a bunch of information about your Service Node, but there's one part we're interested in at this stage: the long string of random letters and numbers after the characters `SN:` . This string is your Service Node's public key, used to identify your Service Node on the list of registered and operational Service Nodes. Select and copy the public key (do not copy any of the surrounding information).
 
-On your local machine, open your Oxen GUI or CLI wallet and make sure your wallet contains at least 15,000 $OXEN to meet the Service Node staking requirement. Once you're in your wallet and have checked the balance, run the command which was provided above when you ran the `prepare_registration` command. The wallet will prompt you to confirm your password, then the amount of $OXEN to stake. Confirm this by typing `y` and clicking enter.
+On your local machine, open your Oxen GUI or CLI wallet and make sure your wallet contains at least 3750 $OXEN to meet the Service Node staking requirement. Once you're in your wallet and have checked the balance, run the command which was provided above when you ran the `prepare_registration` command. The wallet will prompt you to confirm your password, then the amount of $OXEN to stake. Confirm this by typing `y` and clicking enter.
 
 Once this command completes, your staking transaction will be sent to be included on the blockchain. It may take a few minutes for the transaction to be mined into a block; you can check the status using the following command:
 
