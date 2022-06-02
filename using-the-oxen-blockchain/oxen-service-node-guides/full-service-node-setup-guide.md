@@ -99,15 +99,19 @@ Typically, the simplest and cheapest way to host a server such as an Oxen Servic
 | Scaleway         | START1-M          | 9.33                  |
 | OVH              | VPS SSD 2         | 7.61                  |
 | Leaseweb         | Virtual Server XL | 34.45                 |
-| Digital Ocean    | 2 GB, 2 vCPUs     | 15                    |
+| Digital Ocean    | 4 GB, 2 vCPUs     | 20 (24 from 22-07-0   |
 | Linode           | 4 GB, 2 vCPUs     | 20                    |
 | Feral Hosting    | Neon Capability   | 19.68                 |
 | Trabia           | VDS-8G            | 38.54                 |
 | Hetzner          | EX41-SSD (30 TB)  | 39.71                 |
 
-> Note: We do not endorse **any** of these providers. The above list is merely a selection of some of the popular options at the time of writing. Of course, this popularity comes at the expense of decentralisation. To provide even greater value to the network, please consider running a node in a country and/or on a network that currently has poor or even no representation according to the [OXEN Dashboard](https://oxendashboard.com/#5). A useful resource in choosing a less common VPS provider is [ExoticVM](https://www.exoticvm.com).
+> Note: We do not endorse **any** of these providers. The above list is merely a selection of some of the popular options at the time of writing. Of course, this popularity comes at the expense of decentralisation. To provide even greater value to the network, please consider running a node in a country and/or on a network with few or even no nodes according to the [OXEN Dashboard](https://oxendashboard.com/#5). A useful resource in choosing a less common VPS provider is [ExoticVM](https://www.exoticvm.com). Another good one is [Server Hunter](https://www.serverhunter.com/).
 
-In any case, do not just settle on the first provider you encounter. No two are alike. Do your own research and decide on a provider that seems professional, reputable and fits your budget. The better ones will utilise [KVM](https://www.linux-kvm.org/page/Main\_Page) as the [virtualisation technology](https://www.tradingfxvps.com/kvm-vs-vmware-vs-openvz-vs-xen/) (as opposed to OpenVZ, for example, which is an incomplete virtualisation that allows VPS capacity to be oversold), allow you to monitor your VPS' resource consumption, perform a seamless upgrade to a more powerful server at a later date, remotely reboot the host if it becomes unresponsive, and even recover the system using out-of-band access if, for example, a bad configuration change results in lost network access.
+In any case, do not just settle on the first provider you encounter. No two are alike. Do your own research and choose a provider that seems professional, reputable and fits your budget.
+
+The better ones will utilise [KVM](https://www.linux-kvm.org/page/Main\_Page) [virtualisation technology](https://www.tradingfxvps.com/kvm-vs-vmware-vs-openvz-vs-xen/). In particular, you should steer clear of VPSes that use OpenVZ. This is an incomplete form of virtualisation that allows VPS capacity to be oversold, and is usually incompatible with the service node software. Virtual machines created with it often lack a `/dev/tun` device, and even those that have this can still cause insurmountable problems for Lokinet.
+
+A good VPS provider will also allow you to monitor your machine's resource consumption, seamlessly upgrade to a more powerful server at a later date, remotely reboot the host if it becomes unresponsive, and even recover or rebuild the system using out-of-band access if, for example, a bad configuration change results in lost network access.
 
 When selecting your VPS’ operating system, please choose the latest Ubuntu LTS release or latest Debian stable release (currently 20.04 and 11, respectively) if you want to be able to follow the steps below verbatim. If you feel more confident and/or wish to run your server on another Linux distribution, the commands in this guide will still apply, but may need to be modified to suit your chosen operating system. In most cases, beginners and experts alike will be best served by sticking closely to this guide.
 
