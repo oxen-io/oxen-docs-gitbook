@@ -24,7 +24,7 @@ The CLI wallet is for more advanced users, and offers more tools to interact wit
 
 #### macOS
 
-* [Oxen GUI Wallet](https://github.com/oxen-io/oxen-electron-gui-wallet/releases/download/v1.7.0/oxen-electron-wallet-1.7.0-mac.dmg) v1.7.0
+* [Oxen GUI Wallet](https://github.com/oxen-io/oxen-electron-gui-wallet/releases/
 * [Oxen CLI Wallet](https://github.com/oxen-io/oxen-core/releases) \(packaged with Oxen Core\)
 
 #### Android
