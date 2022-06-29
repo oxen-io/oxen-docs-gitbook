@@ -14,18 +14,18 @@ The CLI wallet is for more advanced users, and offers more tools to interact wit
 
 #### Windows
 
-* [Oxen GUI Wallet](https://github.com/oxen-io/oxen-electron-gui-wallet/releases/download/v1.7.0/oxen-electron-wallet-1.7.0-win.exe) v1.7.0
-* [Oxen CLI Wallet](https://github.com/oxen-io/oxen-core/releases) \(packaged with Oxen Core\)
+* [Oxen GUI Wallet](https://github.com/oxen-io/oxen-electron-gui-wallet/releases/download/v1.7.2/oxen-electron-wallet-1.7.2-win.exe) v1.7.2
+* [Oxen CLI Wallet](https://github.com/oxen-io/oxen-core/releases) (packaged with Oxen Core)
 
 #### Linux
 
-* [Oxen GUI Wallet](https://github.com/oxen-io/oxen-electron-gui-wallet/releases/download/v1.7.0/oxen-electron-wallet-1.7.0-linux.AppImage) v1.7.0
-* [Oxen CLI Wallet](https://github.com/oxen-io/oxen-core/releases) \(packaged with Oxen Core\)
+* [Oxen GUI Wallet](https://github.com/oxen-io/oxen-electron-gui-wallet/releases/download/v1.7.2/oxen-electron-wallet-1.7.2-linux.AppImage) v1.7.2
+* [Oxen CLI Wallet](https://github.com/oxen-io/oxen-core/releases) (packaged with Oxen Core)
 
 #### macOS
 
 * [Oxen GUI Wallet](https://github.com/oxen-io/oxen-electron-gui-wallet/releases/)
-* [Oxen CLI Wallet](https://github.com/oxen-io/oxen-core/releases) \(packaged with Oxen Core\)
+* [Oxen CLI Wallet](https://github.com/oxen-io/oxen-core/releases) (packaged with Oxen Core)
 
 #### Android
 
@@ -35,8 +35,3 @@ The CLI wallet is for more advanced users, and offers more tools to interact wit
 #### iOS
 
 * [Oxen Mobile Wallet](https://apps.apple.com/app/oxen-wallet-rangeproof/id1547745078)
-
-
-
-
-

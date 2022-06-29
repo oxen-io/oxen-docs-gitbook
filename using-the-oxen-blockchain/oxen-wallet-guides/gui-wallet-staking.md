@@ -6,7 +6,7 @@ This guide does not explain how to set up a service node, instead it explains fo
 
 The first step is to find out if there are any service nodes which are "Awaiting Contribution", this occurs when a service node requires additional contributors to make up the 15,000 oxen requirement.
 
-If you navigate to [oxen.observer ](https://oxen.observer)you can see on the front page a section titled "Service Nodes Awaiting Contributions" (Highlighted in Orange Below).
+If you navigate to [oxen.observer ](https://oxen.observer/)you can see on the front page a section titled "Service Nodes Awaiting Contributions" (Highlighted in Orange Below).
 
 ![Service Nodes Awaiting Contributions](<../../.gitbook/assets/#1 Blockchain Explorer.png>)
 
@@ -91,4 +91,4 @@ The My Stakes page will also show the node as unlocking and when visiting the ox
 
 ![Service node scheduled to expire](<../../.gitbook/assets/#12 Oxen observer page.png>)
 
-At this point you have all the skills that are necessary to stake to a service node and to unlock the stake when you wish to exit. Visit [https://oxen.observer/](https://oxen.observer) and start exploring the nodes that are awaiting contribution today!&#x20;
+At this point you have all the skills that are necessary to stake to a service node and to unlock the stake when you wish to exit. Visit [https://oxen.observer/](https://oxen.observer/) and start exploring the nodes that are awaiting contribution today!&#x20;

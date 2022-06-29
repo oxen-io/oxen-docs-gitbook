@@ -104,7 +104,7 @@ sogs --rooms + --add-moderators 05d871fc80ca007eed9b2f4df72853e2a2d5465a92fcb188
 
 ### 6. Join your SOGS
 
-Once setup, you should be able to navigate to your VPS's IP address in a web browser, for example [http://116.203.70.33/](http://116.203.70.33)&#x20;
+Once setup, you should be able to navigate to your VPS's IP address in a web browser, for example [http://116.203.70.33/](http://116.203.70.33/)&#x20;
 
 Here you should see a list of your rooms, clicking on a room will display a QR code and the link required to join the room, this link can be copied and pasted into a Session client to join a group.
 

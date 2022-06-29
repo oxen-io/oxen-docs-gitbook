@@ -20,7 +20,7 @@ Click on the `SERVICE NODE` button.
 
 ### Step 3
 
-On this step you will need to enter the service node public key obtained from the node operator (or [OxenSN](https://oxensn.com)) and the amount of Oxen you are contributing to the node. 
+On this step you will need to enter the service node public key obtained from the node operator (or [OxenSN](https://oxensn.com/)) and the amount of Oxen you are contributing to the node.&#x20;
 
 This can be done automatically by clicking `STAKE` on one of the listed Service Nodes awaiting contribution in the wallet interface.
 
@@ -34,4 +34,4 @@ Congratulations, you're now staked!
 
 
 
-If you have questions or need help with this guide feel free to reach out to us on [Discord](https://discordapp.com/invite/67GXfD6) or [Telegram](https://t.me/Oxen_Community).
+If you have questions or need help with this guide feel free to reach out to us on [Discord](https://discordapp.com/invite/67GXfD6) or [Telegram](https://t.me/Oxen\_Community).
