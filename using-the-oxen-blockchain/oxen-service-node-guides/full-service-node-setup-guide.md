@@ -188,10 +188,14 @@ Alternatively, your `<DISTRO>` can be found by using the following list:
 
 * bullseye (Debian 11)
 * buster (Debian 10)
+* jammy (Ubuntu 22.04)
 * focal (Ubuntu 20.04)
 * bionic (Ubuntu 18.04)
-* sid (Debian testing/unstable) (not recommended for a production server)
-* impish (Ubuntu 21.10) (not recommended for a production server)
+
+We also have repositories for Debian testing (`bookworm` or `testing`) and unstable (`sid` or
+`unstable`), and typically support the latest or upcoming Ubuntu non-LTS release (`kinetic`, as of
+writing).  Note, however, that none of these distribution versions are recommended for production
+service nodes.
 
 ```
 echo "deb https://deb.oxen.io <DISTRO> main" | sudo tee /etc/apt/sources.list.d/oxen.list
