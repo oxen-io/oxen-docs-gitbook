@@ -313,7 +313,7 @@ Well done! Continue to [Step 6: Service Node check](full-service-node-setup-guid
 
 #### _Minimum contribution rules_
 
-The Service Node staking requirement is fixed at 15,000 $OXEN. Service Nodes accept at most 4 contributions, meaning the minimum contribution to a Service Node is `<Remaining Staking Requirement> ➗ <Number of Remaining Contributors>`.
+The Service Node staking requirement is fixed at 15,000 $OXEN. Service Nodes accept at most 10 contributions, meaning the minimum contribution to a Service Node is `<Remaining Staking Requirement> ➗ <Number of Remaining Contributors>`.
 
 When setting up reserved spots in a pooled Service Node, the node administrator (you) must ensure the reserved stake amounts each meet the minimum staking requirement; contributors then simply stake their reserved amounts.
 
