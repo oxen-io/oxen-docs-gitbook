@@ -70,7 +70,7 @@ At this point you now are brought to the wallet main page. When you first open t
 
 When the wallet is synchronising it is normal and expected that your transactions are not processed and therefore won't be shown in the app. Please wait until the wallet shows "SYNCHRONIZED" to continue.
 
-![](<../../.gitbook/assets/6 (1).jpeg>)![](<../../.gitbook/assets/7 (2).jpeg>)
+![](<../../.gitbook/assets/6 (1).jpeg>)![](<../../.gitbook/assets/7 (2) (1) (1).jpeg>)
 
 ### Receiving Oxen
 
@@ -88,7 +88,7 @@ The wallet scans the blockchain to find transfers that belong to you, when it fi
 
 You can also click into the transaction to show more details.
 
-![](../../.gitbook/assets/9.jpeg)![](<../../.gitbook/assets/10 (2) (2).jpeg>)
+![](../../.gitbook/assets/9.jpeg)![](<../../.gitbook/assets/10 (2) (1).jpeg>)
 
 Please note that your "Available Balance" will not update immediately. This is normal so don't worry, this is because the wallet enforces a 10 block (20 minute) waiting time before allowing you to spend recently received funds. The reasons for this are interesting and complicated but the TLDR is that as a privacy coin the wallet needs to be mindful of statistical attacks, and spend transactions that occur immediately after receiving funds are easily traceable, which reduces the privacy of all the transactions the blockchain (not just your own transactions).
 
