@@ -29,6 +29,7 @@
   * [Oxen Mobile Wallet Quickstart](using-the-oxen-blockchain/oxen-wallet-guides/oxen-mobile-wallet-quickstart.md)
   * [Exporting a CSV of your wallet transaction history](using-the-oxen-blockchain/oxen-wallet-guides/exporting-a-csv-of-your-wallet-transaction-history.md)
   * [CLI Wallet setup (macOS)](using-the-oxen-blockchain/oxen-wallet-guides/cli-wallet-setup-macos.md)
+  * [Oxen Ledger Wallet setup: GUI Wallet](using-the-oxen-blockchain/oxen-wallet-guides/oxen-ledger-wallet-setup-gui-wallet.md)
   * [Oxen Ledger Wallet setup: CLI Wallet](using-the-oxen-blockchain/oxen-wallet-guides/oxen-ledger-wallet-usage-cli-wallet.md)
   * [CLI Wallet commands](using-the-oxen-blockchain/oxen-wallet-guides/cli-wallet-commands.md)
   * [Restoring an Oxen CLI Wallet from seed](using-the-oxen-blockchain/oxen-wallet-guides/restore-cli-from-seed.md)
