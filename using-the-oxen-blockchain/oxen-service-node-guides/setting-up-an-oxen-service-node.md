@@ -133,7 +133,7 @@ You can now jump onto [oxen.observer](https://oxen.observer), open the full list
 
 #### Monitoring
 
-We highly recommend setting up monitoring for your Service Node. This is as simple as calling on the services of our Telegram or Discord bot. Contact `@LokiSNBot` on Telegram or `OxenSNBot#5812` on Discord and type `/start` or `$help` respectively to get started.
+We highly recommend setting up monitoring for your Service Node. This is as simple as calling on the services of our Telegram or Discord bot. Contact `@OxenSNBot` on Telegram or `OxenSNBot#5812` on Discord and type `/start` or `$help` respectively to get started.
 
 Another helpful tool is Konstantin Ullrich's [Oxen Service Node Operator app](https://play.google.com/store/apps/details?id=dev.konsti.oxen\_service\_node) for Android.
 

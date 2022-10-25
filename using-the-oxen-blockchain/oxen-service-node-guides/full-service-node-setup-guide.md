@@ -113,7 +113,7 @@ The better ones will utilise [KVM](https://www.linux-kvm.org/page/Main\_Page) [v
 
 A good VPS provider will also allow you to monitor your machine's resource consumption, seamlessly upgrade to a more powerful server at a later date, remotely reboot the host if it becomes unresponsive, and even recover or rebuild the system using out-of-band access if, for example, a bad configuration change results in lost network access.
 
-When selecting your VPS’ operating system, please choose the latest Ubuntu LTS release or latest Debian stable release (currently 20.04 and 11, respectively) if you want to be able to follow the steps below verbatim. If you feel more confident and/or wish to run your server on another Linux distribution, the commands in this guide will still apply, but may need to be modified to suit your chosen operating system. In most cases, beginners and experts alike will be best served by sticking closely to this guide.
+When selecting your VPS’ operating system, please choose the latest Ubuntu LTS release or latest Debian stable release (currently 22.04 and 11, respectively) if you want to be able to follow the steps below verbatim. If you feel more confident and/or wish to run your server on another Linux distribution, the commands in this guide will still apply, but may need to be modified to suit your chosen operating system. In most cases, beginners and experts alike will be best served by sticking closely to this guide.
 
 #### Step 2: Preparing your server
 
@@ -474,7 +474,7 @@ sudo apt install oxen-storage-server oxend lokinet-router
 
 ### Monitoring
 
-We highly recommend setting up monitoring for your Service Node. This is as simple as calling on the services of our Telegram or Discord bot. Contact `@LokiSNBot` on Telegram or `OxenSNBot#5812` on Discord and type `/start` or `$help` respectively to get started.
+We highly recommend setting up monitoring for your Service Node. This is as simple as calling on the services of our Telegram or Discord bot. Contact `@OxenSNBot` on Telegram or `OxenSNBot#5812` on Discord and type `/start` or `$help` respectively to get started.
 
 Another helpful tool is Konstantin Ullrich's [Oxen Service Node Operator app](https://play.google.com/store/apps/details?id=dev.konsti.oxen\_service\_node) for Android.
 
