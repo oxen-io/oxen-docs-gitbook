@@ -14,7 +14,7 @@ Session can be used as a basis for applications or services that rely on real-ti
 
 #### Service notifications
 
-Mary wants to build a notification service which lets subscribers know when there are new religious services running on her university campus. She wants users to be able to anonymously subscribe for updates, so their religious affiliation is not linked to their identity. Mary can build this service using the [Node Session client](https://github.com/hesiod-project/node-session-client) or a [Session open group](https://github.com/oxen-io/session-open-group-server).
+Mary wants to build a notification service which lets subscribers know when there are new religious services running on her university campus. She wants users to be able to anonymously subscribe for updates, so their religious affiliation is not linked to their identity. Mary can build this service using the [Node Session client](https://github.com/hesiod-project/node-session-client) or a [Session open group](https://github.com/oxen-io/session-pysogs).
 
 #### Anonymous 2FA code delivery
 
