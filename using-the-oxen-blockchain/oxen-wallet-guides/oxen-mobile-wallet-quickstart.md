@@ -47,14 +47,14 @@ Congratulations on downloading the mobile wallet. The first time you open the ap
 
 Your wallet is protected by a 4 or 6 digit PIN number. You will be required to enter this pin whenever you open the app and also when sending transactions. Enter a PIN you will remember.
 
-![](<../../.gitbook/assets/3 (1).jpeg>)
+![](<../../.gitbook/assets/3 (1) (1) (1).jpeg>)
 
 The first thing the app asks is for a name of the new wallet. These are simply used to give a distinguishable name to identify the wallet. Choose something that is memorable because your wallet list can become unwieldy rather quickly when creating multiple wallets. For this reason using names such as: Wallet1, Wallet2, Wallet3 etc are not recommended. The app also provides a random default name (In this case "TepidFlavor"). \
 
 
 In addition you will need to choose a language for the seed phrase generated in the next step. The most important part of the wallet creation process is the creation of your “Seed Phrase”. This is shown in the next step. Select your native language here to make the recording of your seed phrase easier.
 
-![](<../../.gitbook/assets/4 (1).jpeg>)
+![](<../../.gitbook/assets/4 (1) (1) (1).jpeg>)
 
 Below you can see the app has now generated 25 words that are used to generate the private keys of your wallet.
 
@@ -70,7 +70,7 @@ At this point you now are brought to the wallet main page. When you first open t
 
 When the wallet is synchronising it is normal and expected that your transactions are not processed and therefore won't be shown in the app. Please wait until the wallet shows "SYNCHRONIZED" to continue.
 
-![](<../../.gitbook/assets/6 (1).jpeg>)![](<../../.gitbook/assets/7 (1) (1).jpeg>)
+![](<../../.gitbook/assets/6 (1).jpeg>)![](<../../.gitbook/assets/7 (1).jpeg>)
 
 ### Receiving Oxen
 
@@ -88,7 +88,7 @@ The wallet scans the blockchain to find transfers that belong to you, when it fi
 
 You can also click into the transaction to show more details.
 
-![](../../.gitbook/assets/9.jpeg)![](<../../.gitbook/assets/10 (1) (1).jpeg>)
+![](../../.gitbook/assets/9.jpeg)![](<../../.gitbook/assets/10 (1) (2).jpeg>)
 
 Please note that your "Available Balance" will not update immediately. This is normal so don't worry, this is because the wallet enforces a 10 block (20 minute) waiting time before allowing you to spend recently received funds. The reasons for this are interesting and complicated but the TLDR is that as a privacy coin the wallet needs to be mindful of statistical attacks, and spend transactions that occur immediately after receiving funds are easily traceable, which reduces the privacy of all the transactions the blockchain (not just your own transactions).
 
@@ -117,11 +117,11 @@ To proceed with the transaction slide the "Send Oxen" slider to the right. You w
 
 The final amounts will be shown and the exact fee displayed. To confirm the transaction and send to the network click "OK". After this point the app should display "Transaction Sent"
 
-![](../../.gitbook/assets/16.jpeg)
+![](<../../.gitbook/assets/16 (1).jpeg>)
 
 After this point your transaction will have been sent to the network. After the nodes confirm this transaction into the blockchain your transaction will then appear in the transaction list on the main display screen.
 
-![](../../.gitbook/assets/17.jpeg)
+![](<../../.gitbook/assets/17 (1).jpeg>)
 
 And that's it! You have successfully used the wallet to send and receive a transaction!
 

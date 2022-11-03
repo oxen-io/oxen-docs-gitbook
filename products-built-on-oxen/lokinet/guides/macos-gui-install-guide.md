@@ -10,7 +10,7 @@ Open the .dmg file in your downloads directory (or wherever you downloaded Lokin
 
 Select agree to agree to the GNU GPLv3 license agreement.
 
-<figure><img src="../../../.gitbook/assets/Screen Shot 2022-10-11 at 2.34.05 pm (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screen Shot 2022-10-11 at 2.34.05 pm.png" alt=""><figcaption></figcaption></figure>
 
 Drag and drop the Lokinet application into the applications folder.
 
@@ -36,7 +36,7 @@ After the padlock unlocks, click ‘Allow’, allowing Lokinet to load a system 
 
 Enter your password and press unlock when prompted.
 
-<figure><img src="../../../.gitbook/assets/Screen Shot 2022-10-11 at 2.35.26 pm (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screen Shot 2022-10-11 at 2.35.26 pm.png" alt=""><figcaption></figcaption></figure>
 
 Once System Preference changes are allowed, a system prompt will appear. Click “Allow” to allow Lokinet to add a VPN Configuration.
 
