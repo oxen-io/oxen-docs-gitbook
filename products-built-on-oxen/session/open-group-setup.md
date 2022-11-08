@@ -78,7 +78,7 @@ Once finished with installation, you will want to add a room, to add a room run:
 sogs --add-room TOKEN --name "NAME" --description "DESCRIPTION"
 ```
 
-Replace `TOKEN` with the address to use in the room URL (which must consist of letters, numbers, underscores, or dashes), replace `NAME` with the room name to display in Session and optionally replace `DESCRIPTION` with a short description of the topic of the room.
+Replace `TOKEN` with the address to use in the room URL (which must consist of **ONLY** lowercase letters, numbers, underscores, or dashes), replace `NAME` with the room name to display in Session and optionally replace `DESCRIPTION` with a short description of the topic of the room.
 
 ```
 sogs --add-room fish --name "Fishing" --description "Australian fisheries chat"
