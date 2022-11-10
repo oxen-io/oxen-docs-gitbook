@@ -6,11 +6,13 @@ description: A Guide on how to install Lokinet with the updated GUI
 
 Thanks for downloading Lokinet on MacOS. This guide will help you install Lokinet.
 
-Open the .dmg file in your downloads directory (or wherever you downloaded Lokinet).
+Latest releases can be found and downloaded here [https://github.com/oxen-io/lokinet/releases/latest](https://github.com/oxen-io/lokinet/releases/latest)
 
 ## macOS Monterey
 
 [macOS Ventura guide here](macos-gui-install-guide.md#macos-ventura)
+
+Open the .dmg file in your downloads directory (or wherever you downloaded Lokinet).
 
 Select agree to agree to the GNU GPLv3 license agreement.
 
