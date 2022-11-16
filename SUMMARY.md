@@ -50,12 +50,13 @@
 ## Products built on Oxen
 
 * [🔒 Session](products-built-on-oxen/session/README.md)
-  * [🐧 Installing on Linux (Debian based distros)](products-built-on-oxen/session/installing-on-linux-debian-based-distros.md)
+  * [📚 Guides](products-built-on-oxen/session/guides/README.md)
+    * [🐧 Installing on Linux (Debian based distros)](products-built-on-oxen/session/guides/installing-on-linux-debian-based-distros.md)
+    * [🗣 Session Open Group Server Setup](products-built-on-oxen/session/guides/open-group-setup.md)
   * [🔤 Oxen Name Service for Session](products-built-on-oxen/session/loki-name-system-for-session.md)
   * [🏗 Network infrastructure](products-built-on-oxen/session/network-infrastructure.md)
   * [📨 Message routing](products-built-on-oxen/session/message-routing.md)
   * [📎 Attachments](products-built-on-oxen/session/attachments.md)
-  * [🗣 Session Open Group Server Setup](products-built-on-oxen/session/open-group-setup.md)
 * [🌐 Lokinet](products-built-on-oxen/lokinet/README.md)
   * [📚 Guides](products-built-on-oxen/lokinet/guides/README.md)
     * [🐧 Installing on Linux (GUI)](products-built-on-oxen/lokinet/guides/linux-gui-install-guide.md)
