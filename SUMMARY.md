@@ -50,6 +50,7 @@
 ## Products built on Oxen
 
 * [🔒 Session](products-built-on-oxen/session/README.md)
+  * [🐧 Installing on Linux (Debian based distros)](products-built-on-oxen/session/installing-on-linux-debian-based-distros.md)
   * [🔤 Oxen Name Service for Session](products-built-on-oxen/session/loki-name-system-for-session.md)
   * [🏗 Network infrastructure](products-built-on-oxen/session/network-infrastructure.md)
   * [📨 Message routing](products-built-on-oxen/session/message-routing.md)
