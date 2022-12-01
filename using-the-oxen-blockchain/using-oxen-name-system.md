@@ -11,7 +11,7 @@ Purchasing an ONS record in the CLI wallet uses the `ons_buy_mapping` command. A
 **Example:** Buy an ONS record that maps ‘KeeJef’ to a Session ID: 053 … 254. The wallet buying is the owner of the record:
 
 ```text
-ons_buy_mapping owner=T6UD8TM1t7mUYmMCHXQ67Kg5jXBwoVxNqGpXctnsLXtGBEFnhq37RQAA8jgqgD9U6QbeNGqAkkVXucXQ5txE6Mrk2aRwpppir backup_owner=T6U7AaNgN2cARpR7CNHGChGMjsmjq5ffh4hLa4DjUUXtKS3bPy2rKTX614RxmpPPX6KjZzqUSSpAEcoghASTXqvP1qMsJzWch KeeJef 053b6b764388cd6c4d38ae0b3e7492a8ecf0076e270c013bb5693d973045f45254
+ons_buy_mapping KeeJef 053b6b764388cd6c4d38ae0b3e7492a8ecf0076e270c013bb5693d973045f45254
 ```
 
 **Example:** Buy an ONS record that maps ‘KeeJef’ to a Session ID: 053 … 254. The wallet buying the mapping is the owner of the record, but specifies a backup owner who will also be authorised to update the record:
@@ -23,7 +23,7 @@ ons_buy_mapping backup_owner=T6U7AaNgN2cARpR7CNHGChGMjsmjq5ffh4hLa4DjUUXtKS3bPy2
 **Example:** Buy an ONS record that maps ‘KeeJef’ to a Session ID: 053…254. You buy on behalf of another wallet T6UD8...ppir and specify another backup wallet:
 
 ```text
-ons_buy_mapping KeeJef 053b6b764388cd6c4d38ae0b3e7492a8ecf0076e270c013bb5693d973045f45254
+ons_buy_mapping owner=T6UD8TM1t7mUYmMCHXQ67Kg5jXBwoVxNqGpXctnsLXtGBEFnhq37RQAA8jgqgD9U6QbeNGqAkkVXucXQ5txE6Mrk2aRwpppir backup_owner=T6U7AaNgN2cARpR7CNHGChGMjsmjq5ffh4hLa4DjUUXtKS3bPy2rKTX614RxmpPPX6KjZzqUSSpAEcoghASTXqvP1qMsJzWch KeeJef 053b6b764388cd6c4d38ae0b3e7492a8ecf0076e270c013bb5693d973045f45254
 ```
 
 ### Updating an Oxen Name System record: Wallet executing update is owner of record 
