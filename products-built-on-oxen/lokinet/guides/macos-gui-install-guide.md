@@ -16,7 +16,7 @@ Open the .dmg file in your downloads directory (or wherever you downloaded Lokin
 
 Select agree to agree to the GNU GPLv3 license agreement.
 
-<figure><img src="../../../.gitbook/assets/Screen Shot 2022-10-11 at 2.34.05 pm.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screen Shot 2022-10-11 at 2.34.05 pm (1).png" alt=""><figcaption></figcaption></figure>
 
 Drag and drop the Lokinet application into the applications folder.
 
@@ -34,7 +34,7 @@ If you do not see this popup, open System Preferences and navigate to Security &
 
 With the Security & Privacy settings window open, click the padlock in the bottom left corner.
 
-<figure><img src="../../../.gitbook/assets/Screen Shot 2022-10-11 at 2.35.17 pm.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screen Shot 2022-10-11 at 2.35.17 pm (1).png" alt=""><figcaption></figcaption></figure>
 
 After the padlock unlocks, click ‘Allow’, allowing Lokinet to load a system extension which is necessary for VPN functionality.
 
@@ -42,7 +42,7 @@ After the padlock unlocks, click ‘Allow’, allowing Lokinet to load a system 
 
 Enter your password and press unlock when prompted.
 
-<figure><img src="../../../.gitbook/assets/Screen Shot 2022-10-11 at 2.35.26 pm.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screen Shot 2022-10-11 at 2.35.26 pm (1).png" alt=""><figcaption></figcaption></figure>
 
 Once System Preference changes are allowed, a system prompt will appear. Click “Allow” to allow Lokinet to add a VPN Configuration.
 
@@ -56,7 +56,7 @@ You can view, check, or alter the VPN Configuration created by Lokinet by openin
 
 Select agree to agree to the GNU GPLv3 license agreement.
 
-<figure><img src="../../../.gitbook/assets/Screen Shot 2022-10-11 at 2.34.05 pm.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screen Shot 2022-10-11 at 2.34.05 pm (1).png" alt=""><figcaption></figcaption></figure>
 
 Drag and drop the Lokinet application into the applications folder.
 
@@ -78,7 +78,7 @@ click ‘Allow’, allowing Lokinet to load a system extension which is necessar
 
 Enter your password and press unlock when prompted.
 
-<figure><img src="../../../.gitbook/assets/Screen Shot 2022-10-11 at 2.35.26 pm.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screen Shot 2022-10-11 at 2.35.26 pm (1).png" alt=""><figcaption></figcaption></figure>
 
 Once System Preference changes are allowed, a system prompt will appear. Click “Allow” to allow Lokinet to add a VPN Configuration.
 

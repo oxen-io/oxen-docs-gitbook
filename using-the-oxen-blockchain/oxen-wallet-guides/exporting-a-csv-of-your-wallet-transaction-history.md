@@ -11,16 +11,16 @@ The Oxen GUI wallet as of v1.6.0 supports the exporting of your transactions. Af
 
 ![](https://lh5.googleusercontent.com/PJbDsGGe4DCJjVaMHQY28TEFLSs9Q7DtvF5ZoRkl4v23U2OYh6Vb8DjH1yfY8R3znCrOGUa3ijN94q1NCJD0DXOpl3FgvEFj3hT3njH99AvY9NNCpom8Imrzrm0lFk2XyWw86Bk1)
 
-* The wallet will then prompt you for a folder to save the CSV to. This defaults to a CSV directory within the Oxen folder \(Same directory your wallet keys are stored\) but you can edit this to any location.
+* The wallet will then prompt you for a folder to save the CSV to. This defaults to a CSV directory within the Oxen folder (Same directory your wallet keys are stored) but you can edit this to any location.
 
-![](https://lh6.googleusercontent.com/woqk9Xh9QZp8r_UfVFuTtkOJmFolFvxbMEbEpJoo3LxL6zfXwnMFmswLXLyS-vFNHJuqdMEUz0PaXyPk40NWU6y1U75dfMLFe0cBRs33Xkp9t46Xj7UydzRhHN0BVP57Yw7cwI4f)
+![](https://lh6.googleusercontent.com/woqk9Xh9QZp8r\_UfVFuTtkOJmFolFvxbMEbEpJoo3LxL6zfXwnMFmswLXLyS-vFNHJuqdMEUz0PaXyPk40NWU6y1U75dfMLFe0cBRs33Xkp9t46Xj7UydzRhHN0BVP57Yw7cwI4f)
 
 * Click Export and you will be prompted for your wallet password
 * You will then see a green notification at the bottom of the window if the export is successful. For example: “Transfers exported to /home/sean/Desktop/transfers.csv”
 
 ### CLI Wallet
 
-Note you will either need to be running a local daemon \(oxend\) or have a remote node that the CLI wallet can communicate with. 
+Note you will either need to be running a local daemon (oxend) or have a remote node that the CLI wallet can communicate with.
 
 Navigate to the directory that the oxen-wallet-cli executable is stored in:
 
@@ -42,14 +42,13 @@ If you are using a remote node instead of a local daemon you will need to add ad
 
 ```bash
 sean@sean-MS-7A33:~/loki-core/build/bin$ ./oxen-wallet-cli --daemon-address public.loki.foundation:22023
-
 ```
 
 The wallet will ask you to enter the name of your wallet file. If you are coming from the GUI wallet these are stored in the following locations
 
-1. Linux: ~/Oxen/wallets/MyWallet.keys
-2. Windows: C:\Users\&lt;username&gt;\Documents\Oxen\wallets
-3. Mac: ~/Oxen/wallets/MyWallet.keys
+1. Linux: \~/Oxen/wallets/MyWallet.keys
+2. Windows: C:\Users\&lt;username>\Documents\Oxen\wallets
+3. Mac: \~/Oxen/wallets/MyWallet.keys
 
 These can alternatively be included as command line flags
 
@@ -57,9 +56,8 @@ These can alternatively be included as command line flags
 sean@sean-MS-7A33:~/loki-core/build/bin$ ./oxen-wallet-cli --daemon-address public.loki.foundation:22023 --wallet-file ~/Oxen/wallets/MyWallet --password "password"
 ```
 
-Once the wallet has synced you will be able to call \`export\_transfers\` which saves the CSV to the same location as where you ran the oxen-wallet-cli \(Most likely the same location as the executable\).
+Once the wallet has synced you will be able to call \`export\_transfers\` which saves the CSV to the same location as where you ran the oxen-wallet-cli (Most likely the same location as the executable).
 
 ```bash
 [wallet T6SjAL (has locked stakes)]: export_transfers all output=oxen.csv
 ```
-

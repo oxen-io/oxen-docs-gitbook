@@ -1,4 +1,4 @@
-# 🖥Installing on Windows
+# 🪟 Installing on Windows
 
 ### Initial setup
 
@@ -17,4 +17,3 @@ Head over to [Exit nodes](../exit-nodes.md) or [Accessing SNApps](../snapps/acce
 ### Uninstalling
 
 To uninstall Lokinet on Windows, open control panel and navigate to "Uninstall a Program", then find Lokinet and click uninstall.
-
