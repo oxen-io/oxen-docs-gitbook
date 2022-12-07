@@ -6,7 +6,7 @@ A temporary SNApp is a service accessible over Lokinet that does not have a perm
 
 If you want users to be able to access your application or service over an extended period of time, a temporary SNApp is **not** recommended.
 
-If you only want to host a temporary SNApp, jump to [Step 3](hosting-snapps.md#step-3-finding-your-snapps-lokinet-address).
+If you only want to host a temporary SNApp, jump to [Step 2](hosting-snapps.md#step-2-finding-your-snapps-lokinet-address).
 
 > _Note: This guide assumes you are running a standard Debian or Ubuntu Linux distribution on the machine on which you'll be hosting the SNApp and that you have Lokinet installed and running on this machine, if not please follow the guide_ [_here_](../guides/installing-on-linux-cli.md) _to get Lokinet running. This guide also assumes you are relatively familiar with using the command line._
 
@@ -14,7 +14,7 @@ If you only want to host a temporary SNApp, jump to [Step 3](hosting-snapps.md#s
 
 Start by opening your `lokinet.ini` file and adding a path to where your SNApp key files will be stored.
 
-If you have built Lokinet from Deb packages, you can open your `lokinet.ini` file in the `nano` text editor with the following command:
+If you have installed Lokinet from Deb packages, you can open your `lokinet.ini` file in the `nano` text editor with the following command:
 
 ```
 sudo nano /etc/loki/lokinet.ini
@@ -64,7 +64,7 @@ sudo apt install nginx
 
 ### Step 4: Configure nginx
 
-#### Setup for Lokinet exclusive SNApp
+#### Setup a Lokinet exclusive SNApp
 
 If you want your SNApp to be accessible only via Lokinet and not via your IP address or domain name then you will need to configure `nginx` to run only on the lokinet interface.
 
@@ -86,7 +86,7 @@ Once Lokinet is restarted run the following command to open your nginx default c
 sudo nano /etc/nginx/sites-enabled/default
 ```
 
-change any `listen` directives to use the lokinet IP `10.67.0.1` and remove any IPV6 `listen` directives, save the changes and exit the file.
+change any `listen` directives to use the lokinet IP `10.67.0.1` remove any IPV6 `listen` directives and replace the .loki address after `server_name` with the Lokinet address you discovered in [Step 2](hosting-snapps.md#step-2-finding-your-snapps-lokinet-address)
 
 This should leave your default file in sites available looking something like this:
 
@@ -110,7 +110,7 @@ server {
 }
 ```
 
-Replacing the .loki address after `server_name` with the Lokinet address you discovered in [Step 2](hosting-snapps.md#step-2-finding-your-snapps-lokinet-address), once this step is complete you can reload nginx with the following command:&#x20;
+save the changes and exit the file. Once this step is complete you can reload nginx with the following command:&#x20;
 
 ```
 systemctl reload nginx
@@ -118,9 +118,9 @@ systemctl reload nginx
 
 Proceed to [Step 6](hosting-snapps.md#step-6-all-done)
 
-**Setup for clearnet and Lokinet SNApp**
+**Setup a clearnet and Lokinet accessible SNApp**
 
-If you want your SNapp to be accessible via Lokinet and your clearnet IP/Domain name then fewer changes are required. First open `/etc/nginx/sites-enabled/default` using:
+If you want your SNApp to be accessible via Lokinet and your clearnet IP/Domain name then fewer changes are required. First open `/etc/nginx/sites-enabled/default` using:
 
 ```
 sudo nano /etc/nginx/sites-enabled/default
@@ -152,7 +152,7 @@ Proceed to [Step 6](hosting-snapps.md#step-6-all-done)
 
 #### Nginx Tips:
 
-TIP: By default, you can drop files into `/var/www/html` to serve them as a SNApp. Make sure they are accessible via the `www-data` user (or whichever user `nginx` runs as).
+TIP: By default, you can drop files into `/var/www/html` to serve them as a SNApp. Make sure they are accessible via the `www-data` user (or whichever user `nginx` runs as.
 
 TIP: You can make `nginx` generate a directory listing of files by adding `autoindex on;` on a new line into the `location` block in the nginx config file.
 
