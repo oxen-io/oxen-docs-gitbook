@@ -10,7 +10,7 @@ By default, or when either of the participating clients' statuses is determined 
 
 Once this mapping is determined, the sender creates the message protobuf and packs the protobuf in an envelope with the information to be processed by service nodes: the long-term public key of the recipient, a timestamp, TTL ("time to live") and a nonce which proves the completion of the required proof of work. The sender then sends the envelope using an onion request to one or more random service nodes within the target swarm (in practice, each request is always sent to 3 service nodes to achieve a high degree of redundancy). These service nodes then propagate the message to the remaining nodes in the swarm, and each service node stores the message for the duration of its specified TTL.
 
-![](<../../.gitbook/assets/image (2).png>)
+![](<../../.gitbook/assets/image (5).png>)
 
 > _Alice uses an onion request to communicate with three random service nodes in Bob’s swarm. Bob then uses an onion request to retrieve said message, by talking to three random service nodes in his swarm._
 

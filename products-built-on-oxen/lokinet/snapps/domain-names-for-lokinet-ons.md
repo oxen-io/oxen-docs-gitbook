@@ -24,11 +24,11 @@ ONS records are registered as transactions the [Oxen blockchain](../../../about-
 
 You can register a ONS record by opening the "Oxen Name Service" tab in the [Oxen GUI wallet](../../../downloads.md)&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 Once the "Oxen Name Service" tab is open, select the drop down menu underneath "ONS Record Type", and choose how long you would like to register your Lokinet name for.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 Add your preferred human readable name, and your existing .loki address, an Oxen address may also be specified if you want to delegate ownership to a wallet separate from the wallet currently in use. Backup owners can be specified and have the same rights as the owner.&#x20;
 
