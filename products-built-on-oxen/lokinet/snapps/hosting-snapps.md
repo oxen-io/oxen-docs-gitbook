@@ -6,17 +6,11 @@ A temporary SNApp is a service accessible over Lokinet that does not have a perm
 
 If you want users to be able to access your application or service over an extended period of time, a temporary SNApp is **not** recommended.
 
-If you only want to host a temporary SNApp, jump to [Step 2](hosting-snapps.md#2-finding-your-snapps-lokinet-address).
+If you only want to host a temporary SNApp, jump to [Step 3](hosting-snapps.md#step-3-finding-your-snapps-lokinet-address).
 
-> _Note: This guide assumes you are running a standard Debian or Ubuntu Linux distribution on the machine on which you'll be hosting the SNApp. This guide also assumes you are relatively familiar with using the command line._
+> _Note: This guide assumes you are running a standard Debian or Ubuntu Linux distribution on the machine on which you'll be hosting the SNApp and that you have Lokinet installed and running on this machine, if not please follow the guide_ [_here_](../guides/installing-on-linux-cli.md) _to get Lokinet running. This guide also assumes you are relatively familiar with using the command line._
 
-###
-
-### Step 1: Install Lokinet
-
-This guide assumes you already have Lokinet installed and running, if you havent yet installed Lokinet you can find a series of [guides](../guides/ "mention")
-
-### Step 2: Preparing your Lokinet address
+### Step 1: Preparing your Lokinet address
 
 Start by opening your `lokinet.ini` file and adding a path to where your SNApp key files will be stored.
 
@@ -38,7 +32,7 @@ With `lokinet.ini` open in the text editor, scroll down to your `[network]` sect
 keyfile=/var/lib/lokinet/snappkey.private
 ```
 
-**Replace** `<user>` with your computer username. Alternatively, you can set the filepath to wherever you want your SNApp private key to be stored.
+Alternatively, you can set the filepath to wherever you want your SNApp private key to be stored.
 
 Now, when you restart Lokinet, it will generate your `snappkey.private` file in the directory you have set.
 
@@ -46,7 +40,7 @@ Now, when you restart Lokinet, it will generate your `snappkey.private` file in 
 sudo systemctl restart lokinet
 ```
 
-### Step 3: Finding your SNApp's Lokinet address
+### Step 2: Finding your SNApp's Lokinet address
 
 You can find your SNApp's current address using a host lookup tool:
 
@@ -60,7 +54,7 @@ You can also use the `host` command (the .loki address to query is the same, but
 host -t cname localhost.loki 127.3.2.1
 ```
 
-### Step 4: Install nginx
+### Step 3: Install nginx
 
 Install a proper web server:
 
@@ -68,17 +62,105 @@ Install a proper web server:
 sudo apt install nginx
 ```
 
-Now configure `nginx` to run only on the lokinet interface (in `/etc/nginx/sites-enabled/default` change any `listen` directives to use the lokinet IP, and remove any IPV6 `listen` directives).
+### Step 4: Configure nginx
 
-By default, you can drop files into `/var/www/html` to serve them as a SNApp. Make sure they are accessable via the `www-data` user (or whichever user `nginx` runs as).
+#### Setup for Lokinet exclusive SNApp
 
-TIP: You can make `nginx` generate a directory listing by adding `autoindex on;` into the `location` block in the nginx config file.
+If you want your SNApp to be accessible only via Lokinet and not via your IP address or domain name then you will need to configure `nginx` to run only on the lokinet interface.
 
-### Step 5. Security
+First we will need to set the Lokinet interface IP range, we can do this by accessing our Lokinet config file as we did in [Step 1](hosting-snapps.md#step-1-preparing-your-lokinet-address) and adding this line in the `[network]`section:&#x20;
+
+```
+ifaddr=10.67.0.1/16
+```
+
+this can go underneath your existing network config changes, after this change is made restart Lokinet using:&#x20;
+
+```
+sudo systemctl restart lokinet
+```
+
+Once Lokinet is restarted run the following command to open your nginx default configuration file, we are going to make a few changes here.
+
+```
+sudo nano /etc/nginx/sites-enabled/default
+```
+
+change any `listen` directives to use the lokinet IP `10.67.0.1` and remove any IPV6 `listen` directives, save the changes and exit the file.
+
+This should leave your default file in sites available looking something like this:
+
+```
+server {
+        listen 10.67.0.1:80;
+
+        root /var/www/html;
+
+        # Add index.php to the list if you are using PHP
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name 73qqjm7ju98g6obua8bprce1tjyyphnotknnijhpn8mypwumqs8o.loki;
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files $uri $uri/ =404;
+        }
+
+}
+```
+
+Replacing the .loki address after `server_name` with the Lokinet address you discovered in [Step 2](hosting-snapps.md#step-2-finding-your-snapps-lokinet-address), once this step is complete you can reload nginx with the following command:&#x20;
+
+```
+systemctl reload nginx
+```
+
+Proceed to [Step 6](hosting-snapps.md#step-6-all-done)
+
+**Setup for clearnet and Lokinet SNApp**
+
+If you want your SNapp to be accessible via Lokinet and your clearnet IP/Domain name then fewer changes are required. First open `/etc/nginx/sites-enabled/default` using:
+
+```
+sudo nano /etc/nginx/sites-enabled/default
+```
+
+Then add your .loki address (which you discovered in [Step 2](hosting-snapps.md#step-2-finding-your-snapps-lokinet-address)) as a `server_name`, after the changes your nginx default file should look something like this:
+
+```
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        root /var/www/html;
+
+        # Add index.php to the list if you are using PHP
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name _ 73qqjm7ju98g6obua8bprce1tjyyphnotknnijhpn8mypwumqs8o.loki;
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files $uri $uri/ =404;
+        }
+}
+```
+
+Proceed to [Step 6](hosting-snapps.md#step-6-all-done)
+
+#### Nginx Tips:
+
+TIP: By default, you can drop files into `/var/www/html` to serve them as a SNApp. Make sure they are accessible via the `www-data` user (or whichever user `nginx` runs as).
+
+TIP: You can make `nginx` generate a directory listing of files by adding `autoindex on;` on a new line into the `location` block in the nginx config file.
+
+### Step 5. Security (Optional)
 
 Make sure no services bind to all interfaces.
 
-Suggested firewall settings when using nginx:
+Suggested [UFW](https://wiki.ubuntu.com/UncomplicatedFirewall) firewall settings when using nginx:
 
 ```
 # change me to the range used by lokinet
@@ -91,42 +173,6 @@ ufw deny from $LOKINET_RANGE
 ufw allow 80/tcp from $LOKINET_RANGE
 ```
 
-### Step 6. Configuring SRV records
+### Step 6: All done!
 
-It is possible to configure your SNApp so that others can get service information when looking it up. For example, you may want to tell the user you are hosting an xmpp server at a specific port, or even at a different .loki address, or perhaps even load-balance a service across multiple .loki addresses.
-
-To start, open Lokinet's .ini file for editing as in [Step 1](hosting-snapps.md#step-1-preparing-your-lokinet-address).
-
-Under the section heading `[network]` add one or more entries with the following format:
-
-```
-srv=_service._protocol priority weight port [target]
-```
-
-An example:
-
-```
-srv=_xmpp._tcp 10 10 1234 mylokiaddress.loki
-```
-
-This would be an entry for the XMPP protocol, pointing to `mylokiaddress.loki` at port 1234.
-
-Another example:
-
-```
-srv=_mumble._tcp 10 10 64738
-```
-
-This would be an entry for Mumble, pointing to the SNApp you are configuring at port 64738.
-
-The target in this entry MUST be one of the following:
-
-* empty, which means "just use the .loki for this SNApp"
-* a single dot (`.`), which means "this SNApp does NOT have that service available"
-* any valid name in the .loki TLD.
-
-For more information on SRV records and what you can do with them, visit [the Wikipedia article](https://en.wikipedia.org/wiki/SRV\_record).
-
-### All done!
-
-Congratulations! Your SNApp should now be accessible over Lokinet.
+Congratulations! Your SNApp should now be accessible over Lokinet. Use the Lokinet address you discovered in [Step 2](hosting-snapps.md#step-2-finding-your-snapps-lokinet-address), to access your SNApp

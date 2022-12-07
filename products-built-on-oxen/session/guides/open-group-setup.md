@@ -68,7 +68,7 @@ sudo apt install sogs-proxied
 
 If installing the standalone version you will see this prompt, asking you to enter a URL or IP address, if you have not setup DNS to point towards the IP address of your VPS then you should enter your VPS Public IP address, which can usually be found on your VPS provider's website. &#x20;
 
-![](<../../../.gitbook/assets/image (2).png>)
+![](<../../../.gitbook/assets/image (2) (1).png>)
 
 ### 4. Add a room
 

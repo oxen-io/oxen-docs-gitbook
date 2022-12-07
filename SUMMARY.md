@@ -70,3 +70,5 @@
   * [🧑💻 SNApps](products-built-on-oxen/lokinet/snapps/README.md)
     * [🚀 Accessing SNApps](products-built-on-oxen/lokinet/snapps/accessing-snapps.md)
     * [🖥 Hosting SNApps](products-built-on-oxen/lokinet/snapps/hosting-snapps.md)
+    * [🗺 Domain Names For Lokinet (ONS)](products-built-on-oxen/lokinet/snapps/domain-names-for-lokinet-ons.md)
+    * [⏺ Configuring SRV Records](products-built-on-oxen/lokinet/snapps/configuring-srv-records.md)
