@@ -2,19 +2,17 @@
 
 Some SOGS operators may want to setup a room on their SOGS which features one way style communication, these rooms allow moderators and administrators to update the room with new messages, but disallows unprivileged users to send new messages. These sorts of rooms can be useful for providing updates or information.&#x20;
 
-## Step 1&#x20;
-
-Create a new room
+## 1.  Create a new room
 
 ```
 sogs --add-room TOKEN --name "NAME" --description "DESCRIPTION"
 ```
 
+_\*Skip to step 3 if you already have a room and you are an administrator in that room\*_
+
 Replace `TOKEN` with the address to use in the room URL (which must consist of **ONLY** lowercase letters, numbers, underscores, or dashes), replace `NAME` with the room name to display in Session and optionally replace `DESCRIPTION` with a short description of the topic of the room.
 
-## Step 2&#x20;
-
-Ensure you are an administrator of the room&#x20;
+## 2.  Ensure you are an administrator of the room&#x20;
 
 ```
 sogs --room TOKEN --admin --add-moderator SESSIONID
@@ -22,9 +20,7 @@ sogs --room TOKEN --admin --add-moderator SESSIONID
 
 replacing TOKEN with the room token you created in step 1 and replacing SESSIONID with your own Session ID
 
-## Step 3&#x20;
-
-Now we need to alter room permissions&#x20;
+## 3.  Alter room permissions&#x20;
 
 There are 4 types of permission currently available in rooms&#x20;
 
