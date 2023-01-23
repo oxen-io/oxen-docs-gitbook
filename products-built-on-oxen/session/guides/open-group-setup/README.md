@@ -68,7 +68,7 @@ sudo apt install sogs-proxied
 
 If installing the standalone version you will see this prompt, asking you to enter a URL or IP address, if you have not setup DNS to point towards the IP address of your VPS then you should enter your VPS Public IP address, which can usually be found on your VPS provider's website. &#x20;
 
-![](<../../../.gitbook/assets/image (2).png>)
+![](<../../../../.gitbook/assets/image (2).png>)
 
 ### 4. Add a room
 
@@ -108,7 +108,7 @@ Once setup, you should be able to navigate to your VPS's IP address in a web bro
 
 Here you should see a list of your rooms, clicking on a room will display a QR code and the link required to join the room, this link can be copied and pasted into a Session client to join a group.
 
-![U](<../../../.gitbook/assets/image (3).png>)
+![U](<../../../../.gitbook/assets/image (3).png>)
 
 If something in this guide doesn't make sense, or if you’re running into issues that you can’t identify on your own, the first place to go would be the [Session open group](http://116.203.70.33/session?public\_key=a03c383cf63c3c4efe67acc52112a6dd734b3a946b9545f488aaa93da7991238) inside Session. Alternatively, you can find help on our other communication channels: [Twitter](https://twitter.com/Oxen\_io), or [Reddit](https://reddit.com/oxen\_io).
 
