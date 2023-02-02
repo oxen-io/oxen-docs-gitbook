@@ -1,10 +1,6 @@
 # Table of contents
 
 * [💡 Introduction to Oxen](README.md)
-* [⚒️ Building with Oxen](building-with-oxen/README.md)
-  * [🌐 Lokinet](building-with-oxen/lokinet.md)
-  * [🔒 Session](building-with-oxen/session.md)
-  * [🐂 Oxen](building-with-oxen/oxen.md)
 * [📁 Downloads](downloads.md)
 * [🆘 Support](support.md)
 

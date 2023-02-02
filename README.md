@@ -30,14 +30,11 @@ Developers can also leverage Oxen by plugging its technologies directly into the
 Thanks to Oxen's robust, actively-developed codebase, developers finally have the ability to create mature and fully-featured privacy applications — without compromises. Here’s a list of some ideas that are possible using the Oxen stack:
 
 * A truly encrypted Slack/Mattermost competitor
-* A truly encrypted voice and video call service \(yes, much better than Zoom or Jitsi — which aren’t really that well-secured at all\)
-* Peer-to-peer networking replacement library for blockchain projects \(much easier to deploy than libp2p, for instance, due to common features with ZMQ\)
+* A truly encrypted voice and video call service (yes, much better than Zoom or Jitsi — which aren’t really that well-secured at all)
+* Peer-to-peer networking replacement library for blockchain projects (much easier to deploy than libp2p, for instance, due to common features with ZMQ)
 * Onion VPN marketplace powered by Oxen
-* Secure onion-routed HTTP request library \(onion requests\) used to secure simple web traffic between client and server without requiring a VPN or OS level support
-* Redundant messaging utilising the swarm protocol \(superior protocol to Bitmessage\)
-* Virtual LAN functionality to enable private networks to form on the public internet \(a more versatile, easier-to-use version of Hamachi\)
+* Secure onion-routed HTTP request library (onion requests) used to secure simple web traffic between client and server without requiring a VPN or OS level support
+* Redundant messaging utilising the swarm protocol (superior protocol to Bitmessage)
+* Virtual LAN functionality to enable private networks to form on the public internet (a more versatile, easier-to-use version of Hamachi)
 
-For more in-depth information on the components of the Oxen stack, head over to [Building on Oxen](building-with-oxen/).  
-  
-
-
+For more in-depth information on the components of the Oxen stack, head over to [Building on Oxen](broken-reference).
