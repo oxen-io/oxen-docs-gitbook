@@ -6,7 +6,7 @@ You can run the Oxen Service Node software on any device running a supported ope
 
 #### Running an Oxen Service Node: Requirements
 
-These are the current basic requirements for running a Service Node as of October 2021. They will almost certainly increase in the future as the technologies powered by the Oxen network grow in popularity, so keep an eye on the [Oxen blog](https://oxen.io/blog) and join either our [Telegram community](https://t.me/Oxen\_Community) or [Session open group](http://116.203.70.33/oxen?public\_key=a03c383cf63c3c4efe67acc52112a6dd734b3a946b9545f488aaa93da7991238) for all the latest updates.
+These are the current basic requirements for running a Service Node as of October 2021. They will almost certainly increase in the future as the technologies powered by the Oxen network grow in popularity, so keep an eye on the [Oxen blog](https://oxen.io/blog) and join either our [Telegram community](https://t.me/Oxen\_Community) or [Session open group](https://open.getsession.org/oxen?public\_key=a03c383cf63c3c4efe67acc52112a6dd734b3a946b9545f488aaa93da7991238) for all the latest updates.
 
 | Spec                              | Requirement                                                                                                                             |
 | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
