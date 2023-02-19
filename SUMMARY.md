@@ -64,7 +64,7 @@
     * [🍎 macOS troubleshooting](products-built-on-oxen/lokinet/guides/macos-troubleshooting.md)
     * [📞 Run a secure Mumble server over Lokinet](products-built-on-oxen/lokinet/guides/secure-mumble-server-over-lokinet.md)
   * [👋 Exit nodes](products-built-on-oxen/lokinet/exit-nodes.md)
-  * [🧑💻 SNApps](products-built-on-oxen/lokinet/snapps/README.md)
+  * [🧑💻 🧑💻 SNApps](products-built-on-oxen/lokinet/snapps/README.md)
     * [🚀 Accessing SNApps](products-built-on-oxen/lokinet/snapps/accessing-snapps.md)
     * [🖥 Hosting SNApps](products-built-on-oxen/lokinet/snapps/hosting-snapps.md)
     * [🗺 Domain Names For Lokinet (ONS)](products-built-on-oxen/lokinet/snapps/domain-names-for-lokinet-ons.md)

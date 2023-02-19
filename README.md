@@ -1,40 +1,30 @@
 ---
 description: >-
-  Oxen is a developer platform focused on building tools for a more private
-  digital future.
+  Oxen is an ecosystem of privacy tools built on top of a fully decentralised
+  layer-1 blockchain.
 ---
 
 # 💡 Introduction to Oxen
 
-**Oxen** is a developer platform for privacy tools. Using Oxen's super-powered technology stack, developers and users are finally able to access proper privacy, security, decentralisation, and safety in a myriad of software applications.
+**Oxen** is one of the largest app ecosystems in the entire crypto industry. Applications like Session and Lokinet are currently servicing hundreds of thousands of active users thanks to the power of the Oxen Service Node Network.
 
-Through its network, blockchain, and technology stack, Oxen offers a variety of tools, libraries, and direct end-user products which solve some of the most difficult challenges in the digital security space.
-
-The network is powered by the Oxen blockchain, a privacy preserving cryptocurrency network that enables fast and private value transfer. The blockchain is maintained by a distributed network of community-operated [🖥 Oxen Service Nodes](about-the-oxen-blockchain/oxen-service-nodes.md), which run all the network features and services offered by Oxen's tech stack.
+The network is powered by the Oxen blockchain, a privacy preserving cryptocurrency network that enables fast and private value transfer. The blockchain is maintained by a distributed network of community-operated [🖥 Oxen Service Nodes](https://oxen.gitbook.io/oxen-docs/about-the-oxen-blockchain/oxen-service-nodes), which run all the network features and services offered by Oxen's tech stack.
 
 #### Quick navigation
 
 * [Show me how to get an OXEN wallet](using-the-oxen-blockchain/oxen-wallet-guides/)
 * [Show me how to stake on the OXEN network](using-the-oxen-blockchain/oxen-service-node-guides/staking-to-shared-service-node.md)
 
-### What can be built with Oxen?
+### The Coin
 
-The Oxen team has already published two end-user products released which leverage the Oxen network in order to provide privacy to users in both the secure messaging and internet traffic spaces. You can read more about [Session](products-built-on-oxen/session/) and [Lokinet](products-built-on-oxen/lokinet/) here.
+Oxen was originally forked from Monero, and it's still based on the CryptoNote protocol. From these beginnings, Oxen has inherited world class privacy and security features — including ring signatures, stealth addresses, and ring confidential transactions. Just like $XMR, $OXEN is fungible, private, and untraceable.
 
-Although these are innovative applications, the Oxen stack can be used to build so much more!
+### Service Nodes
 
-With dozens of tools, features, libraries, and protocols to leverage, developers can utilise Oxen to create brand new tools backed by world-leading privacy and security technology.
+Oxen is fully proof of stake, with a set of incentivised nodes called Oxen Service Nodes maintaining an securing the blockchain, providing services to Oxen Apps, and receiving block rewards.
 
-Developers can also leverage Oxen by plugging its technologies directly into their existing technology stacks, applications, or services — providing their users with a whole new standard privacy and security.
+### The Apps
 
-Thanks to Oxen's robust, actively-developed codebase, developers finally have the ability to create mature and fully-featured privacy applications — without compromises. Here’s a list of some ideas that are possible using the Oxen stack:
+**Session** — An end-to-end encrypted, decentralised messaging app. Because Session doesn’t require any identifying information—such as a phone number or email address—to sign up, it has become popular with civil rights groups, whistleblowers, and other people who require high levels of privacy and anonymity.
 
-* A truly encrypted Slack/Mattermost competitor
-* A truly encrypted voice and video call service (yes, much better than Zoom or Jitsi — which aren’t really that well-secured at all)
-* Peer-to-peer networking replacement library for blockchain projects (much easier to deploy than libp2p, for instance, due to common features with ZMQ)
-* Onion VPN marketplace powered by Oxen
-* Secure onion-routed HTTP request library (onion requests) used to secure simple web traffic between client and server without requiring a VPN or OS level support
-* Redundant messaging utilising the swarm protocol (superior protocol to Bitmessage)
-* Virtual LAN functionality to enable private networks to form on the public internet (a more versatile, easier-to-use version of Hamachi)
-
-For more in-depth information on the components of the Oxen stack, head over to [Building on Oxen](broken-reference).
+**Lokinet** — An onion-router that allows people to browse the internet privately and securely. Lokinet operates on the network layer and is therefore able to onion-route any IP-based protocol, making it fast, dynamic, and adaptable.
