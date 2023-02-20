@@ -12,7 +12,7 @@ The wallet uses these private keys through a daemon which synchronises with the 
 
 The Oxen GUI Wallet, also referred to as the Oxen Electron Wallet, is the most user-friendly Oxen wallet. It has a graphical interface (like most PC applications), which is perfect for beginners or those just looking to store and send their Oxen. The GUI Wallet is available for Windows, macOS, and Linux.
 
-To download the latest release of the Oxen GUI Wallet, head to [our downloads page](https://docs.oxen.io/downloads).
+To download the latest release of the Oxen GUI Wallet, head to our [downloads page](https://docs.oxen.io/downloads).
 
 | Guide                                                                                                       | Description                                                         |
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
@@ -25,7 +25,7 @@ To download the latest release of the Oxen GUI Wallet, head to [our downloads pa
 
 The Oxen CLI Wallet is for more advanced users, and offers additional tools to interact with the Oxen blockchain.
 
-To download the latest release of the Oxen CLI Wallet, head to [our downloads page](https://docs.oxen.io/downloads).
+To download the latest release of the Oxen CLI Wallet, head to our [downloads page](https://docs.oxen.io/downloads).
 
 | Guide                                                                                                       | Description                                                                          |
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
@@ -35,3 +35,13 @@ To download the latest release of the Oxen CLI Wallet, head to [our downloads pa
 | [CLI Setup for macOS](cli-wallet-setup-macos.md)                                                            | How to configure `oxen-wallet-cli` for the first time on macOS.                      |
 | [Oxen Ledger Wallet setup: CLI Wallet](oxen-ledger-wallet-usage-cli-wallet.md)                              | How to setup the Oxen CLI Wallet on the Ledger Hardware Wallet.                      |
 | [Exporting a CSV of your wallet transaction history](exporting-a-csv-of-your-wallet-transaction-history.md) | How to export your Oxen wallet's transaction history as a CSV file.                  |
+
+### Mobile Wallet
+
+The Oxen mobile wallet allows users to access and manage their Oxen without having access to a PC. The mobile wallet is available for both iOS and Android.&#x20;
+
+To download the latest release of the Oxen mobile wallet, head to our [downloads page](../../downloads.md).
+
+| Guide                                                             | Description                                                                       |
+| ----------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| [Oxen Mobile Wallet Quickstart](oxen-mobile-wallet-quickstart.md) | This guide will walk you through using the Oxen Mobile wallet for the first time. |
