@@ -42,6 +42,7 @@ The Oxen mobile wallet allows users to access and manage their Oxen without havi
 
 To download the latest release of the Oxen mobile wallet, head to our [downloads page](../../downloads.md).
 
-| Guide                                                             | Description                                                                       |
-| ----------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| [Oxen Mobile Wallet Quickstart](oxen-mobile-wallet-quickstart.md) | This guide will walk you through using the Oxen Mobile wallet for the first time. |
+| Guide                                                             | Description                                                     |
+| ----------------------------------------------------------------- | --------------------------------------------------------------- |
+| [Oxen Mobile Wallet Quickstart](oxen-mobile-wallet-quickstart.md) | How to use the Oxen Mobile wallet for the first time.           |
+| [Mobile Wallet Staking](mobile-wallet-staking-guide.md)           | How to stake to an Oxen Service Node via the Oxen Mobile Wallet |
