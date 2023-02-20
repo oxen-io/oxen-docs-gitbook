@@ -14,7 +14,6 @@ Because of the nature of [Pulse](../pulse-pos-on-oxen/), a large proportion of $
 
 These two qualities help increase buy pressure and decrease sell pressure in $OXEN markets, respectively.
 
-More details about the cryptoeconomic theory which underpins Oxen [can be found here](https://loki.network/wp-content/uploads/2019/05/Loki_Cryptoeconomics-2-1.pdf). 
+More details about the cryptoeconomic theory which underpins Oxen [can be found here](https://loki.network/wp-content/uploads/2019/05/Loki\_Cryptoeconomics-2-1.pdf).
 
-The non for profit[ Oxen Privacy Tech Foundation](https://optf.ngo/) receives a governance reward of 9240 $OXEN every 7 days. This reward is used to pay for development, marketing, and community projects, more information about how the Oxen treasury and governance reward is managed can be found on the [OPTF](https://optf.ngo/) website. 
-
+The not-for-profit[ Oxen Privacy Tech Foundation](https://optf.ngo/) receives a governance reward of 9240 $OXEN every 7 days. This reward is used to pay for development, marketing, and community projects, more information about how the Oxen treasury and governance reward is managed can be found on the [OPTF](https://optf.ngo/) website.
