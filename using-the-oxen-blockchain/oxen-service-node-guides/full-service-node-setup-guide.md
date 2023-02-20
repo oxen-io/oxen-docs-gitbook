@@ -22,8 +22,8 @@ These are the current basic requirements for running a Service Node as of Octobe
 
 ### Table of Contents
 
-* Oxen Service Nodes in a nutshell
-* Set-up for new users
+* [Oxen Service Nodes in a nutshell](full-service-node-setup-guide.md#oxen-service-nodes-in-a-nutshell)
+* [Set-up for new users](full-service-node-setup-guide.md#service-node-set-up-for-new-users)
   * [Step 1: Obtaining a server](full-service-node-setup-guide.md#step-1-obtaining-a-server)
   * [Step 2: Preparing your server](full-service-node-setup-guide.md#step-2-preparing-your-server)
   * [Step 3: Initial repository set-up](full-service-node-setup-guide.md#step-3-initial-repository-setup)
@@ -31,19 +31,10 @@ These are the current basic requirements for running a Service Node as of Octobe
   * [Step 5: Service Node registration](full-service-node-setup-guide.md#step-5-service-node-registration)
   * [Step 6: Service Node status check](full-service-node-setup-guide.md#step-6-service-node-status-check)
   * [Step 7: Unlocking your stake](full-service-node-setup-guide.md#step-7-unlocking-your-stake)
-* Keeping your binaries up to date
-* Monitoring
-* Back-ups
-
-
-
-
-
-
-
-s
-
-* Conclusion
+* [Keeping your binaries up to date](full-service-node-setup-guide.md#keeping-your-binaries-up-to-date)
+* [Monitoring](full-service-node-setup-guide.md#monitoring)
+* [Back-ups](full-service-node-setup-guide.md#back-ups)
+* [Conclusion](full-service-node-setup-guide.md#conclusion)
 
 ### Oxen Service Nodes in a nutshell
 
@@ -192,10 +183,7 @@ Alternatively, your `<DISTRO>` can be found by using the following list:
 * focal (Ubuntu 20.04)
 * bionic (Ubuntu 18.04)
 
-We also have repositories for Debian testing (`bookworm` or `testing`) and unstable (`sid` or
-`unstable`), and typically support the latest or upcoming Ubuntu non-LTS release (`kinetic`, as of
-writing).  Note, however, that none of these distribution versions are recommended for production
-service nodes.
+We also have repositories for Debian testing (`bookworm` or `testing`) and unstable (`sid` or `unstable`), and typically support the latest or upcoming Ubuntu non-LTS release (`kinetic`, as of writing). Note, however, that none of these distribution versions are recommended for production service nodes.
 
 ```
 echo "deb https://deb.oxen.io <DISTRO> main" | sudo tee /etc/apt/sources.list.d/oxen.list
@@ -496,7 +484,7 @@ oxen-sn-keys restore /var/lib/oxen/key_ed25519
 
 Alternatively, you can use a tool like `scp` to copy the file off-host for safekeeping.
 
-> Note that for older service nodes (installed before Oxen 8.x) the server will have *two* keys: the above, plus a legacy `/var/lib/oxen/key`.  You must additionally back up and restore this legacy key to restore such a service node, using:
+> Note that for older service nodes (installed before Oxen 8.x) the server will have _two_ keys: the above, plus a legacy `/var/lib/oxen/key`. You must additionally back up and restore this legacy key to restore such a service node, using:
 >
 > ```
 > oxen-sn-keys show /var/lib/oxen/key
@@ -508,7 +496,7 @@ Alternatively, you can use a tool like `scp` to copy the file off-host for safek
 > oxen-sn-keys restore-legacy /var/lib/oxen/key
 > ```
 >
-> If you are planning on unlocking and re-registering an older node with two keys, it is recommended to remove the legacy `/var/lib/oxen/key` *after* the registration expires, restart the oxen/lokinet/storage server services, and then register using the new, single key: this will leave you with just one key to back up and restore.  IMPORTANT: Never remove any keys on an active, registered service node!
+> If you are planning on unlocking and re-registering an older node with two keys, it is recommended to remove the legacy `/var/lib/oxen/key` _after_ the registration expires, restart the oxen/lokinet/storage server services, and then register using the new, single key: this will leave you with just one key to back up and restore. IMPORTANT: Never remove any keys on an active, registered service node!
 
 ### Conclusion
 

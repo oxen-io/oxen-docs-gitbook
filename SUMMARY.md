@@ -23,7 +23,7 @@
   * [GUI Wallet Quickstart](using-the-oxen-blockchain/oxen-wallet-guides/gui-wallet-quickstart.md)
   * [GUI Wallet Staking](using-the-oxen-blockchain/oxen-wallet-guides/gui-wallet-staking.md)
   * [Oxen Mobile Wallet Quickstart](using-the-oxen-blockchain/oxen-wallet-guides/oxen-mobile-wallet-quickstart.md)
-  * [Mobile Wallet Staking Guide](using-the-oxen-blockchain/oxen-wallet-guides/mobile-wallet-staking-guide.md)
+  * [Mobile Wallet Staking Guide](using-the-oxen-blockchain/oxen-service-node-guides/mobile-wallet-staking-guide.md)
   * [Exporting a CSV of your wallet transaction history](using-the-oxen-blockchain/oxen-wallet-guides/exporting-a-csv-of-your-wallet-transaction-history.md)
   * [CLI Wallet setup (macOS)](using-the-oxen-blockchain/oxen-wallet-guides/cli-wallet-setup-macos.md)
   * [Oxen Ledger Wallet setup: GUI Wallet](using-the-oxen-blockchain/oxen-wallet-guides/oxen-ledger-wallet-setup-gui-wallet.md)
