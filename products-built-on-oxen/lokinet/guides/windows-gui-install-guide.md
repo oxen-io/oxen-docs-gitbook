@@ -6,7 +6,7 @@
 2. Run the downloaded .exe file
 3. Check both "lokinet" and "gui" in the installer and then click "install"
 4. Run the application
-5. Press the big green button in the Lokinet interface to start or stop Lokinet
+5. Press the big power button in the Lokinet interface to start or stop Lokinet
 
 All done!
 
