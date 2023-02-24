@@ -1,8 +1,12 @@
 # GUI Wallet setup
 
-This document will tell you exactly how to set up and operate the Oxen GUI wallet. You can download the appropriate GUI Wallet for your desktop operating system [here](../../downloads.md). 
+{% embed url="https://youtu.be/XhFShsmnV2Y" %}
+GUI Wallet Setup
+{% endembed %}
 
-### **Step 0 \(Windows only\):** Install Electron wallet and allow Defender permissions.
+This document will tell you exactly how to set up and operate the Oxen GUI wallet. You can download the appropriate GUI Wallet for your desktop operating system [here](../../downloads.md).
+
+### **Step 0 (Windows only):** Install Electron wallet and allow Defender permissions.
 
 > **Mac and Linux users skip to** [**Step 1**](gui-wallet-setup.md#1-running-the-wallet-for-the-first-time)**.**
 
@@ -60,4 +64,3 @@ Next fill in the following input fields:
 * Confirm Password: `Enter the same password to confirm spelling.`
 
 Once input boxes are filled in click `RESTORE WALLET` button.
-
