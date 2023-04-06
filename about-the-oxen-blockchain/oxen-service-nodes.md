@@ -6,6 +6,8 @@ description: Oxen Service Nodes provide the underlying support for the Oxen Netw
 
 Oxen’s networking functionality, scalability, and decentralisation tech stack is powered by a set of incentivised nodes called Oxen Service Nodes. To operate a service node, an operator time-locks 15,000 $OXEN, and the service node begins providing a minimum level of bandwidth and storage to the network. In return for their services, service node operators receive a portion of the block reward from each block mined on the Oxen blockchain.
 
+{% embed url="https://www.youtube.com/watch?v=d193VVqlj58" %}
+
 The resulting network benefits from market-based resistance to Sybil attacks, addressing a range of problems with existing onion routers and privacy-centric services. This resistance is based on supply and demand interactions which help prevent single actors from possessing a large enough stake in Oxen to have a significant negative impact on the second-layer privacy services Oxen provides. [DASH](https://github.com/dashpay/dash/wiki/Whitepaper) first theorised that cryptoeconomics can provide a network with properties of Sybil attack resistance. In our case, as an attacker accumulates $OXEN, the circulating supply decreases, in turn applying demand-side pressure and driving the price of $OXEN up. This effect spirals, making it increasingly costly for additional $OXEN to be purchased and thus making an attack prohibitively expensive.
 
 To maintain this protection, Oxen encourages active suppression of the circulating supply. In particular, the emissions curve and staking requirement have been designed to ensure enough circulating supply is locked (and reasonable rewards are provided to operators) to ensure Sybil attack resistance.
