@@ -10,10 +10,11 @@ One of:
 
 * Debian 11 ("bullseye")
 * Debian 10 ("buster")
+* Ubuntu 22.04 ("jammy")
 * Ubuntu 20.04 ("focal")
 * Ubuntu 18.04 ("bionic")
 
-Recommended: the latest Debian stable or Ubuntu LTS release (11 and 20.04, respectively, as of the time of writing).
+Recommended: the latest Debian stable or Ubuntu LTS release (11 and 22.04, respectively, as of the time of writing).
 
 > Note: There are strict uptime requirements for Service Nodes (see [Service Node deregistration](service-node-deregistration.md)). It is **strongly discouraged** to run a Service Node on a device that will not be continuously on-line. We recommend running your Service Node on a VPS with a reputable provider.
 
@@ -72,10 +73,11 @@ To find your `<DISTRO>` run the following command: `lsb_release -sc`
 Alternatively, `<DISTRO>` can be found in the following list:
 
 * sid (Debian testing/unstable)
+* bullseye (Debian 11)
 * buster (Debian 10)
-* bionic (Ubuntu 18.04)
+* jammy (Ubuntu 22.04)
 * focal (Ubuntu 20.04)
-* groovy (Ubuntu 20.10)
+* bionic (Ubuntu 18.04)
 
 ```
 echo "deb https://deb.oxen.io <DISTRO> main" | sudo tee /etc/apt/sources.list.d/oxen.list
