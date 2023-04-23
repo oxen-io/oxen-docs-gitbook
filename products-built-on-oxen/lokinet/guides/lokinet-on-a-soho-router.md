@@ -126,7 +126,6 @@ exit-node=exit2.loki
 you can swap out exit.loki and exit2.loki with any other exit you know of, these are provided as functionging placeholder/default values for toy usage, the OPTF runs both of these exits at the moment.
 
 you can add as many entries as you want and it will stripe traffic accross them per remote ip address.
-(1.1.1.1 and 9.9.9.9 and 5.4.3.2.1 will use each select a random entry in your list of exits provided)
 
 then edit the systemd unit to add a post up command we'll need for the routing table:
 
