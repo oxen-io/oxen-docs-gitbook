@@ -60,24 +60,33 @@ Congratulations, Lokinet is now installed and running in the background.
 
 ### Starting and stopping Lokinet
 
-To start Lokinet manually, run the following command:
+By default, lokinet will be running in the background on boot.
+
+You can disable lokinet from starting on boot with:
 
 ```text
-sudo systemctl start lokinet
+sudo systemctl disable --now lokinet
 ```
 
-To stop Lokinet manually, run the following command:
+You can re-enable lokinet to run on boot with:
+
+```text
+sudo systemctl enable --now lokinet
+``` 
+You can stop the lokinet service with:
 
 ```text
 sudo systemctl stop lokinet
 ```
 
+You can use stop, start or restart to start and stop lokinet using the command above replacing `stop` with `start` or `restart`
+
 ### Updating Lokinet
 
-To update Lokinet, run the following command:
+To update Lokinet when installed with apt run the following command:
 
 ```text
-sudo apt update && sudo apt install lokinet && sudo lokinet-bootstrap && sudo systemctl
+sudo apt update && sudo apt upgrade lokinet
 ```
 
 ### Using Lokinet
@@ -86,25 +95,19 @@ Head over to [Exit nodes](../exit-nodes.md) or [Accessing SNApps](../snapps/acce
 
 ### CLI installation troubleshooting
 
-#### `Failed to decode boostrap RC`
+If lokinet gets "stuck" trying to connect to the network, back up any persisting private keys for .loki and....
 
-If your bootstrap is not configured properly, run the following command:
+* stop the lokinet service
+* remove `/var/lib/lokinet/profiles.dat`
+* start the lokinet service
 
-```text
-sudo lokinet-bootstrap
-```
-
-Then restart Lokinet:
-
-```text
-sudo systemctl restart lokinet
-```
+this will remove the client's inferred network state that it slowly generates over time, thus will start retrying nodes it thought were dead before.
 
 #### Linux Mint does not work with \(lsb-release\)
 
 It has been reported that Linux Mint users may need to use the following command instead of the second command in [2. Installation](installing-on-linux-cli.md#2-installation):
 
 ```text
-echo "deb https://deb.oxen.io focal main" | sudo tee /etc/apt/sources.list.d/oxen.list
+echo "deb https://deb.oxen.io jammy main" | sudo tee /etc/apt/sources.list.d/oxen.list
 ```
 
