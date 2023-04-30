@@ -171,7 +171,7 @@ This first command installs the public key used to sign the Oxen Service Node pa
 sudo curl -so /etc/apt/trusted.gpg.d/oxen.gpg https://deb.oxen.io/pub.gpg
 ```
 
-The second command tells `apt` where to find the packages. **Note:** Replace `<DISTRO>`with the appropriate value to match your operating system. If your VPS is running Ubuntu 20.04 as recommended for this guide, replace `<DISTRO>` with `focal`.
+The second command tells `apt` where to find the packages. **Note:** Replace `<DISTRO>`with the appropriate value to match your operating system. If your VPS is running Ubuntu 22.04 as recommended for this guide, replace `<DISTRO>` with `jammy`.
 
 Otherwise, to check your `<DISTRO>` , run the following command: `lsb_release -sc`
 

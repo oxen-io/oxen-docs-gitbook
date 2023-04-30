@@ -14,7 +14,7 @@ If this is your first time using SSH and the Linux command line, don’t stress.
 
 The first thing you’ll want to do is rent yourself a VPS \(Virtual Private Server\) to host your Mumble voice chat server. You _could_ run the Mumble server from your own computer instead, but if you want the server to stay up 24/7, _without_ having to leave your own PC on all the time, a VPS is the way to go. Mumble’s chat server has extremely low system requirements, so a VPS with any amount of storage and at least 512MB RAM will do the trick — you can find VPSs that meet these requirements for around US$3 a month. 
 
-Try [https://www.hetzner.com/cloud](https://www.hetzner.com/cloud), or [https://evolution-host.com/vps-hosting.php](https://evolution-host.com/vps-hosting.php) if you want to pay in $OXEN! When ordering, select Ubuntu 20.04 or Debian 10 as the operating system.
+Try [https://www.hetzner.com/cloud](https://www.hetzner.com/cloud), or [https://evolution-host.com/vps-hosting.php](https://evolution-host.com/vps-hosting.php) if you want to pay in $OXEN! When ordering, select Ubuntu 22.04 or Debian 11 as the operating system.
 
 ### Step 2: Prepare your VPS
 
