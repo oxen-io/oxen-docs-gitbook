@@ -31,4 +31,4 @@ Simply jump into the lokinet-gui client and click the large green power button.
 
 Head over to [Exit nodes](../exit-nodes.md) or [Accessing SNApps](../snapps/accessing-snapps.md) for an overview of the exciting things you can do with Lokinet up and running!
 
-See the troubleshooting guide [here](../linux-troubleshooting.md) if you have issues.
+See the troubleshooting guide [here](./linux-troubleshooting.md) if you have issues.
