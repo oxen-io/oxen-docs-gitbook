@@ -37,7 +37,7 @@ See the troubleshooting guide [here](./linux-troubleshooting.md) if you have iss
 
 #### Linux Mint does not work with \(lsb-release\)
 
-It has been reported that Linux Mint users may need to use the following command instead of the second command in [Initial setup](linux-gui-install-guide.md##initial-setup):
+It has been reported that Linux Mint users may need to use the following command instead of the second command in [Initial setup](linux-gui-install-guide.md#initial-setup):
 
 ```text
 echo "deb https://deb.oxen.io jammy main" | sudo tee /etc/apt/sources.list.d/oxen.list
