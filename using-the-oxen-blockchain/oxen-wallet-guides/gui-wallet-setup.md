@@ -55,7 +55,7 @@ To import a wallet from seed click the `Restore wallet from seed` button.
 Next fill in the following input fields:
 
 * Wallet Name: `Enter a name for your wallet.`
-* Mnemonic Seed: `Enter the seed phrase that was generated when intially creating your wallet.`
+* Mnemonic Seed: `Enter the seed phrase that was generated when initially creating your wallet.`
 * Restore from Date: `Enter the date or blockheight in which you want to restore your wallet from.`
 
 > It is quicker to restore from the date in which you generated the wallet.

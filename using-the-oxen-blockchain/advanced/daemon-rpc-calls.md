@@ -377,7 +377,7 @@ Outputs:
 * _status_  - string; General RPC error code. "OK" means everything looks good.
 * _untrusted_  - boolean; States if the result is obtained using the bootstrap mode, and is therefore not trusted \(`true`\), or when the daemon is fully synced \(`false`\).
 
-In this example, blocks range from height 1545999 to 1546000 is looked up \(notice that the returned informations are ascending order and that it is at the April 2018 network upgrade time\):
+In this example, blocks range from height 1545999 to 1546000 is looked up \(notice that the returned information are ascending order and that it is at the April 2018 network upgrade time\):
 
 ```text
 $ curl -X POST http://127.0.0.1:18081/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"get_block_headers_range","params":{"start_height":1545999,"end_height":1546000}}' -H 'Content-Type: application/json'
@@ -890,7 +890,7 @@ $ curl -X POST http://127.0.0.1:18081/json_rpc -d '{"jsonrpc":"2.0","id":"0","me
 
 #### **get\_coinbase\_tx\_sum**
 
-Get the coinbase ammount and the fees ammount for n last blocks starting at particular height
+Get the coinbase amount and the fees amount for n last blocks starting at particular height
 
 Alias: _None_.
 
@@ -1050,7 +1050,7 @@ $ curl -X POST http://127.0.0.1:18081/json_rpc -d '{"jsonrpc":"2.0","id":"0","me
 
 #### **sync\_info**
 
-Get synchronisation informations
+Get synchronisation information
 
 Alias: _None_.
 
@@ -1499,7 +1499,7 @@ Alias: _/sendrawtransaction_.
 
 Inputs:
 
-* _tx\_as\_hex_  - string; Full transaction information as hexidecimal string.
+* _tx\_as\_hex_  - string; Full transaction information as hexadecimal string.
 * _do\_not\_relay_  - boolean; Stop relaying transaction to other nodes \(default is  `false`\).
 
 Outputs:
@@ -1525,7 +1525,7 @@ $ curl -X POST http://127.0.0.1:18081/send_raw_transaction -d '{"tx_as_hex":"de6
 
 #### **/save\_bc**
 
-Save the blockchain. The blockchain does not need saving and is always saved when modified, however it does a sync to flush the filesystem cache onto the disk for safety purposes against Operating System or Harware crashes.
+Save the blockchain. The blockchain does not need saving and is always saved when modified, however it does a sync to flush the filesystem cache onto the disk for safety purposes against Operating System or Hardware crashes.
 
 Alias: _None_.
 
@@ -1712,7 +1712,7 @@ Set the daemon log categories. Categories are represented as a comma separated l
   * _WARNING_
   * _INFO_
   * _DEBUG_
-  * _TRACE_  - lower level A level automatically includes higher level. By default, categories are set to  `*:WARNING,net:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,stacktrace:INFO,logging:INFO,msgwriter:INFO`. Setting the categories to "" prevent any logs to be outputed.
+  * _TRACE_  - lower level A level automatically includes higher level. By default, categories are set to  `*:WARNING,net:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,stacktrace:INFO,logging:INFO,msgwriter:INFO`. Setting the categories to "" prevent any logs to be outputted.
 
 Alias: _None_.
 
@@ -1768,7 +1768,7 @@ Outputs:
   * _fee_  - unsigned int; The amount of the mining fee included in the transaction, in  atomic units.
   * _id\_hash_  - string; The transaction ID hash.
   * _kept\_by\_block_  - boolean; States if the tx was included in a block at least once \(`true`\) or not \(`false`\).
-  * _last\_failed\_height_  - unsigned int; If the transaction validation has previously failed, this tells at what height that occured.
+  * _last\_failed\_height_  - unsigned int; If the transaction validation has previously failed, this tells at what height that occurred.
   * _last\_failed\_id\_hash_  - string; Like the previous, this tells the previous transaction ID hash.
   * _last\_relayed\_time_  - unsigned int; Last unix time at which the transaction has been relayed.
   * _max\_used\_block\_height_  - unsigned int; Tells the height of the most recent block with an output used in this transaction.

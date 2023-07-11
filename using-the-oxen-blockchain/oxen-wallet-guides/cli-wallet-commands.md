@@ -342,7 +342,7 @@ check_reserve_proof <address> <signature_file> [<message>]
 
 Where `<address>` is the address of the wallet where the command get\_reserve\_proof was ran. `<signature_file>` is the file that was received from the individual sending you the reserve proof, normally generated as `oxen_reserve_proof` and `<message>` is the key set by the individual who sent you the reserve proof.
 
-Therefor for the previous example where we created a reserve proof for 1000 $OXEN and signed with “car”, we would run the command:
+Therefore for the previous example where we created a reserve proof for 1000 $OXEN and signed with “car”, we would run the command:
 
 ```text
 check_reserve_proof T6TmZX8EzZVjS9zNg7zAsrEQFDgcVC2qV2ZMyoWsbyK4SNB2SwMHZtMhPSsFyTmRBQUaGVF5k3qy5CMFM6Lvj7gi3AeszDag7 oxen_reserve_proof Car
