@@ -8,25 +8,25 @@ Thinking of running an Oxen Service Node? Awesome! The guide below will help you
 
 One of:
 
+* Debian 12 ("bookworm")
 * Debian 11 ("bullseye")
-* Debian 10 ("buster")
 * Ubuntu 22.04 ("jammy")
 * Ubuntu 20.04 ("focal")
-* Ubuntu 18.04 ("bionic")
 
-Recommended: the latest Debian stable or Ubuntu LTS release (11 and 22.04, respectively, as of the time of writing).
+Recommended: the latest Debian stable or Ubuntu LTS release (12 and 22.04, respectively, as of the time of writing).
 
 > Note: There are strict uptime requirements for Service Nodes (see [Service Node deregistration](service-node-deregistration.md)). It is **strongly discouraged** to run a Service Node on a device that will not be continuously on-line. We recommend running your Service Node on a VPS with a reputable provider.
 
 ### Firewall Configuration
 
-If you are using a firewall then you should ensure that the following ports are open and reachable:
+If you are using a firewall then you should ensure that the following ports (TCP unless otherwise
+noted) are open and reachable:
 
-* Port 22020 (storage server to storage server)
+* Port 22020 (storage server connectivity; requires *both* TCP and UDP)
 * Port 22021 (client to storage server)
 * Port 22022 (blockchain syncing)
 * Port 22025 (Service Node to Service Node)
-* Port 1090 (UDP, not TCP, unlike all of the above; Lokinet router data)
+* Port 1090 (Lokinet router data; UDP only)
 
 ### Ultra-express guide
 
