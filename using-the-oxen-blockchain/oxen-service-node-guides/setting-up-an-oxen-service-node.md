@@ -8,13 +8,12 @@ Thinking of running an Oxen Service Node? Awesome! The guide below will help you
 
 One of:
 
+* Debian 12 ("bookworm")
 * Debian 11 ("bullseye")
-* Debian 10 ("buster")
 * Ubuntu 22.04 ("jammy")
 * Ubuntu 20.04 ("focal")
-* Ubuntu 18.04 ("bionic")
 
-Recommended: the latest Debian stable or Ubuntu LTS release (11 and 22.04, respectively, as of the time of writing).
+Recommended: the latest Debian stable or Ubuntu LTS release (12 and 22.04, respectively, as of the time of writing).
 
 > Note: There are strict uptime requirements for Service Nodes (see [Service Node deregistration](service-node-deregistration.md)). It is **strongly discouraged** to run a Service Node on a device that will not be continuously on-line. We recommend running your Service Node on a VPS with a reputable provider.
 
