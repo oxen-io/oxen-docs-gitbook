@@ -19,13 +19,14 @@ Recommended: the latest Debian stable or Ubuntu LTS release (12 and 22.04, respe
 
 ### Firewall Configuration
 
-If you are using a firewall then you should ensure that the following ports are open and reachable:
+If you are using a firewall then you should ensure that the following ports (TCP unless otherwise
+noted) are open and reachable:
 
-* Port 22020 (storage server to storage server)
+* Port 22020 (storage server connectivity; requires *both* TCP and UDP)
 * Port 22021 (client to storage server)
 * Port 22022 (blockchain syncing)
 * Port 22025 (Service Node to Service Node)
-* Port 1090 (UDP, not TCP, unlike all of the above; Lokinet router data)
+* Port 1090 (Lokinet router data; UDP only)
 
 ### Ultra-express guide
 
