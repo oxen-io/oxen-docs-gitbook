@@ -6,6 +6,20 @@ description: >-
 
 # 💡 Introduction to Oxen
 
+{% hint style="success" %}
+**The Oxen Network is transitioning to the Session Network. More information** [**here**](https://oxen.io/blog/development-is-transitioning-to-session-token)**.**&#x20;
+{% endhint %}
+
+{% tabs %}
+{% tab title="Service Node Bonus Program" %}
+Service Node operators and contributors can participate in the Service Node Bonus Program to earn additional Session Tokens. More information can be found [here](https://swap.oxen.io/).
+{% endtab %}
+
+{% tab title="Oxen Coin Claims" %}
+Oxen can be swapped for the new Session Token using the Oxen Coin Claims program. More information can be found [here](https://token.getsession.org/oxen-coin-claims).&#x20;
+{% endtab %}
+{% endtabs %}
+
 **Oxen** is one of the largest app ecosystems in the entire crypto industry. Applications like Session and Lokinet are currently servicing hundreds of thousands of active users thanks to the power of the Oxen Service Node Network.
 
 The network is powered by the Oxen blockchain, a privacy preserving cryptocurrency network that enables fast and private value transfer. The blockchain is maintained by a distributed network of community-operated [🖥 Oxen Service Nodes](https://oxen.gitbook.io/oxen-docs/about-the-oxen-blockchain/oxen-service-nodes), which run all the network features and services offered by Oxen's tech stack.
