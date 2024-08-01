@@ -13,7 +13,7 @@ These are the current basic requirements for running a Service Node as of Octobe
 | Latest Oxen Service Node software | Latest Service Node `.deb` packages (installed via the steps below) or latest [binaries](https://github.com/oxen-io/loki-core/releases) |
 | Server operating system           | Ubuntu 20.04+ (latest LTS recommended) or Debian 11+ (latest stable recommended)                                                        |
 | Storage                           | 40GB or more                                                                                                                            |
-| RAM                               | 2-4GB (2GB absolute minimum)                                                                                                            |
+| RAM                               | 4-8GB (4GB absolute minimum)                                                                                                            |
 | Connectivity                      | 100Mb or faster                                                                                                                         |
 | Traffic                           | 1TB per month or more                                                                                                                   |
 | Power                             | Redundant with remote cycling ability, as found in most data centres                                                                    |
