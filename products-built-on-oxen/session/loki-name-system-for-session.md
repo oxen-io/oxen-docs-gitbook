@@ -8,10 +8,10 @@ The ONS namespace is broken up into two distinct sections. One section is respon
 
 Each ONS name can resolve to a Session public key, Wallet address or `.loki` address. Session and Wallet names are within the same namespace. When purchasing a Session record, the Wallet record is automatically added to your possession. Lokinet names are in their own namespaces. For example, when purchasing ‘KeeJef’ in the Session namespace, you can assign a Session public key. Additionally you can update the wallet record under a 2nd transaction.
 
-So when a user looks up ‘KeeJef’ they are returned both a Session ID and Wallet address:
+So when a user looks up ‘KeeJef’ they are returned both a Account ID and Wallet address:
 
-```text
-SessionID: 053b6b764388cd6c4d38ae0b3e7492a8ecf0076e270c013bb5693d973045f45254 
+```
+AccountID: 053b6b764388cd6c4d38ae0b3e7492a8ecf0076e270c013bb5693d973045f45254 
 Wallet Address: LBMTVEK8WRiC9rmfoKEjyrZSRje6PdiTU6926LjMkGMUdzyApMvXUbH4LswHnLjMjMPLUbDKiL3RCRQe5XFiobWb8jQrApR
 ```
 
@@ -21,13 +21,13 @@ Depending on which context the name is being used, the application will automati
 
 ## Rules
 
-Both namespaces \(Session/Wallet and Lokinet\) have restrictions on the characters allowed in a name. All names are case-insensitive.
+Both namespaces (Session/Wallet and Lokinet) have restrictions on the characters allowed in a name. All names are case-insensitive.
 
-For Session \(or Wallet\), the name has to:
+For Session (or Wallet), the name has to:
 
 * start with an alphanumeric character or underscore
-* consist of alphanumeric, hyphens or underscores in between 
-* end with an alphanumeric character or underscore 
+* consist of alphanumeric, hyphens or underscores in between
+* end with an alphanumeric character or underscore
 
 Users may register names with special characters or emojis by using the equivalent Punycode representation. The name must be at least 1 character long, and at most, 64 characters long.
 
@@ -58,7 +58,7 @@ Names in the Session/Wallet namespace cost 7 $OXEN to register. We will try to u
 
 ## Privacy
 
-It is up to each user to choose which information they map publicly. If you don’t want to map your Session ID or Wallet address to your real world identity you might want to choose a different alias instead of something related to your name. Basic encryption is employed to mask publicity of data on the surface level, but please do not rely on this for critical privacy requirements. 
+It is up to each user to choose which information they map publicly. If you don’t want to map your Account ID or Wallet address to your real world identity you might want to choose a different alias instead of something related to your name. Basic encryption is employed to mask publicity of data on the surface level, but please do not rely on this for critical privacy requirements.
 
 All wallet sub-addresses generated via account new are supported as owners.
 
@@ -78,7 +78,7 @@ At its core, a typical ONS record from the database looks like:
 * `txid`
 * `prev_txid`
 * `register_height`
-* more fields \(implementation details, see oxen\_name\_system.h\)
+* more fields (implementation details, see oxen\_name\_system.h)
 
 Of which the `name_hashed` and `encrypted_value` fields use some form of encryption or decryption.
 
@@ -87,9 +87,9 @@ Of which the `name_hashed` and `encrypted_value` fields use some form of encrypt
 * Human readable name is hashed with `blake2b` with the following parameters
   * Key Length: 0 bytes
   * Hash Length: 32 bytes
-* Name hash converted to base64 for storage into the `sqlite3` database \(this provides optimal lexicographic lookup as a key\).
+* Name hash converted to base64 for storage into the `sqlite3` database (this provides optimal lexicographic lookup as a key).
 
-```text
+```
     hash32 = Blake2B(name, key=0)
     name_hash = Base64Encode(hash32)
 ```
@@ -104,7 +104,7 @@ Of which the `name_hashed` and `encrypted_value` fields use some form of encrypt
 * Decrypt/encrypt the value represented in binary with `XSalsa20Poly1305` and the following parameters as of Valiant Vidar v7.1.X
   * Nonce: 0 bytes
 
-```text
+```
     key32 = Argon2ID(iterations=3, memory=268435436, salt=0)
     encrypted_value = XSalsa20Poly1305Encrypt(value, key32, nonce=0)
     decrypted_value = XSalsa20Poly1305Decrypt(encrypted_value, key32, nonce=0)
@@ -122,22 +122,22 @@ ONS records can be updated by getting the owner of the record to generate a sign
 
 The following fields can be updated in a record
 
-```text
+```
 Value
 Owner
 Backup Owner
 ```
 
 * Copy the fields to update into a buffer
-* Copy the TXID into the buffer that last updated the record \(which can be retrieved by querying the mapping\).
+* Copy the TXID into the buffer that last updated the record (which can be retrieved by querying the mapping).
 * Hash the buffer with `blake2b` with the following parameters
   * Key Length: 0 bytes
   * Hash Length: 32 bytes
 * Sign the hashed buffer
-  * If the current owner \(or backup owner\) is a wallet address, it must be signed with the current owner's \(or backup owner's\) wallet secret spend key.
-  * If the current owner \(or backup owner\) is a ed25519 key, it must be signed with the current owner's \(or backup owner's\) ed25519 secret key.
+  * If the current owner (or backup owner) is a wallet address, it must be signed with the current owner's (or backup owner's) wallet secret spend key.
+  * If the current owner (or backup owner) is a ed25519 key, it must be signed with the current owner's (or backup owner's) ed25519 secret key.
 
-```text
+```
     // *If value is specified, copy the value to the buffer, otherwise skip.
     buffer[] = {*binary_value, *owner, *backup_owner, prev_txid}
     hash32 = Blake2B(buffer, key=0)
@@ -147,4 +147,3 @@ Backup Owner
     else
         signature = ed25519_signature(hash32, ed25519_skey)
 ```
-

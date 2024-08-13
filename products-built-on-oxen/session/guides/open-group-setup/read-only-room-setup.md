@@ -15,10 +15,10 @@ Replace `TOKEN` with the address to use in the room URL (which must consist of *
 ## 2.  Ensure you are an administrator of the room&#x20;
 
 ```
-sogs --room TOKEN --admin --add-moderator SESSIONID
+sogs --room TOKEN --admin --add-moderator ACCOUNTID
 ```
 
-replacing TOKEN with the room token you created in step 1 and replacing SESSIONID with your own Session ID
+replacing TOKEN with the room token you created in step 1 and replacing ACCOUNTID with your own Account ID
 
 ## 3.  Alter room permissions&#x20;
 
@@ -39,5 +39,5 @@ sogs --add-perms ra --remove-perms wu --room TOKEN
 
 This command will ensure read and access permissions are provided and remove write and upload permissions for regular users.&#x20;
 
-As the permission changes do not affect administrators and moderators, they will still be able to read, write and upload to the group. New Session ID's can be given write/upload access by making those Session ID's moderator or admin, this can be done directly in the Session Desktop client or via the [CLI](https://github.com/oxen-io/session-pysogs/blob/dev/administration.md).
+As the permission changes do not affect administrators and moderators, they will still be able to read, write and upload to the group. New Account ID's can be given write/upload access by making those Account ID's moderator or admin, this can be done directly in the Session Desktop client or via the [CLI](https://github.com/oxen-io/session-pysogs/blob/dev/administration.md).
 

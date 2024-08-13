@@ -18,4 +18,4 @@ You can download Session for Windows, macOS, Linux, iOS, or Android [on the Sess
 
 ### Register a Session name
 
-Looking to register a permanent name for your Session ID? Head over to [Using Oxen Name Service](../../using-the-oxen-blockchain/using-oxen-name-system.md).
+Looking to register a permanent name for your Account ID? Head over to [Using Oxen Name Service](../../using-the-oxen-blockchain/using-oxen-name-system.md).
