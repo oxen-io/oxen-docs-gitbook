@@ -110,8 +110,6 @@ Here you should see a list of your rooms, clicking on a room will display a QR c
 
 ![U](<../../../../.gitbook/assets/image (3).png>)
 
-If something in this guide doesn't make sense, or if you’re running into issues that you can’t identify on your own, the first place to go would be the [Session open group](https://open.getsession.org/session?public\_key=a03c383cf63c3c4efe67acc52112a6dd734b3a946b9545f488aaa93da7991238) inside Session. Alternatively, you can find help on our other communication channels: [Twitter](https://twitter.com/Oxen\_io), or [Reddit](https://reddit.com/oxen\_io).
-
 ### Upgrading SOGS
 
 SOGS is configured as a Debian package, it will be updated when you update and upgrade other packages on your system, you can trigger this process by running the following commands
@@ -126,4 +124,4 @@ sudo apt upgrade
 
 ### Having Issues?
 
-If you've sought help through our communication channels but have not arrived at a solution for your issue, we recommend opening an issue ticket on the [Session open group server](https://github.com/oxen-io/session-pysogs) GitHub repository.
+If you're having trouble setting up your SOGS, we recommend opening an issue on the [Session open group server](https://github.com/oxen-io/session-pysogs) GitHub repository. Contributors to the PySOGS software should be able to assist you in getting everything up and running.
