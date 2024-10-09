@@ -153,11 +153,11 @@ Alright, good to go. Our server is now set up, up to date, and is not running as
 
 If you are using a firewall then ensure that the following ports are open/reachable
 
-* Port 22020 (storage server to storage server)
+* Port 22020 (storage server connectivity; requires *both* TCP and UDP)
 * Port 22021 (client to storage server)
 * Port 22022 (blockchain syncing)
 * Port 22025 (Service Node to Service Node)
-* Port 1090 (UDP, not TCP, unlike all of the above; Lokinet router data)
+* Port 1090 (Lokinet router data; UDP only)
 
 #### Step 3: Initial repository setup
 
