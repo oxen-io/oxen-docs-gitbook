@@ -16,7 +16,7 @@ Pulse makes Oxen more secure, more sustainable, and more powerful.
 
 Every 120 seconds, an active [Oxen Service Node](../oxen-service-nodes.md) is chosen to create a new candidate block. This one true service node creates a candidate block and sends it to 11 randomly chosen _validators_.
 
-Validators are service nodes tasked with independently assessing the candidate block and ensuring it does not contain any duplicate transactions \(or any other malicious activitiy\). If 7 of the 11 validators verify the block's legitimacy, it can be published to the network as a valid block.
+Validators are service nodes tasked with independently assessing the candidate block and ensuring it does not contain any duplicate transactions \(or any other malicious activity\). If 7 of the 11 validators verify the block's legitimacy, it can be published to the network as a valid block.
 
 This process is then repeated to create the next block.
 
@@ -60,7 +60,7 @@ Environmental and economic sustainability are becoming increasingly pertinent is
 
 PoW consensus, while serviceable for securing the blockchain, has an inescapable flaw — it is extremely inefficient, and this problem becomes worse as the network scales. 
 
-Bitcoin, which uses PoW, [consumes over 100 TWh](https://www.cbeci.org) per year, more than the consumption of entire countries like the Netherlands and the Phillipines — and that's just one blockchain! No one blockchain should have all that power.
+Bitcoin, which uses PoW, [consumes over 100 TWh](https://www.cbeci.org) per year, more than the consumption of entire countries like the Netherlands and the Philippines — and that's just one blockchain! No one blockchain should have all that power.
 
 PoS means a sustainable future for blockchain technology. Instead of relying on power-intensive computation, the blockchain is secured through the cooperation of [service nodes](../oxen-service-nodes.md), which is much more energy efficient — say goodbye to the wasteful ways of PoW.
 
@@ -68,7 +68,7 @@ PoS means a sustainable future for blockchain technology. Instead of relying on 
 
 Lots of major players in the blockchain world have thrown their weight behind PoS — most notably, Ethereum.
 
-This is largely because PoS is more scaleable, more flexible, and easier to participate in. PoS is what will finally bring blockchain to the masses.
+This is largely because PoS is more scalable, more flexible, and easier to participate in. PoS is what will finally bring blockchain to the masses.
 
 Of course, the nodes that maintain the Oxen blockchain do a lot more than just create and validate blocks — they form the backbone range of services and applications, like [Session](../../products-built-on-oxen/session/) and [Lokinet](../../products-built-on-oxen/lokinet/). This is just the beginning of what Oxen can do with its powerful network of service nodes.
 
