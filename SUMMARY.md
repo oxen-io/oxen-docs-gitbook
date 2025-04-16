@@ -37,6 +37,7 @@
   * [💸 Staking to a shared Oxen Service Node](using-the-oxen-blockchain/oxen-service-node-guides/staking-to-shared-service-node.md)
   * [🛑 Service Node deregistration](using-the-oxen-blockchain/oxen-service-node-guides/service-node-deregistration.md)
   * [🛠️ Service node tools and upkeep](using-the-oxen-blockchain/oxen-service-node-guides/service-node-tools-upkeep.md)
+  * [🔗 Connecting to an Arbitrum One RPC Endpoint](using-the-oxen-blockchain/oxen-service-node-guides/connecting-to-an-arbitrum-one-rpc-endpoint.md)
 * [🔡 Using Oxen Name System (ONS)](using-the-oxen-blockchain/using-oxen-name-system.md)
 * [🤓 Advanced](using-the-oxen-blockchain/advanced/README.md)
   * [Service node 📞 RPC calls](using-the-oxen-blockchain/advanced/service-node-rpc-calls.md)
