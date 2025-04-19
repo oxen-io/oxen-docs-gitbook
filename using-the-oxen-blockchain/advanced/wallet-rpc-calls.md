@@ -179,7 +179,7 @@ Inputs:
 Outputs:
 
 * _address_  - string; The 95-character hex address string of the oxen-wallet-rpc in session.
-* _addresses_  array of addresses informations
+* _addresses_  array of addresses information
   * _address_  string; The 95-character hex \(sub\)address string.
   * _label_  string; Label of the \(sub\)address
   * _address\_index_  unsigned int; index of the subaddress
@@ -226,7 +226,7 @@ Inputs:
 
 Outputs:
 
-* _index_  - subaddress informations
+* _index_  - subaddress information
   * _major_  unsigned int; Account index.
   * _minor_  unsigned int; Address index.
 
@@ -573,7 +573,7 @@ Outputs:
 * _fee_  - Integer value of the fee charged for the txn.
 * _multisig\_txset_  - Set of multisig transactions in the process of being signed \(empty for non-multisig\).
 * _tx\_blob_  - Raw transaction represented as hex string, if get\_tx\_hex is true.
-* _tx\_hash_  - String for the publically searchable transaction hash.
+* _tx\_hash_  - String for the publicly searchable transaction hash.
 * _tx\_key_  - String for the transaction key if get\_tx\_key is true, otherwise, blank string.
 * _tx\_metadata_  - Set of transaction metadata needed to relay this transfer later, if get\_tx\_metadata is true.
 * _unsigned\_txset_  - String. Set of unsigned tx for cold-signing purposes.
@@ -885,7 +885,7 @@ Inputs:
 
 Outputs:
 
-* _tx\_hash_  - String for the publically searchable transaction hash.
+* _tx\_hash_  - String for the publicly searchable transaction hash.
 
 Example:
 
@@ -1446,7 +1446,7 @@ Inputs:
 
 * _txid_  - string; transaction id.
 * _address_  - string; destination public address of the transaction.
-* _message_  - string; \(Optional\) add a message to the signature to further authenticate the prooving process.
+* _message_  - string; \(Optional\) add a message to the signature to further authenticate the proving process.
 
 Outputs:
 
@@ -1526,7 +1526,7 @@ Alias: _None_.
 Inputs:
 
 * _txid_  - string; transaction id.
-* _message_  - string; \(Optional\) add a message to the signature to further authenticate the prooving process.
+* _message_  - string; \(Optional\) add a message to the signature to further authenticate the proving process.
 
 Outputs:
 
@@ -1598,7 +1598,7 @@ Inputs:
 * _all_  - boolean; Proves all wallet balance to be disposable.
 * _account\_index_  - unsigned int; Specify the account from witch to prove reserve. \(ignored if  `all`  is set to true\)
 * _amount_  - unsigned int; Amount \(in  atomic units\) to prove the account has for reserve. \(ignored if  `all`  is set to true\)
-* _message_  - string; \(Optional\) add a message to the signature to further authenticate the prooving process.
+* _message_  - string; \(Optional\) add a message to the signature to further authenticate the proving process.
 
 Outputs:
 
