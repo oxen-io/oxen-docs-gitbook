@@ -135,3 +135,7 @@ l2-oxend=ipc:///var/lib/oxen/oxend.sock
 ```
 
 When using such a local unix socket connection, you do _not_ append the proxy's pubkey to the l2-oxend= line, nor is it necessary to list the pubkeys of nodes accessing via the unix socket in the proxy.txt file (it won't hurt, but it isn't needed).
+
+**Multi SN** \
+\
+For Multi SN users, please see this additional [guide](https://github.com/jagerman/loki-multi-sn?tab=readme-ov-file#using-oxend-as-an-l2-proxy).
