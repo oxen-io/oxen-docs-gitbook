@@ -29,8 +29,8 @@ Optional:&#x20;
 
 ### Completing the Anchor Software Upgrade and Hardfork (22-29/04/2025)
 
-* Set up an Arbitrum RPC Provider. All Service Nodes must maintain an active connection to an Arbitrum One RPC node to complete the Anchor software upgrade and hardfork. Learn how to fulfill this requirement [here](https://docs.oxen.io/oxen-docs/using-the-oxen-blockchain/oxen-service-node-guides/connecting-to-an-arbitrum-one-rpc-endpoint).
-* Upgrade your Service Node to Oxen 11.2.0 (Anchor). Follow the upgrade instructions [here](https://oxen.io/blog/oxen-anchor-hardfork-11-1-0) and complete the upgrade as soon as possible during the one week upgrade period.
+* Set up an Arbitrum RPC Provider. All Service Nodes must maintain an active connection to an Arbitrum One RPC node to complete the Anchor software upgrade and hardfork. Learn how to fulfill this requirement [here](connecting-to-an-arbitrum-one-rpc-endpoint.md).
+* Upgrade your Service Node to Oxen 11.2.0 (Anchor). Follow the upgrade instructions [here](https://oxen.io/blog/oxen-anchor-hardfork-11-2-0) and complete the upgrade as soon as possible during the one week upgrade period.
 * Monitor your Service Node in case something goes wrong and it gets decommissioned. &#x20;
   * There is a 5-day grace period after the 29/04/25 hardfork takes effect during which network deregistrations won’t happen—in case anyone needs extra time to address an issue at the fork—but it is strongly recommended you address any problems as quickly as possible.
 * Back up your Service Node keys, including the new \`key\_bls\`.  Oxen 11 adds a new BLS key, used for interactions with the smart contract, that needs to be restored along with the existing key\_ed25519 in case you need to move or restore your Service Node.
