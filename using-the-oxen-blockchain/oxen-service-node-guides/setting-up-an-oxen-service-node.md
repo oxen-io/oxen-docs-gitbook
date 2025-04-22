@@ -1,4 +1,4 @@
-# 🏎 Express service node setup guide
+# 🏎️ Express service node setup guide
 
 Thinking of running an Oxen Service Node? Awesome! The guide below will help you configure a device with the necessary Service Node software packages, and stake $OXEN to register the node on the Oxen network.
 
@@ -19,10 +19,9 @@ Recommended: the latest Debian stable or Ubuntu LTS release (12 and 22.04, respe
 
 ### Firewall Configuration
 
-If you are using a firewall then you should ensure that the following ports (TCP unless otherwise
-noted) are open and reachable:
+If you are using a firewall then you should ensure that the following ports (TCP unless otherwise noted) are open and reachable:
 
-* Port 22020 (storage server connectivity; requires *both* TCP and UDP)
+* Port 22020 (storage server connectivity; requires _both_ TCP and UDP)
 * Port 22021 (client to storage server)
 * Port 22022 (blockchain syncing)
 * Port 22025 (Service Node to Service Node)
@@ -137,7 +136,7 @@ You can now jump onto [oxen.observer](https://oxen.observer), open the full list
 
 We highly recommend setting up monitoring for your Service Node. This is as simple as calling on the services of our Telegram or Discord bot. Contact `@OxenSNBot` on Telegram or `OxenSNBot#5812` on Discord and type `/start` or `$help` respectively to get started.
 
-Another helpful tool is Konstantin Ullrich's [Oxen Service Node Operator app](https://play.google.com/store/apps/details?id=dev.konsti.oxen\_service\_node) for Android.
+Another helpful tool is Konstantin Ullrich's [Oxen Service Node Operator app](https://play.google.com/store/apps/details?id=dev.konsti.oxen_service_node) for Android.
 
 #### Upgrading
 
@@ -171,8 +170,7 @@ To show backup information for your Service Node's secret key (for future recove
 oxen-sn-keys show /var/lib/oxen/key_ed25519
 ```
 
-For service nodes originally installed before 8.x there will be a /var/lib/oxen/key file that must
-also be backed up (if this file does not exist then you do not need it):
+For service nodes originally installed before 8.x there will be a /var/lib/oxen/key file that must also be backed up (if this file does not exist then you do not need it):
 
 ```
 oxen-sn-keys show /var/lib/oxen/key
@@ -184,7 +182,7 @@ Restore from SN secret key:
 oxen-sn-keys restore /var/lib/oxen/key_ed25519
 ```
 
-and, *only* when restoring from an older installation with an additional `.../key` file:
+and, _only_ when restoring from an older installation with an additional `.../key` file:
 
 ```
 oxen-sn-keys restore-legacy /var/lib/oxen/key
