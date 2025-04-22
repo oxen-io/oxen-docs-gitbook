@@ -19,17 +19,48 @@ During the Landing phase, the transition to the Session Network is executed. The
 
 ### How does the automatic migration of nodes work?&#x20;
 
-The automatic migration mechanics are designed to ensure the majority of nodes can migrate to the new Session Network. This is ensured in a few different ways.\
+The automatic migration mechanics are designed to ensure the majority of nodes are migrated to the new Session Network. This is ensured in a few different ways.\
 \
-Firstly, staking requirements on the Session Network will be determined in such a way that operators who have been registered for the Service Node Bonus Program since the beginning of the program will have more than enough SESH to be able to re-stake their nodes. Similarly, operators and contributors to multicontributor nodes, where the operator and all contributors were registered for the Service Node Bonus Program from the beginning, will also have more than enough SESH for their node to be re-staked on the Session Network.&#x20;
+Firstly, staking requirements on the Session Network will be determined in such a way that operators who have been registered for the Service Node Bonus Program since the beginning of the program will have more than enough SESH to have their nodes automatically restaked. Similarly, operators and contributors to multicontributor nodes, where the operator and all contributors were registered for the Service Node Bonus Program from the beginning, will also have more than enough SESH for their node to be auto re-staked on the Session Network.
 
-Secondly, a system of automatic reallocation will ensure that any excess SESH goes to nodes that don’t meet the staking requirements of the Session Network after the conversion of staked Oxen and Service Node Bonus points, allowing as many of these nodes as possible to be re-staked. This is particularly important when it comes to ensuring multicontributor nodes are able to be re-staked.
+Secondly, a system of automatic reallocation will ensure that any excess SESH generated goes to nodes that don’t meet the staking requirements of the Session Network after the conversion of staked Oxen and Service Node Bonus points, allowing as many of these nodes as possible to be re-staked. This is particularly important when it comes to ensuring multicontributor nodes are able to be re-staked.
 
-Every wallet participating in the migration will effectively be assigned a “pool” of SESH converted from staked Oxen and Service Node Bonus points. SESH from this pool can be reallocated from one node to another. Suppose a multicontributor node cannot be re-staked, as the operator and/or one or more of the contributors does not have enough SESH for the node to be fully staked. In this case, the node will be disbanded, so that the SESH can be made available to other nodes that also require additional SESH to be re-staked, where there is a match between the amount of SESH in an operator or contributor’s “pool” and the amount of additional SESH required to fulfill their proportion of the node’s stake. Note that SESH cannot be allocated to nodes above the proportion of the operator or contributor’s original stake in the node.
+At a high level, the migration process works by assigning each participating wallet a “pool” of SESH tokens, based on the converted value of their staked Oxen and the points earned in the Service Node Bonus Program. The SESH in this pool is then reallocated to nodes the wallet was operating or contributing to, following a predefined algorithm. This algorithm ensures that tokens are distributed in a way that preserves as many existing node relationships as possible.
 
-In this way, SESH will be allocated efficiently across nodes to ensure that the maximum number of nodes can be re-staked on the new Session Network. However, in some cases, operators and contributors may have excess SESH with no nodes available to stake to.&#x20;
+Let’s walk through a few example scenarios with some invented values to illustrate how the algorithm works.
 
-For example, an operator who signed up early to the Service Node Bonus program may have more SESH than is needed for the nodes they are running. As another example, a contributor to a node may have excess SESH if their node is disbanded for failing to meet staking requirements, and they weren’t staking to any other nodes to which the additionalSESH could have otherwise been allocated, or other nodes they were staking to did not require additional SESH to meet the staking requirements. In these instances, excess SESH will be claimable as staking rewards via the [Staking Portal](https://stake.getsession.org/). Operators and contributors can simply connect their Ethereum wallet to the [Staking Portal](https://stake.getsession.org/) and claim the SESH on the Arbitrum One network following the completion of the Landing Hardfork.
+**Scenario 1:**\
+An operator is running 3 solo nodes on the Oxen network and is enrolled in the Service Node Bonus Program. On TGE, their combined converted stake and bonus points amount to 1,000 SESH, which becomes the balance of the “pool” of tokens used by the auto migration algorithm.
+
+* Staking requirement: 200 SESH per Session Node
+* The algorithm will allocate 200 SESH to each of the 3 nodes (starting from the oldest registered to the newest registered), consuming 600 SESH total.
+* The remaining 400 SESH will be left over as excess, which the operator can claim from the Staking Portal and either re-stake or withdraw to their wallet.
+
+The result is that the operator has 3 nodes which are automatically migrated and restaked on the Session network and has an amount of excess SESH which can be claimed from the Staking Portal and used to restake or stored in their wallet.
+
+**Scenario 2:**\
+Lets consider a more complex scenario, an operator stakes 2 solo nodes and contributes 25% of the stake to a third, multi-contributor node. At TGE, their pool contains 300 SESH (this smaller amount might be due to the fact that one of the solo nodes and the multi-contributor node were operating for only part of the duration of the Bonus Program later and thus earned fewer points).
+
+* The algorithm allocates 200 SESH to one solo node.
+* The second solo node is disbanded due to insufficient remaining stake, since it requires 200 SESH and only 100 SESH is available in the pool.
+* Of the 100 SESH left, 50 SESH is used to provide 25% of the required stake to the multi-contributor node.
+* The final 50 SESH is marked as excess and can be claimed through the Staking Portal.
+
+The result is that the operator goes from operating 2 nodes down to 1 node, preserves their stake in the multicontributor node and ends up with 50 SESH excess. They could claim this excess SESH from the Staking Portal and use it to stake a new multicontributor node using the same VPS/hardware as they previously used to run their second node or just withdraw the excess to their wallet.
+
+Note: SESH is only allocated to nodes that the wallet previously operated or contributed to, and only up to the same percentage they were originally staking.
+
+**Scenario 3:**\
+Lastly, let’s consider a scenario focused on contributors. A contributor is staking 25% of the stake for 5 different multicontributor nodes. At TGE, their pool is calculated to be 100 SESH. Assume nodes 1 and 2 were operated by operators who did not register for the Service Node Bonus Program.
+
+* Nodes 1 and 2 are disbanded because their operators did not register for the SN bonus program
+* The contributor’s pool is reallocated to the remaining nodes (3, 4, and 5), starting from the oldest.
+  * 50 SESH is used to cover 25% of the stake for node 3.
+  * 50 SESH is used to do the same for node 4.
+  * Node 5 is disbanded due to lack of available stake from the contributor.
+  * Contributors and operators signed up to the SN bonus program from disbanded nodes (1, 2, and 5) will have their converted stakes and points returned to their respective pools. The algorithm will re-run on these new pool values to try to preserve as many nodes as possible.
+
+The end result here is that this contributor’s SESH tokens are automatically reallocated to 2 multicontributor Session Nodes instead of the previous 5 Oxen Network nodes and that the contributor completes the migration with no excess SESH.
 
 ### What if my node deregisters after the Anchor Hardfork?
 
@@ -39,11 +70,11 @@ If your node deregisters after the Anchor Hardfork but before the Landing Hardfo
 
 The exactly full stake amount for Session Nodes is yet to be determined, but it is estimated to be between 20k-23k SESH tokens.&#x20;
 
-### If I was operating a solo Service Node for the duration of the Service Node Bonus Program and I’m signed up for the program will I receive enough tokens to meet the new Session node staking requirement?&#x20;
+### If I was operating a solo Service Node for the duration of the Service Node Bonus Program and I’m signed up for the program will I receive enough tokens to meet the new Session Node staking requirement?&#x20;
 
 Yes, the new Session staking requirement will be set such that a solo Service Node operator who has been running a Service Node for the entire Service Node Bonus Program and who is signed up will receive more than enough Session Tokens to be automatically staked to the Session network when the migration occurs.  Operators who have started new nodes during the Bonus Program may not have accumulated enough points to cover all the new nodes, in which case some nodes might get disbanded to provide enough SESH to stake the remaining nodes (see the previous question).
 
-### If I was operating a multicontributor Service Node for the duration of the Service Node Bonus Program and my contributors and I are signed up will we receive enough tokens to meet the new Session node staking requirement?&#x20;
+### If I was operating a multicontributor Service Node for the duration of the Service Node Bonus Program and my contributors and I are signed up will we receive enough tokens to meet the new Session Node staking requirement?&#x20;
 
 Yes, the new Session staking requirement will be set such that multicontributor Service Nodes which have been running for the entire Service Node Bonus Program and who have all contributors and the operator signed up will receive enough Session Tokens to be automatically re-staked to the Session network when the migration occurs.
 
