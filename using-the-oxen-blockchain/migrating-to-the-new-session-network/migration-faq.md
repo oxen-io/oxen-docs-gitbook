@@ -13,7 +13,7 @@ The transition from the Oxen Network to the Session Network happens in three pha
 
 During the Lighthouse phase, the contributors and community members have conducted work on the Session Network testnet and may have gained valuable experience by running a testnet node.
 
-During the Anchor phase, final preparations are made for the transition to the Session Network. The Oxen Network undergoes the Anchor Hardfork, with mandatory upgrades to Oxen Core packages for all Service Nodes. Note that the Anchor release will introduce some new requirements for nodes to prepare for the transition, please read the instructions below!
+During the Anchor phase, final preparations are made for the transition to the Session Network. The Oxen Network undergoes the Anchor Hardfork, with mandatory upgrades to Oxen Core packages for all Service Nodes. Note that the Anchor release will introduce some [new requirements](connecting-to-an-arbitrum-one-rpc-endpoint.md) for nodes to prepare for the transition.
 
 During the Landing phase, the transition to the Session Network is executed. The Oxen Network undergoes the Landing Hardfork, becoming the Session Network. Session Token (SESH) is generated and distributed to node operators and contributors.
 
