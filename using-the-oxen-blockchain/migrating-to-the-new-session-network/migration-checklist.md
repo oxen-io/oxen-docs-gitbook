@@ -43,7 +43,7 @@ Optional:
 
 ### Landing Software Upgrade and Hardfork (06/05/2025-TBD)
 
-* Fund your Ethereum address with some Ethereum on the Arbitrum One network. You will need a small amount to cover transaction fees.
+* Fund your Ethereum address with some Ethereum on the Arbitrum One network. You will need a small amount to cover transaction fees which are required to claim rewards and register new nodes.
   * Note that SESH will be distributed on the Arbitrum One network, using the Ethereum address provided. To view your SESH at TGE, ensure you have selected the Arbitrum One network in your wallet.
 * Upgrade your Service Node to Oxen 11.3.0 (Landing).
   * Find upgrade instructions via the Oxen blog. There will be a mandatory upgrade period following the release of Landing binaries. The Landing Hardfork and network migration will be executed at the end of the  upgrade period. **The date for the activation of the Landing Hardfork has not yet been determined**, but it will be within a few weeks of the Landing software upgrade release.
