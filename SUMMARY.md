@@ -39,6 +39,7 @@
   * [🛠️ Service node tools and upkeep](using-the-oxen-blockchain/oxen-service-node-guides/service-node-tools-upkeep.md)
 * [⛴️ Migrating to the new Session Network](using-the-oxen-blockchain/migrating-to-the-new-session-network/README.md)
   * [✅ Migration Checklist](using-the-oxen-blockchain/migrating-to-the-new-session-network/migration-checklist.md)
+  * [❓ Migration FAQ](using-the-oxen-blockchain/migrating-to-the-new-session-network/migration-faq.md)
   * [🔗 Connecting to an Arbitrum One RPC Endpoint](using-the-oxen-blockchain/migrating-to-the-new-session-network/connecting-to-an-arbitrum-one-rpc-endpoint.md)
   * [🔀 How to set up an oxend L2 proxy](using-the-oxen-blockchain/migrating-to-the-new-session-network/how-to-set-up-an-oxend-l2-proxy.md)
 * [🔡 Using Oxen Name System (ONS)](using-the-oxen-blockchain/using-oxen-name-system.md)
