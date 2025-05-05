@@ -28,7 +28,7 @@ the layout of the system has the following components:
 * lokinet handles DNS for lokinet.
 * unbound provides encrypted dns tunnel for ICANN.
 * hostapd handles wifi access point.
-* ifdown handles managing netowrk interfaces.
+* ifdown handles managing network interfaces.
 
 ## setup
 
@@ -78,7 +78,7 @@ we now need to install and configure lokinet.
 
 #### install lokinet
 
-we add the apt repo for lokinet. follow instructions [here](https://deb.oxen.io/) to add the repo, dont install any packages from those instrctions. once you add the repos, update apt with:
+we add the apt repo for lokinet. follow instructions [here](https://deb.oxen.io/) to add the repo, dont install any packages from those instructions. once you add the repos, update apt with:
 
 `# apt update`
 
@@ -108,7 +108,7 @@ ifaddr=10.100.0.1/16
 
 [dns]
 bind=127.0.42.1:5533
-# when this option is emtpy we only resolve .loki and .snode and will SERVFAIL any other queries.
+# when this option is empty we only resolve .loki and .snode and will SERVFAIL any other queries.
 upstream=
 
 ```
@@ -125,7 +125,7 @@ exit-node=exit2.loki
 
 you can swap out exit.loki and exit2.loki with any other exit you know of, these are provided as functionging placeholder/default values for toy usage, the OPTF runs both of these exits at the moment.
 
-you can add as many entries as you want and it will stripe traffic accross them per remote ip address.
+you can add as many entries as you want and it will stripe traffic across them per remote ip address.
 
 then edit the systemd unit to add a post up command we'll need for the routing table:
 
@@ -286,7 +286,7 @@ iface wifi0 inet static
 ```
 
 then add a file for your upstream network in `/etc/network/interfaces.d/upstream`.
-this exmaple will use dhcp in your upstream network to figure out how to get to the internet.
+this example will use dhcp in your upstream network to figure out how to get to the internet.
 
 ```ini
 auto eth0
@@ -309,7 +309,7 @@ when it comes back up you can join devices to the wifi network called `lokinet` 
 
 #### caveats
 
-lokinet `0.9.11` has a wire protocol handshake state machine race condition, this is planned on being fixed by `0.10.1`. the work arround is as follows:
+lokinet `0.9.11` has a wire protocol handshake state machine race condition, this is planned on being fixed by `0.10.1`. the work around is as follows:
 
 stop lokinet:
 
