@@ -41,7 +41,7 @@ Optional:
 
 * Set up an oxend L2 proxy to help reduce costs for running multiple nodes. For operators planning to run multiple nodes on the new Session Network, check out this [guide](https://docs.oxen.io/oxen-docs/using-the-oxen-blockchain/oxen-service-node-guides/how-to-set-up-an-oxend-l2-proxy).
 
-### Landing Software Upgrade and Hardfork (06/05/2025-TBD)
+### Landing Software Upgrade and Hardfork (14/05/2025-TBD)
 
 * Fund your Ethereum address with some Ethereum on the Arbitrum One network. You will need a small amount to cover transaction fees which are required to claim rewards and register new nodes.
   * Note that SESH will be distributed on the Arbitrum One network, using the Ethereum address provided. To view your SESH at TGE, ensure you have selected the Arbitrum One network in your wallet.
