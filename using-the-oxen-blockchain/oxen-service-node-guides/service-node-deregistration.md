@@ -16,7 +16,7 @@ Each Oxen Service Node can be in one of four states: awaiting, active, decommiss
 
 #### Decommission and credits
 
-Active Oxen Service Nodes earn "credits" which are then used up during any periods where the service node goes offline (or otherwise stops meeting network requirements) to stop a deregistration from occuring. A new service node starts out with `INITIAL_CREDIT`, and then builds up `CREDIT_PER_DAY` for each day the service node remains active, up to a maximum of `DECOMMISSION_MAX_CREDIT`.
+Active Oxen Service Nodes earn "credits" which are then used up during any periods where the service node goes offline (or otherwise stops meeting network requirements) to stop a deregistration from occurring. A new service node starts out with `INITIAL_CREDIT`, and then builds up `CREDIT_PER_DAY` for each day the service node remains active, up to a maximum of `DECOMMISSION_MAX_CREDIT`.
 
 |                           |                                                |
 | ------------------------- | ---------------------------------------------- |

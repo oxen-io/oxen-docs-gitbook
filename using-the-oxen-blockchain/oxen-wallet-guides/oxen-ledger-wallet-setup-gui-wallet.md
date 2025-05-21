@@ -80,7 +80,7 @@ Create a transaction by filling in the address and amount fields of this page an
 
 ![](https://lh3.googleusercontent.com/46czSXzuEtap4Bbqv6VmU8fljXI5NyzVvnmceE2A7458VRJG1HCtSOMNmQGFExMIdFyvcpx6ia3qZ3EP2uDG8jceXg2kZxDwu5D0zeuU5LESfVGhkTFikAkkFOj4-3U4NnCsO-1nvDt2TR9zEGq8LR4L25BiVbt8hyKYwjKHr4v3HiCdCjWaeVKUEQ)
 
-The hardware wallet will then begin processing the transaction. At first you will see the “Processsing TX” screen. This page may take some time as the ledger has to do some heavy calculations.
+The hardware wallet will then begin processing the transaction. At first you will see the “Processing TX” screen. This page may take some time as the ledger has to do some heavy calculations.
 
 ![](https://lh6.googleusercontent.com/qKkW3FtfD\_p9mcveaNkpGefEJRgnajlXzjBKwbU-3hFY1eNgRRozGpMnwmi2V\_VVAajDT1zcttPTrqVXybjiTIymlsmwwNeFic\_EUnn-w-eIUiMGWqXlA2a2rE-a0Qu5pxKqTld9M5J8Vv0U7KiBtrrWDS5GLJZImiHABbC7pKXAINzmcemO\_JpWGg)
 
