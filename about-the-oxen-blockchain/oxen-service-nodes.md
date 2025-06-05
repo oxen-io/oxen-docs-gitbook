@@ -2,7 +2,11 @@
 description: Oxen Service Nodes provide the underlying support for the Oxen Network
 ---
 
-# 🖥 Oxen Service Nodes
+# 🖥️ Oxen Service Nodes
+
+{% hint style="warning" %}
+**The Oxen Network has transitioned to the Session Network. More information** [**here**](https://oxen.io/blog/development-is-transitioning-to-session-token)**.**&#x20;
+{% endhint %}
 
 Oxen’s networking functionality, scalability, and decentralisation tech stack is powered by a set of incentivised nodes called Oxen Service Nodes. To operate a service node, an operator time-locks 15,000 $OXEN, and the service node begins providing a minimum level of bandwidth and storage to the network. In return for their services, service node operators receive a portion of the block reward from each block mined on the Oxen blockchain.
 

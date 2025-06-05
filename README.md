@@ -6,36 +6,31 @@ description: >-
 
 # 💡 Introduction to Oxen
 
-{% hint style="success" %}
-**The Oxen Network is transitioning to the Session Network. More information** [**here**](https://oxen.io/blog/development-is-transitioning-to-session-token)**.**&#x20;
+{% hint style="warning" %}
+**The Oxen Network has transitioned to the Session Network. More information** [**here**](https://oxen.io/blog/development-is-transitioning-to-session-token)**.**&#x20;
 {% endhint %}
 
 {% tabs %}
 {% tab title="Service Node Bonus Program" %}
-Service Node operators and contributors can participate in the Service Node Bonus Program to earn additional Session Tokens. More information can be found [here](https://swap.oxen.io/).
+Service Node operators and contributors who participated in the Service Node Bonus Program earned additional Session Tokens and had their staked OXEN automatically converted to Session Tokens. More information can be found [here](https://swap.oxen.io/).
 {% endtab %}
 
 {% tab title="Oxen Coin Claims" %}
-Oxen can be swapped for the new Session Token using the Oxen Coin Claims program. More information can be found [here](https://token.getsession.org/oxen-coin-claims).&#x20;
+Oxen can now be swapped for the new Session Token using the [Oxen Coin Claims Portal](https://claim.oxen.io/#/). More information can be found [here](https://token.getsession.org/oxen-coin-claims).&#x20;
 {% endtab %}
 {% endtabs %}
 
-**Oxen** is one of the largest app ecosystems in the entire crypto industry. Applications like Session and Lokinet are currently servicing hundreds of thousands of active users thanks to the power of the Oxen Service Node Network.
+**Oxen** was one of the largest app ecosystems in the entire crypto industry. Applications like Session and Lokinet serviced hundreds of thousands of active users thanks to the power of the Oxen Service Node Network, recently migrated to the new [Session Network](https://docs.getsession.org/session-network).
 
-The network is powered by the Oxen blockchain, a privacy preserving cryptocurrency network that enables fast and private value transfer. The blockchain is maintained by a distributed network of community-operated [🖥 Oxen Service Nodes](https://oxen.gitbook.io/oxen-docs/about-the-oxen-blockchain/oxen-service-nodes), which run all the network features and services offered by Oxen's tech stack.
-
-#### Quick navigation
-
-* [Show me how to get an OXEN wallet](using-the-oxen-blockchain/oxen-wallet-guides/)
-* [Show me how to stake on the OXEN network](using-the-oxen-blockchain/oxen-service-node-guides/staking-to-shared-service-node.md)
+The network was powered by the Oxen blockchain, a privacy preserving cryptocurrency network that enables fast and private value transfer. The blockchain was maintained by a distributed network of community-operated [🖥 Oxen Service Nodes](https://oxen.gitbook.io/oxen-docs/about-the-oxen-blockchain/oxen-service-nodes), which ran all the network features and services offered by Oxen's tech stack.
 
 ### The Coin
 
-Oxen was originally forked from Monero, and it's still based on the CryptoNote protocol. From these beginnings, Oxen has inherited world class privacy and security features — including ring signatures, stealth addresses, and ring confidential transactions. Just like $XMR, $OXEN is fungible, private, and untraceable.
+Oxen was originally forked from Monero, and was based on the CryptoNote protocol. From these beginnings, Oxen inherited privacy and security features — including ring signatures, stealth addresses, and ring confidential transactions. Just like $XMR, $OXEN is fungible, private, and untraceable.
 
 ### Service Nodes
 
-Oxen is fully proof of stake, with a set of incentivised nodes called Oxen Service Nodes maintaining an securing the blockchain, providing services to Oxen Apps, and receiving block rewards.
+Oxen was fully proof of stake, with a set of incentivised nodes called Oxen Service Nodes maintaining an securing the blockchain, providing services to Oxen Apps, and receiving block rewards. Nodes that migrated to the Session Network are now functioning as Session Nodes and receiving block rewards in the form of Session Tokens.
 
 ### The Apps
 

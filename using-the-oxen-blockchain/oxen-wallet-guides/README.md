@@ -1,5 +1,9 @@
 # 💰 Oxen Wallet & Guides
 
+{% hint style="warning" %}
+**The Oxen Network has transitioned to the Session Network. More information** [**here**](https://oxen.io/blog/development-is-transitioning-to-session-token)**.**&#x20;
+{% endhint %}
+
 _Just looking for the latest Oxen Wallet releases?_ [_Head to our downloads page_](https://github.com/oxen-io/oxen-electron-gui-wallet/releases)_._
 
 The Oxen Wallet is your gateway to private decentralised transactions and communications. It allows you to hold and secure your $OXEN, stake into Oxen Service Nodes, and transact with $OXEN.

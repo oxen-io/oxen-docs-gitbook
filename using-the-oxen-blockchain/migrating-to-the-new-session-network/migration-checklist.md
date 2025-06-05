@@ -6,7 +6,11 @@ description: >-
 
 # ✅ Migration Checklist
 
-The migration from the Oxen Network to the new Session Network is nearly here! This is a convenient checklist for operators of active and registered Oxen Service Nodes who are migrating to the Session Network.&#x20;
+{% hint style="warning" %}
+**The Oxen Network has transitioned to the Session Network. More information** [**here**](https://oxen.io/blog/development-is-transitioning-to-session-token)**.**&#x20;
+{% endhint %}
+
+The migration from the Oxen Network to the new Session Network is complete. This page served as a for operators of active and registered Oxen Service Nodes who were migrating to the Session Network.&#x20;
 
 ### Node Preparation and Readiness&#x20;
 

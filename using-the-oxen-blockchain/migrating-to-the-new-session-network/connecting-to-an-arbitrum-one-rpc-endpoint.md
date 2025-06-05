@@ -6,7 +6,11 @@ description: >-
 
 # 🔗 Connecting to an Arbitrum One RPC Endpoint
 
-As part of the upcoming migration to the new Session Network, the Anchor software upgrade and hardfork implements the ability for Service Nodes to witness the Arbitrum One blockchain. \
+{% hint style="warning" %}
+**The Oxen Network has transitioned to the Session Network. More information** [**here**](https://oxen.io/blog/development-is-transitioning-to-session-token)**.**&#x20;
+{% endhint %}
+
+As part of the migration to the new Session Network, the Anchor software upgrade and hardfork implements the ability for Service Nodes to witness the Arbitrum One blockchain. \
 \
 All Service Nodes will be required to maintain an active and up-to-date Arbitrum One RPC endpoint to complete the upgrade. This endpoint will be crucial to allow Service Nodes to witness the state of Arbitrum smart contracts, which in the future will contain the list of active Session Nodes.\
 \

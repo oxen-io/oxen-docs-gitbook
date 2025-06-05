@@ -2,7 +2,11 @@
 description: Bink is Oxen's revolutionary instant payment system
 ---
 
-# 👁 Blink: Instant transactions
+# 👁️ Blink: Instant transactions
+
+{% hint style="warning" %}
+**The Oxen Network has transitioned to the Session Network. More information** [**here**](https://oxen.io/blog/development-is-transitioning-to-session-token)**.**&#x20;
+{% endhint %}
 
 ### What is Blink?
 

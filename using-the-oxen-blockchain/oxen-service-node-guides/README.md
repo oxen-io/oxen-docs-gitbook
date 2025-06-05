@@ -1,4 +1,8 @@
-# 🖥 Service Node guides
+# 🖥️ Service Node guides
+
+{% hint style="warning" %}
+**The Oxen Network has transitioned to the Session Network. More information** [**here**](https://oxen.io/blog/development-is-transitioning-to-session-token)**.**&#x20;
+{% endhint %}
 
 A directory of guides for setting up and maintaining your Oxen Service Node.
 

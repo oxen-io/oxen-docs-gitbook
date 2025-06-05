@@ -1,5 +1,9 @@
 # 🔀 How to set up an oxend L2 proxy
 
+{% hint style="warning" %}
+**The Oxen Network has transitioned to the Session Network. More information** [**here**](https://oxen.io/blog/development-is-transitioning-to-session-token)**.**&#x20;
+{% endhint %}
+
 With the 11.1.2 Oxen release, a new capability for oxend was been added to proxy requests to an L2 provider. This feature is aimed in particular at operators who intend to run multiple nodes on the new Session Network following the migration.
 
 This feature works by having only 2-3 of your nodes configured with an L2 provider URL, and having all the others configured to talk to those 2-3 nodes to get Arbitrum updates, without having to use multiple or paid tier accounts for your set of nodes.

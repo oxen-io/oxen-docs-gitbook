@@ -4,6 +4,10 @@ description: Pulse is Oxen's Proof of Stake consensus mechanism
 
 # 💓 Pulse: PoS on Oxen
 
+{% hint style="warning" %}
+**The Oxen Network has transitioned to the Session Network. More information** [**here**](https://oxen.io/blog/development-is-transitioning-to-session-token)**.**&#x20;
+{% endhint %}
+
 Fundamentally, every blockchain — including Oxen — is exactly what it says in the name: a chain of blocks. One 'block' in the Oxen blockchain is made up of a set of $OXEN transactions which have been deemed valid by the network. But when the network consists of thousands of computers all over the world, how does it come to consensus about the state of the blockchain?
 
 That's where Pulse comes in.

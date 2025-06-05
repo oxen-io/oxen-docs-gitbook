@@ -1,11 +1,14 @@
 ---
 description: >-
-  Get answers to key questions regarding the upcoming migration to the new
-  Session Network. This page will be updated continuously as additional
-  questions are shared by the community.
+  Get answers to key questions regarding the migration to the new Session
+  Network.
 ---
 
 # ❓ Migration FAQ
+
+{% hint style="warning" %}
+**The Oxen Network has transitioned to the Session Network. More information** [**here**](https://oxen.io/blog/development-is-transitioning-to-session-token)**.**&#x20;
+{% endhint %}
 
 ### What is the sequence of events for the migration?&#x20;
 

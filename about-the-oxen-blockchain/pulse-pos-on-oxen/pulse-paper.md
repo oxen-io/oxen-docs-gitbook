@@ -6,9 +6,13 @@ description: >-
 
 # 🤿 Pulse: Deep dive
 
+{% hint style="warning" %}
+**The Oxen Network has transitioned to the Session Network. More information** [**here**](https://oxen.io/blog/development-is-transitioning-to-session-token)**.**&#x20;
+{% endhint %}
+
 ### Introduction
 
-Pulse is [Oxen](../../)'s Proof of Stake \(PoS\) scheme. There are various reasons this scheme was implemented in favour of the more popular blockchain consensus mechanism, Proof of Work \(Pow\).
+Pulse is [Oxen](../../)'s Proof of Stake (PoS) scheme. There are various reasons this scheme was implemented in favour of the more popular blockchain consensus mechanism, Proof of Work (Pow).
 
 Pulse makes Oxen more secure, more sustainable, and more powerful.
 
@@ -16,7 +20,7 @@ Pulse makes Oxen more secure, more sustainable, and more powerful.
 
 Every 120 seconds, an active [Oxen Service Node](../oxen-service-nodes.md) is chosen to create a new candidate block. This one true service node creates a candidate block and sends it to 11 randomly chosen _validators_.
 
-Validators are service nodes tasked with independently assessing the candidate block and ensuring it does not contain any duplicate transactions \(or any other malicious activitiy\). If 7 of the 11 validators verify the block's legitimacy, it can be published to the network as a valid block.
+Validators are service nodes tasked with independently assessing the candidate block and ensuring it does not contain any duplicate transactions (or any other malicious activitiy). If 7 of the 11 validators verify the block's legitimacy, it can be published to the network as a valid block.
 
 This process is then repeated to create the next block.
 
@@ -26,7 +30,7 @@ Thanks to Pulse, it is both difficult and unprofitable to attempt an attack on t
 
 #### Increasing the resource investment needed to attack Oxen
 
-In a Proof of Work blockchain, double spending a token requires an attacker to secretly produce an alternate blockchain with more cumulative difficulty, reverse a previously spent transaction, and then create a new transaction with the same token\(s\).
+In a Proof of Work blockchain, double spending a token requires an attacker to secretly produce an alternate blockchain with more cumulative difficulty, reverse a previously spent transaction, and then create a new transaction with the same token(s).
 
 Unless the attacker is using sophisticated attacks — such as selfish mining or cartels — this requires the miner to obtain 51% of the entire network's hash power.
 
@@ -44,11 +48,11 @@ However, the same assault on a PoS blockchain requires you to purchase the token
 
 **Checkpointing**
 
-Checkpointing provides additional 🛡 defence on top of Pulse. Every four blocks, the Oxen blockchain records a checkpoint — taking a snapshot of everything before it on the blockchain. Nothing transactions older than 2 checkpoints \(also known as 8 blocks\) can _ever_ be changed.
+Checkpointing provides additional 🛡 defence on top of Pulse. Every four blocks, the Oxen blockchain records a checkpoint — taking a snapshot of everything before it on the blockchain. Nothing transactions older than 2 checkpoints (also known as 8 blocks) can _ever_ be changed.
 
 This means that even _if_ Pulse was somehow compromised, the Oxen blockchain would **still** be protected.
 
-Checkpointing also provides additional protection against more sophisticated \(and luck-dependent\) attacks.
+Checkpointing also provides additional protection against more sophisticated (and luck-dependent) attacks.
 
 ### Sustainability
 
@@ -58,7 +62,7 @@ Environmental and economic sustainability are becoming increasingly pertinent is
 
 #### **Power consumption**
 
-PoW consensus, while serviceable for securing the blockchain, has an inescapable flaw — it is extremely inefficient, and this problem becomes worse as the network scales. 
+PoW consensus, while serviceable for securing the blockchain, has an inescapable flaw — it is extremely inefficient, and this problem becomes worse as the network scales.
 
 Bitcoin, which uses PoW, [consumes over 100 TWh](https://www.cbeci.org) per year, more than the consumption of entire countries like the Netherlands and the Phillipines — and that's just one blockchain! No one blockchain should have all that power.
 
@@ -90,7 +94,7 @@ Each validator also sends the candidate block to 3 other validators, ensuring al
 
 **Commit round**
 
-Every validator now generates a 128 bit integer, and sends a hash of that integer to all other validators. 
+Every validator now generates a 128 bit integer, and sends a hash of that integer to all other validators.
 
 **Reveal round**
 
@@ -102,7 +106,7 @@ This signature is then sent to all other validators.
 
 **Block submission**
 
-Each validator is then able to check the validity of each of the other validator's signatures, ensuring they are all signing both the same candidate block and the same combined random integer. 
+Each validator is then able to check the validity of each of the other validator's signatures, ensuring they are all signing both the same candidate block and the same combined random integer.
 
 Once signatures have been validated, any validator in the quorum may submit a block to the network which includes at least 7 validator signatures.
 
@@ -110,7 +114,7 @@ Once signatures have been validated, any validator in the quorum may submit a bl
 
 * 120 second block time
 * Cannot be significantly biased by any one member of the quorum
-* Tolerates failure or malfeasance of up to ~45% of service nodes
+* Tolerates failure or malfeasance of up to \~45% of service nodes
 
 ### Fault tolerance
 
@@ -128,7 +132,7 @@ If this block is signed by the validators, the swap tag will indicate that there
 
 **Demerits and de-registrations**
 
-Validators in a quorum can submit intent to demerit messages at any stage for their leader or any peer validator\(s\) they feel haven't followed the protocol. 
+Validators in a quorum can submit intent to demerit messages at any stage for their leader or any peer validator(s) they feel haven't followed the protocol.
 
 For example, if a leader never publishes a candidate block, any validator in the quorum may send an intent to demerit message to their other peers. If this message is signed by the majority of other validators it may be submitted to the network as a demerit point message.
 
@@ -147,7 +151,7 @@ To get a better understanding of Pulse, it is worth discussing what happens in s
 
 If a leader fails to construct and send a candidate block, the validators will be triggered to submit an intent to demerit message.
 
-If this message is signed by a simple majority of the quorum, a demerit point is be applied to the leader and the next leader creates a swap block. 
+If this message is signed by a simple majority of the quorum, a demerit point is be applied to the leader and the next leader creates a swap block.
 
 **Not enough validators participate in the commit or reveal rounds**
 
@@ -177,7 +181,7 @@ This means any node that signs blocks indiscriminately in block creation quorums
 
 #### Stake grind attacks
 
-Stake grinding usually refers to a class of attacks where a validator or leader can iterate values to bias the selection of the next chosen validator. Since validators are chosen by using a collaboratively generated random integer in each block, it is possible to bias the results of the scheme. However, the only way to actually do this is for a validator to chooses to hide the value they shared during the commit round. 
+Stake grinding usually refers to a class of attacks where a validator or leader can iterate values to bias the selection of the next chosen validator. Since validators are chosen by using a collaboratively generated random integer in each block, it is possible to bias the results of the scheme. However, the only way to actually do this is for a validator to chooses to hide the value they shared during the commit round.
 
 In the context of Oxen Service Node selection for the next quorum, this biasing is extremely weak, and the action of committing but failing to reveal a value leads to a demerit message being submitted for the validator, making this attack infeasible.
 
@@ -207,7 +211,7 @@ With Pulse, the ‘nothing at stake’ problem is prevented by allowing nodes in
 
 All service nodes in the Oxen network maintain a public IP address so they are reachable by other service nodes and [Lokinet](https://lokinet.org)/[Session](https://getsession.org) users. These IP addresses are held in a distributed list that anyone can access. This opens the service node network and especially block producing quorums to DDoS attacks. For example, an attacker could wait for a block to be successfully published and immediately identify the members of the next quorum who will produce a block. With this information, they could launch a DDoS attack aimed to interrupt the communication between validators, or between the leader and validators. If successful, they would prevent a new block from being produced and could continue this attack on successive quorums.
 
-Although individual service nodes have incentives to prevent DDoS attacks \(so they can earn rewards and avoid demerit points\), there are some protections we can offer in the Oxen software suite which can be deployed in the case that the previous block has failed to be produced. The most trivial protection is that after a failure in block creation, service nodes in the next selected quorum should ignore any connections from IP addresses which do not belong to another service node. This limits the scope of the attacker’s DDoS to only service nodes — which are costly to operate and far less numerous than a botnet-like DDoS attack. service node operators could also reasonably rate limit other service nodes on a per key basis, choosing not to respond to service nodes who put undue strain on their own networks.
+Although individual service nodes have incentives to prevent DDoS attacks (so they can earn rewards and avoid demerit points), there are some protections we can offer in the Oxen software suite which can be deployed in the case that the previous block has failed to be produced. The most trivial protection is that after a failure in block creation, service nodes in the next selected quorum should ignore any connections from IP addresses which do not belong to another service node. This limits the scope of the attacker’s DDoS to only service nodes — which are costly to operate and far less numerous than a botnet-like DDoS attack. service node operators could also reasonably rate limit other service nodes on a per key basis, choosing not to respond to service nodes who put undue strain on their own networks.
 
 ### Considerations
 
@@ -219,9 +223,9 @@ For example, say a block creation quorum produces a value between 0 and 10 each 
 
 A possible attack on this application would be for an Oxen Service Node operator, let’s call her “Mallory”, to wait to become a validator in a quorum, act honestly, and commit to a random value. Once she has committed to the scheme, she waits for the other validators to reveal their original integers. She can now calculate the shared random result for those validators that have revealed. Let’s suppose their combined final value will be 3. Using this information and whatever deterministic algorithm that is used to combine each validators contribution, Mallory can now decide whether or not she wants to reveal her result and add her contribution to this data.
 
-If Mallory bets on tails and realises revealing her commitment would change the overall result to heads, then she should not reveal her commitment. If her commitment \(when combined with the other commitments\) still selects a number under 3, then she can reveal her committed value. Of course, the cost of not revealing a commitment is demerit points being applied to Mallory’s service node which will lead to deregistration in the event that Mallory has not revealed her commitments consistently. However, as long as Mallory’s winnings are more than the cost of being deregistered from the service node network, her dishonest actions are financially incentivised.
+If Mallory bets on tails and realises revealing her commitment would change the overall result to heads, then she should not reveal her commitment. If her commitment (when combined with the other commitments) still selects a number under 3, then she can reveal her committed value. Of course, the cost of not revealing a commitment is demerit points being applied to Mallory’s service node which will lead to deregistration in the event that Mallory has not revealed her commitments consistently. However, as long as Mallory’s winnings are more than the cost of being deregistered from the service node network, her dishonest actions are financially incentivised.
 
-It should be clear from this example that service nodes can significantly bias the results of decisions which have few available outcomes, like a coin toss. So applications should not use the random integer we are creating for these type of use cases! The Oxen blockchain, however, does not use the source of randomness in this way. We use the randomness to choose service nodes in a service node list, where biasing the results has an insignificant effect as the possible outcomes are far more numerous. With Pulse, the randomness seeds an algorithm that chooses a combination of 11 nodes out of currently about 620 nodes. Mallory, in this case, would be able to choose between two \(and only two\) different random samples of 11 nodes from the selection of 620, but this single extra choice is highly unlikely to provide a notable benefit in terms of opportunistic selection.
+It should be clear from this example that service nodes can significantly bias the results of decisions which have few available outcomes, like a coin toss. So applications should not use the random integer we are creating for these type of use cases! The Oxen blockchain, however, does not use the source of randomness in this way. We use the randomness to choose service nodes in a service node list, where biasing the results has an insignificant effect as the possible outcomes are far more numerous. With Pulse, the randomness seeds an algorithm that chooses a combination of 11 nodes out of currently about 620 nodes. Mallory, in this case, would be able to choose between two (and only two) different random samples of 11 nodes from the selection of 620, but this single extra choice is highly unlikely to provide a notable benefit in terms of opportunistic selection.
 
 #### Block times
 
@@ -230,4 +234,3 @@ Pulse targets a predictable block time of **120 seconds** — excluding the rare
 ### Conclusion
 
 Pulse is a robust yet simple scheme for block creation and transaction ordering in the Oxen network. Pulse does all this while increasing security and decreasing the need to use energy intensive PoW. Additionally, it's better aligned with existing incentive structures to reward those who do the most work to create order, and secure the network — service nodes.
-

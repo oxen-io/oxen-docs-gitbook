@@ -4,6 +4,10 @@ description: Here's a quick overview of the services provided by the Oxen blockc
 
 # 📍 Overview
 
+{% hint style="warning" %}
+**The Oxen Network has transitioned to the Session Network. More information** [**here**](https://oxen.io/blog/development-is-transitioning-to-session-token)**.**&#x20;
+{% endhint %}
+
 ### 💸 $OXEN and the 💰Oxen Wallet: Private instant transactions
 
 The Oxen Wallet, available in user-friendly GUI or powerful CLI versions, enables you to send and receive private anonymous transactions in the blink of an eye. You can download your preferred Wallet version [here](https://github.com/oxen-io/oxen-electron-gui-wallet/releases).

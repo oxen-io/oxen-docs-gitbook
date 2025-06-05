@@ -1,8 +1,8 @@
----
-description: You can find all of our Oxen wallet releases here
----
-
 # 📁 Downloads
+
+{% hint style="warning" %}
+**The Oxen Network has transitioned to the Session Network. More information** [**here**](https://oxen.io/blog/development-is-transitioning-to-session-token)**.**&#x20;
+{% endhint %}
 
 Need some help using our wallets? Check out the [Oxen wallet guides](using-the-oxen-blockchain/oxen-wallet-guides/). You can also find out more about [setting up service nodes](https://docs.oxen.io/using-the-oxen-blockchain/oxen-service-node-guides/full-service-node-setup-guide) and [staking](using-the-oxen-blockchain/oxen-service-node-guides/staking-to-shared-service-node.md) from our wallets.
 
