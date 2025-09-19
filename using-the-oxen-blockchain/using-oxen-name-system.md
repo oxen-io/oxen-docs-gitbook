@@ -1,7 +1,12 @@
 # 🔡 Using Oxen Name System (ONS)
 
-{% embed url="https://www.youtube.com/watch?v=t4KJnOdhJow" %}
+{% hint style="warning" %}
+**The Oxen Network has transitioned to the Session Network. More information** [**here**](https://oxen.io/blog/development-is-transitioning-to-session-token)**.** \
+\
+<mark style="color:$danger;">**It is no longer possible to register new ONS mappings. It is possible to update ONS mappings if you stil hold OXEN.**</mark>&#x20;
+{% endhint %}
 
+\
 The following steps can be used to register and update ONS mappings in the CLI wallet. Note that you can access a detailed description of each command within the app, using “help \<command\_name>”.
 
 ### Purchasing an Oxen Name System record
