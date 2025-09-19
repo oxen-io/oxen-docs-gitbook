@@ -3,7 +3,8 @@
 {% hint style="warning" %}
 **The Oxen Network has transitioned to the Session Network. More information** [**here**](https://oxen.io/blog/development-is-transitioning-to-session-token)**.** \
 \
-<mark style="color:$danger;">**It is no longer possible to register new ONS mappings. It is possible to update ONS mappings if you stil hold OXEN.**</mark>&#x20;
+<mark style="color:$danger;">**It is no longer possible to register new ONS mappings. It is possible to update ONS mappings if you still hold OXEN.**</mark> \
+\ <mark style="color:$danger;">**Once the new Session Name Service (SNS) launches, it will be possible to create new usernames mapped to Account IDs on Session. ONS mappings will also be migrated to the new SNS.**</mark>&#x20;
 {% endhint %}
 
 \
