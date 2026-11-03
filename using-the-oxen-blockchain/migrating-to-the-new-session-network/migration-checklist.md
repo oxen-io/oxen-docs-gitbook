@@ -23,13 +23,13 @@ The migration from the Oxen Network to the new Session Network is complete. This
   * 100Mb or faster connectivity
   * 1TB traffic per month or more
   * Redundant power with remote cycling ability, as found in most data centres
-* Join relevant comms channels: Ensure you're in the [Session Token Community](https://discord.gg/sessiontoken) on Discord and following on X ([Oxen](https://x.com/oxen_io) | [Session Token](https://x.com/session_token)) to receive timely updates
+* Join relevant comms channels: Ensure you're in the [Session Token Community](https://getsession.org/discord) on Discord and following on X ([Oxen](https://x.com/oxen_io) | [Session Token](https://x.com/session_token)) to receive timely updates
 * Register for the Service Node Bonus Program using your Oxen wallet address and Ethereum wallet address. This will automate the Session Token swapping process following the transition and ensure network continuity. Register [here](https://swap.oxen.io/).
 * Make sure you can access the ETH wallet addresses you used to register for the Service Node Bonus and testnet programs. You can check [here](https://swap.oxen.io/).
 
 Optional:&#x20;
 
-* Set up a testnet node on the Session testnet to explore how the new web-based Staking Portal works, from registering to managing nodes. Open a ticket in [Discord](https://discord.gg/sessiontoken) to request access to test SESH tokens and test arbETH to stake to your testnet node, or post a message in the Oxen Service Node Operators community on Session.&#x20;
+* Set up a testnet node on the Session testnet to explore how the new web-based Staking Portal works, from registering to managing nodes. Open a ticket in [Discord](https://getsession.org/discord) to request access to test SESH tokens and test arbETH to stake to your testnet node, or post a message in the Oxen Service Node Operators community on Session.&#x20;
 
 ### Completing the Anchor Software Upgrade and Hardfork (22-29/04/2025)
 
